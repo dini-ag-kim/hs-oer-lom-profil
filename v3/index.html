@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset='utf-8'>
+        <title>LOM for Higher Education OER Repositories</title>
+        <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
+        <script class='remove'>
+            var respecConfig = {
+                editors: [{
+                    name: "Michael Menzel",
+                    mailto: "michael.menzel@uni-tuebingen.de",
+                    company: "Universitätsbibliothek Tübingen - ZOERR",
+                    companyURL: "https://www.oerbw.de/"
+                }],
+                format: "markdown",
+                github: "https://github.com/dini-ag-kim/hs-oer-lom",
+                localBiblio: {
+                    "LOM": {
+                        title: "IMS Learning Resource Meta-Data XML Binding Specification",
+                        href: "https://www.imsglobal.org/metadata/imsmdv1p2p1/imsmd_bindv1p2p1.html",
+                        status: "Final Specification 1.2.1",
+                        publisher: "IMS Global Learning Consortium, Inc."
+                    }
+                },
+                logos: [],
+                publishDate: "2020-01-16",
+                subtitle: "Beschreibung zur XML Schema Definition des Metadatenprofils für Open Educational Resources im Hochschulbereich"
+            };
+        </script>
+    </head>
+    <body>
+        <section id="abstract">
+
+            ## Einleitung
+ 
+            Verschiedene Hochschulrepositorien deutscher Bundesländer haben sich
+            zum Ziel gesetzt, ihre frei verfügbaren Materialien vernetzt zugänglich
+            zu machen. Für den Austausch von Metadaten über die Materialien wurde eine
+            [XML Schema Description](https://dini-ag-kim.github.io/hs-oer-lom/v3/schemas/hs-oer-lom.xsd)
+            erstellt. Das Schema basiert auf [[LOM]], wurde aber konsequent reduziert
+            auf die für die Repositorien notwendigen Metadaten. Da solche Schemata
+            schwer zu lesen sind, gibt es diese Dokumentation. Kenntnisse über
+            grundlegende XML–Eigenschaften werden vorausgesetzt und nicht erläutert.
+            Vielfältige Informationen dazu gibt es im WWW oder auch in der Einleitung
+            der vorgenannten [[LOM]]-Spezifikation.
+
+        </section>
+
+        <section id="conformance"></section>
+
+        <section id="specification">
+
+            ## Technische Spezifikation
+
+            !!! WIP !!!
+
+        </section>
+
+        <section id="examples">
+
+            ## Beispiele
+
+            Zur Illustration sind zwei Beispiele für Metadatenbeschreibungen von
+            Lernobjekten in XML hier zu finden:
+
+            <section id="example-1">
+
+                ## Beispiel 1
+
+                <pre class="example" data-include="examples/oerlom-example-a.xml" data-include-format="text"></pre>
+
+            </section>
+
+            <section id="example-2">
+
+                ## Beispiel 2
+
+                <pre class="example" data-include="examples/oerlom-example-b.xml" data-include-format="text"></pre>
+
+            </section>
+
+        </section>
+
+        <section id="schemas">
+
+            ## XML Schema
+
+            Für den Austausch von Metadaten über die Materialien wurde eine
+            [XML Schema Description](https://hs-oer-lom.github.io/v3/schemas/hs-oer-lom.xsd)
+            erstellt. Bitte beachten Sie, dass sie nur vollständig mit dem kleinen
+            begleitenden [Dokument](https://hs-oer-lom.github.io/v3/schemas/xml.xsd)
+            ist, das auch für korrekte Validierungen benötigt wird.
+
+            Eigene XML–Dokumente können gegen das XML Schema mit gängigen Werkzeugen
+            validiert werden, z. B. mit `xmllint`:
+
+            `$ xmllint --noout --schema hs-oer-lom.xsd mein-oer-lom.xml`
+
+            Wenn Sie das Schema in Ihrem eigenen XML-Dokument referenzieren möchten,
+            verwenden Sie bitte die folgende URL:
+
+            `https://hs-oer-lom.github.io/v3/schemas/hs-oer-lom.xsd`
+
+            <section id="xml-schema">
+
+                ## XML Schema
+
+                <pre data-include="schemas/hs-oer-lom.xsd" data-include-format="text"></pre>
+
+            </section>
+
+            <section id="schema-addition">
+
+                ## Schema-Ergänzung
+
+                <pre data-include="schemas/xml.xsd" data-include-format="text"></pre>
+
+            </section>
+
+        </section>
+
+        <section id="glossary" class="appendix">
+
+            ## Glossar
+
+            <dl>
+                <dt><abbr title="Learning Object Metadata">LOM</abbr></dt>
+                <dd>Learning Object Metadata</dd>
+                <dt><abbr title="Open Educational Resource">OER</abbr></dt>
+                <dd>Open Educational Resource</dd>
+                <dt><abbr title="World Wide Web">WWW</abbr></dt>
+                <dd>World Wide Web</dd>
+                <dt><abbr title="Extensible Markup Language">XML</abbr></dt>
+                <dd>Extensible Markup Language</dd>
+            </dl>
+            
+        </section>
+    </body>
+</html>

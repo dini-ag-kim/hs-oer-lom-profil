@@ -1,0 +1,255 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<metadata xmlns="https://www.oerbw.de/hsoerlom"
+	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xsi:schemaLocation="https://www.oerbw.de/hsoerlom hs-oer-lom.xsd">
+  <lom>
+    <general>
+      <identifier>8dee40f6-0b22-4e5c-9d39-7ebeb7d20b9f</identifier>
+      <title>
+	<langstring>Baustein 5 Classroom Action Research</langstring>
+      </title>
+      <catalogentry>
+	<catalog>Handle.Net</catalog>
+	<entry>
+	<langstring>http://hdl.handle.net/10900.3/OER_qiYOaTBN</langstring>
+	</entry>
+      </catalogentry>
+      <language>de</language>
+      <description>
+	<langstring>Studierende führen im Rahmen von Praxisphasen Klassenforschungsprojekte durch.</langstring>
+      </description>
+      <keyword>
+	<langstring>Aktionsforschung</langstring>
+      </keyword>
+      <keyword>
+	<langstring>forschungsorientierte Lehre</langstring>
+      </keyword>
+      <keyword>
+	<langstring>Unterrichtsforschung</langstring>
+      </keyword>
+      <aggregationlevel>
+	<source>
+	  <langstring xml:lang="x-none">LOMv1.0</langstring>
+	</source>
+	<value>
+	  <langstring xml:lang="x-none">2</langstring>
+	</value>
+      </aggregationlevel>
+    </general>
+    <lifecycle>
+      <version>
+	<!-- Versionen werden intern automatisch verwaltet und zählen auch bei
+	jeder Änderung der Metadaten die Minor Version hoch. Die Major Version
+	bleibt immer bei 1. Es ist zu fragen, inwieweit das hilfreich ist. -->
+	<langstring>1.6</langstring>
+      </version>
+      <status>
+	<source>
+	  <langstring xml:lang="x-none">LOMv1.0</langstring>
+	</source>
+	<value>
+	  <langstring xml:lang="x-none">Final</langstring>
+	</value>
+      </status>
+      <contribute>
+	<role>
+	  <source>
+	    <langstring xml:lang="x-none">LOMv1.0</langstring>
+	  </source>
+	  <value>
+	    <langstring xml:lang="x-none">Author</langstring>
+	  </value>
+	</role>
+	<centity>
+	  <vcard>
+	    BEGIN:VCARD
+	    VERSION:3.0
+	    N:Kolb;Annika
+	    FN: Annika Kolb
+	    END:VCARD
+	  </vcard>
+	</centity>
+	<centity>
+	  <vcard>
+	    BEGIN:VCARD
+	    VERSION:3.0
+	    N:Vonrhein;Ingrid
+	    FN:Ingrid Vonrhein
+	    END:VCARD
+	  </vcard>
+	</centity>
+	<centity>
+	  <vcard>
+	    BEGIN:VCARD
+	    VERSION:3.0
+	    N:Schocker;Marita
+	    FN:Marita Schocker
+	    END:VCARD
+	  </vcard>
+	</centity>
+      </contribute>
+    </lifecycle>
+    <metametadata>
+      <contribute>
+	<role>
+	  <source>
+	    <langstring xml:lang="x-none">LOMv1.0</langstring>
+	  </source>
+	  <value>
+	    <langstring xml:lang="x-none">Creator</langstring>
+	  </value>
+	</role>
+	<centity>
+	  <vcard>
+	    BEGIN:VCARD
+	    VERSION:3.0
+	    N:Faißt;Julia
+	    FN:Julia Faißt
+	    END:VCARD
+	  </vcard>
+	</centity>
+	<date>
+	  <datetime>2019-07-13</datetime>
+	  <description>
+	    <langstring>Modified</langstring>
+	  </description>
+	</date>
+      </contribute>
+      <contribute>
+	<role>
+	  <source>
+	    <langstring xml:lang="x-none">LOMv1.0</langstring>
+	  </source>
+	  <value>
+	    <langstring xml:lang="x-none">Validator</langstring>
+	  </value>
+	</role>
+	<centity>
+	  <vcard>
+	    BEGIN:VCARD
+	    VERSION:3.0
+	    N:Schreiber;Anja
+	    FN:Anja Schreiber
+	    END:VCARD
+	  </vcard>
+	</centity>
+	<date>
+	  <datetime>2019-07-17</datetime>
+	  <description>
+	    <langstring>Published</langstring>
+	  </description>
+	</date>
+      </contribute>
+      <!-- Ist das "Herkunft"-Feld hier sinnvoll abgebildet?
+      Die (einzige) Alternative wäre, es in einer <classification> unterzubringen.
+      Allerdings gibt es im Standardvokabular keinen sinnvollen Wert für <purpose>. -->
+      <contribute>
+	<role>
+	  <source>
+	    <langstring xml:lang="x-none">LOMv1.0</langstring>
+	  </source>
+	  <value>
+	    <langstring xml:lang="x-none">Provider</langstring>
+	  </value>
+	</role>
+	<centity>
+	  <vcard>
+	    BEGIN:VCARD
+	    VERSION:3.0
+	    ORG:PH Freiburg
+	    URL:https://www.wikidata.org/wiki/Q1441203
+	    END:VCARD
+	  </vcard>
+	</centity>
+      </contribute>      
+    </metametadata>
+    <technical>
+      <format>application/pdf</format>
+      <size>873974</size>
+    </technical>
+    <educational>
+      <learningResourceType>
+	<source>
+	  <langstring xml:lang="x-none">Hochschulcampus Content Custom Model</langstring>
+	</source>
+	<value>
+	  <langstring xml:lang="x-none">lesson_plan</langstring>
+	</value>
+      </learningResourceType>
+      <description>
+	<langstring>
+	  Die Studierenden lernen, wie Fragen der aktuellen Forschung in die Lehre integriert werden können.
+	</langstring>
+      </description>
+    </educational>
+    <rights>
+      <copyrightandotherrestrictions>
+	<source>
+	  <langstring xml:lang="x-none">LOMv1.0</langstring>
+	</source>
+	<value>
+	  <langstring xml:lang="x-none">yes</langstring>
+	</value>
+      </copyrightandotherrestrictions>
+      <description>
+	<langstring xml:lang="x-t-cc-url">https://creativecommons.org/licenses/by-sa/4.0/deed.en</langstring>
+      </description>
+    </rights>
+    <classification>
+      <purpose>
+	<source>
+	  <langstring xml:lang="x-none">LOMv1.0</langstring>
+	</source>
+	<value>
+	  <langstring xml:lang="x-none">Discipline</langstring>
+	</value>
+      </purpose>
+      <taxonpath>
+	<source>
+	  <langstring xml:lang="x-none">Hochschulfaecher</langstring>
+	</source>
+	<taxon>
+	  <id>http://w3id.org/class/hochschulfaechersystematik/n3#</id>
+	  <entry>
+	    <langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
+	  </entry>
+	  <taxon>
+	  <id>http://w3id.org/class/hochschulfaechersystematik/n33#</id>
+	    <entry>
+	      <langstring>Erziehungswissenschaften</langstring>
+	    </entry>
+	    <taxon>
+	      <id>http://w3id.org/class/hochschulfaechersystematik/n052#</id>
+	      <entry>
+		<langstring>Erziehungswissenschaft (Pädagogik)</langstring>
+	      </entry>
+	    </taxon>
+	  </taxon>
+	</taxon>
+      </taxonpath>
+      <taxonpath>
+	<source>
+	  <langstring xml:lang="x-none">DDC</langstring>
+	</source>
+	<taxon>
+	  <id>300</id>
+	  <entry>
+	    <langstring>Social sciences</langstring>
+	  </entry>
+	  <taxon>
+	    <id>370</id>
+	    <entry>
+	      <langstring>Education</langstring>
+	    </entry>
+	    <taxon>
+	      <id>378</id>
+	      <entry>
+		<langstring>Higher education</langstring>
+	      </entry>
+	    </taxon>
+	  </taxon>
+	</taxon>
+      </taxonpath>
+    </classification>
+  </lom>
+</metadata>
