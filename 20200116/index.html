@@ -48,15 +48,128 @@
             Für die Offline-Nutzung und den Ausdruck kann man die Dokumentation
             [als PDF herunterladen](hs-oer-lom-doc.pdf).
 
+            Die weitere Entwicklung und Pflege des Standards wird in einem
+            [GitHub-Repositorium](https://github.com/dini-ag-kim/hs-oer-lom-profil/)
+            erfolgen, welches alle notwendigen Informationen enthält.
+
         </section>
 
         <section id="conformance"></section>
 
-        <section id="specification">
+        <section id="generic-elements">
 
-            ## Technische Spezifikation
+            ## Mehrfach vorkommende Elemente
 
-            !!! WIP !!!
+            <section data-dfn-for="langstring">
+
+                ## Das Element <dfn>`<langstring>`</dfn>
+
+                Das Element kommt wiederholt im Schema vor. Es wird für einen
+                Texteintrag benutzt, der in verschiedenen Sprachen vorliegen kann.
+                Das Element `<langstring>` DARF im übergeordneten Element mehrfach
+                enthalten sein, dann MUSS sich der Wert des Attributs `xml:lang`
+                jeweils unterscheiden.
+                
+                Im Rahmen der Hochschulrepositorien deutscher Länder wird diese
+                Möglichkeit vorerst nicht benutzt, sie wird jedoch offengehalten.
+                Solange davon kein Gebrauch gemacht wird, KANN auf das Attribut
+                `xml:lang` auch verzichtet werden.
+                
+                <p class="note">Wird das Element <code>&lt;langstring></code> in den
+                Elementen <code><a>&lt;source></a></code> und
+                <code><a>&lt;value></a></code> benutzt, so MUSS das Attribut
+                `xml:lang` verwendet und auf den Wert `x-none` gesetzt werden!</p>
+
+                <dl>
+                    <dt>Attribute:</dt>
+                    <dd>`xml:lang`</dd>
+                    <dt>Elemente:</dt>
+                    <dd>keine</dd>
+                </dl>
+
+            </section>
+
+            <section data-dfn-for="description">
+
+                ## Das Element <dfn>`<description>`</dfn>
+
+                Das Element beschreibt die Bedeutung oder den Inhalt eines
+                übergeordneten Elements genauer.
+
+                <dl>
+                    <dt>Mehrwertigkeit:</dt>
+                    <dd>Es KANN 0 oder 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+                    <dt>Attribute:</dt>
+                    <dd>keine</dd>
+                    <dt>Elemente:</dt>
+                    <dd><a>&lt;langstring></a></dd>
+                </dl>
+
+            </section>
+
+            <section data-dfn-for="datetime">
+
+                ## Das Element <dfn>`<datetime>`</dfn>
+
+                Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
+                eine Uhrzeit und eine Zeitzone entsprechend [[ISO8601]].
+                
+                Für eine Zusammenfassung siehe z. B. hier:
+                https://www.cl.cam.ac.uk/~mgk25/iso-time.html.
+
+                <dl>
+                    <dt>Mehrwertigkeit:</dt>
+                    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+                </dl>
+
+                <pre class="example">
+                    &lt;datetime>1999-07-26&lt;/datetime>
+                    &lt;datetime>00:42:55&lt;/datetime>
+                    &lt;datetime>1999-07-26T12:15:35&lt;/datetime>
+                    &lt;datetime>1999-07-26T12:15:35+01:00&lt;/datetime>
+                </pre>
+
+            </section>
+
+        </section>
+
+        <section id="metadata-lom">
+
+            ## Metadaten und LOM
+
+            <section data-dfn-for="metadata">
+
+                ## Das Wurzelelement <dfn>`<metadata>`</dfn>
+
+                Das Element bildet die Klammer für die Metadaten zu allen Objekten.
+
+                <p class="note">Evtl. kommen bei OAI-PMH noch weitere umschließende
+                Elemente hinzu, die Anfrage an den OAI-Server betreffend. Das hat
+                aber keinen weiteren Einfluss auf die hier spezifizierten Angaben zu
+                den Metadaten der Lernobjekte.</p>
+
+                <dl>
+                    <dt>Mehrwertigkeit:</dt>
+                    <dd>Es MUSS genau 1 Mal in der XML-Metadatendatei vorkommen.</dd>
+                    <dt>Attribute:</dt>
+                    <dd>
+                        `xmlns` - Es benennt den durch diese XML Schema Description
+                        deklarierten Namespace und SOLL folgenden Wert haben:
+                        `https://www.oerbw.de/hsoerlom`
+
+                        `xmlns:xsi` - Es benennt den Namespace für XSI-Elemente und
+                        MUSS den folgenden Wert haben:
+                        `http://www.w3.org/2001/XMLSchema-instance`
+                        
+                        `xsi:schemaLocation` - Es benennt den Ort, an dem das XML
+                        Schema zu finden ist und MUSS den folgenden Wert haben:
+                        `https://www.oerbw.de/hsoerlom https://w3id.org/dini-ag-kim/hs-oer-lom-profil/20200116/schemas/hs-oer-lom.xsd`
+                    </dd>
+                    <dt>Elemente:</dt>
+                    <dd><a>&lt;lom></a></dd>
+                </dl>
+
+            </section>
 
         </section>
 
@@ -145,12 +258,18 @@
             <dl>
                 <dt><abbr title="Learning Object Metadata">LOM</abbr></dt>
                 <dd>Learning Object Metadata</dd>
+                <dt><abbr title="Open Archives Initiative">OAI</abbr></dt>
+                <dd>Open Archives Initiative</dd>
+                <dt><abbr title="OAI Protocol for Metadata Harvesting">OAI-PMH</abbr></dt>
+                <dd>OAI Protocol for Metadata Harvesting</dd>
                 <dt><abbr title="Open Educational Resource">OER</abbr></dt>
                 <dd>Open Educational Resource</dd>
                 <dt><abbr title="World Wide Web">WWW</abbr></dt>
                 <dd>World Wide Web</dd>
                 <dt><abbr title="Extensible Markup Language">XML</abbr></dt>
                 <dd>Extensible Markup Language</dd>
+                <dt><abbr title="XML Schema Instance">XSI</abbr></dt>
+                <dd>XML Schema Instance</dd>
                 <dt><abbr title="Zentrales OER-Repositorium der Hochschulen In Baden-Württemberg">ZOERR</abbr></dt>
                 <dd><a href="https://www.oerbw.de/">Zentrales OER-Repositorium der Hochschulen In Baden-Württemberg</a></dd>
             </dl>
