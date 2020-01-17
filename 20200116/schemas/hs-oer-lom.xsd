@@ -2,7 +2,7 @@
 <!-- Diese XML Shema Description beschreibt ein auf LOM basierendes Metadatenformat, welches
 beim Austausch von Metadaten zwischen OER Hoschschulrepositorien in Deutschland
 verwendet werden soll. Eine Dokumentation des Schemas findet sich unter
-https://dini-ag-kim.github.io/hs-oer-lom/
+https://dini-ag-kim.github.io/hs-oer-lom-profil/
 Dezember 2019 MM -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://www.oerbw.de/hsoerlom" 
   xmlns="https://www.oerbw.de/hsoerlom">
