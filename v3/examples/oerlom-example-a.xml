@@ -1,200 +1,200 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
-<metadata xmlns="https://www.oerbw.de/hsoerlom"
-	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	  xsi:schemaLocation="https://www.oerbw.de/hsoerlom hs-oer-lom.xsd">
-  <lom>
-    <general>
-      <identifier>c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</identifier>
-      <title>
-	<langstring>Introduction to Difference Equations</langstring>
-      </title>
-      <catalogentry>
-	<catalog>Handle.Net</catalog>
-	<entry>
-	<langstring>http://hdl.handle.net/10900.3/OER_ZZxWvFJV</langstring>
-	</entry>
-      </catalogentry>
-      <language>en</language>
-      <description>
-	<langstring>Vorbereitung auf einen Kurs zur Zeitreihenanalyse</langstring>
-      </description>
-      <keyword>
-	<langstring xml:lang="de">Differenzengleichung</langstring>
-      </keyword>
-      <keyword>
-	<langstring xml:lang="en">Difference Equation</langstring>
-      </keyword>
-    </general>
-    <lifecycle>
-      <version>
-	<!-- Versionen werden intern automatisch verwaltet und zählen auch bei
-	jeder Änderung der Metadaten die Minor Version hoch. Die Major Version
-	bleibt immer bei 1. Es ist zu fragen, inwieweit das hilfreich ist. -->
-	<langstring>1.7</langstring>
-      </version>
-      <contribute>
-	<role>
-	  <source>
-	    <langstring xml:lang="x-none">LOMv1.0</langstring>
-	  </source>
-	  <value>
-	    <langstring xml:lang="x-none">Author</langstring>
-	  </value>
-	</role>
-	<centity>
-	  <vcard>
-	    BEGIN:VCARD
-	    VERSION:3.0
-	    N:Meier;Thomas
-	    FN:Thomas Meier
-	    URL:https://orcid.org/0000-0003-3415-7412
-	    END:VCARD
-	  </vcard>
-	</centity>
-      </contribute>
-    </lifecycle>
-    <metametadata>
-      <contribute>
-	<role>
-	  <source>
-	    <langstring xml:lang="x-none">LOMv1.0</langstring>
-	  </source>
-	  <value>
-	    <langstring xml:lang="x-none">Creator</langstring>
-	  </value>
-	</role>
-	<centity>
-	  <vcard>
-	    BEGIN:VCARD
-	    VERSION:3.0
-	    N:Meier;Thomas
-	    FN:Thomas Meier
-	    URL:https://orcid.org/0000-0003-3415-7412
-	    END:VCARD
-	  </vcard>
-	</centity>
-	<date>
-	  <datetime>2019-02-11</datetime>
-	  <description>
-	    <langstring>Modified</langstring>
-	  </description>
-	</date>
-      </contribute>
-      <!-- Ist das "Herkunft"-Feld hier sinnvoll abgebildet?
-      Die (einzige) Alternative wäre, es in einer <classification> unterzubringen.
-      Allerdings gibt es im Standardvokabular keinen sinnvollen Wert für <purpose>. -->
-      <contribute>
-	<role>
-	  <source>
-	    <langstring xml:lang="x-none">LOMv1.0</langstring>
-	  </source>
-	  <value>
-	    <langstring xml:lang="x-none">Provider</langstring>
-	  </value>
-	</role>
-	<centity>
-	  <vcard>
-	    BEGIN:VCARD
-	    VERSION:3.0
-	    ORG:Universität Tübingen
-	    URL:https://www.wikidata.org/wiki/Q153978
-	    END:VCARD
-	  </vcard>
-	</centity>
-      </contribute>      
-    </metametadata>
-    <technical>
-      <format>video/mp4</format>
-      <size>45061194</size>
-      <location type="URI">ccrep://uni-tuebingen.de/c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</location>
-      <otherplatformrequirements>Es wird ein Videoplayer für MP4 benötigt.</otherplatformrequirements>
-      <duration>
-	<datetime>00:31:33</datetime>
-	<description>
-	  <langstring>Playing time</langstring>
-	</description>
-      </duration>
-    </technical>
-    <educational>
-      <learningResourceType>
-	<source>
-	  <langstring xml:lang="x-none">Hochschulcampus Content Custom Model</langstring>
-	</source>
-	<value>
-	  <langstring xml:lang="x-none">video</langstring>
-	</value>
-      </learningResourceType>
-      <learningResourceType>
-	<source>
-	  <langstring xml:lang="x-none">Hochschulcampus Content Custom Model</langstring>
-	</source>
-	<value>
-	  <langstring xml:lang="x-none">course</langstring>
-	</value>
-      </learningResourceType>
-    </educational>
-    <rights>
-      <copyrightandotherrestrictions>
-	<source>
-	  <langstring xml:lang="x-none">LOMv1.0</langstring>
-	</source>
-	<value>
-	  <langstring xml:lang="x-none">yes</langstring>
-	</value>
-      </copyrightandotherrestrictions>
-      <description>
-	<langstring xml:lang="x-t-cc-url">https://creativecommons.org/publicdomain/zero/1.0/deed.en</langstring>
-      </description>
-    </rights>
-    <classification>
-      <purpose>
-	<source>
-	  <langstring xml:lang="x-none">LOMv1.0</langstring>
-	</source>
-	<value>
-	  <langstring xml:lang="x-none">Discipline</langstring>
-	</value>
-      </purpose>
-      <taxonpath>
-	<source>
-	  <langstring xml:lang="x-none">Hochschulfaecher</langstring>
-	</source>
-	<taxon>
-	  <id>http://w3id.org/class/hochschulfaechersystematik/n4#</id>
-	  <entry>
-	    <langstring>Mathematik, Naturwissenschaften</langstring>
-	  </entry>
-	  <taxon>
-	    <id>http://w3id.org/class/hochschulfaechersystematik/n37#</id>
-	    <entry>
-	      <langstring>Studienbereich Mathematik</langstring>
-	    </entry>
-	    <taxon>
-	      <id>http://w3id.org/class/hochschulfaechersystematik/n276#</id>
-	      <entry>
-		<langstring>Wirtschaftsmathematik</langstring>
-	      </entry>
-	    </taxon>
-	  </taxon>
-	</taxon>
-      </taxonpath>
-      <taxonpath>
-	<source>
-	  <langstring xml:lang="x-none">Hochschulfaecher</langstring>
-	</source>
-	<taxon>
-	  <id>http://w3id.org/class/hochschulfaechersystematik/n3#</id>
-	  <entry>
-	    <langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
-	  </entry>
-	  <taxon>
-	  <id>http://w3id.org/class/hochschulfaechersystematik/n30#</id>
-	    <entry>
-	      <langstring>Wirtschaftswissenschaften</langstring>
-	    </entry>
-	  </taxon>
-	</taxon>
-      </taxonpath>
-    </classification>
-  </lom>
+<metadata xmlns="https://www.oerbw.de/hsoerlom" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://www.oerbw.de/hsoerlom https://dini-ag-kim.github.io/hs-oer-lom/v3/schemas/hs-oer-lom.xsd">
+	<lom>
+		<general>
+			<identifier>c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</identifier>
+			<title>
+				<langstring>Introduction to Difference Equations</langstring>
+			</title>
+			<catalogentry>
+				<catalog>Handle.Net</catalog>
+				<entry>
+					<langstring>http://hdl.handle.net/10900.3/OER_ZZxWvFJV</langstring>
+				</entry>
+			</catalogentry>
+			<language>en</language>
+			<description>
+				<langstring>Vorbereitung auf einen Kurs zur Zeitreihenanalyse</langstring>
+			</description>
+			<keyword>
+				<langstring xml:lang="de">Differenzengleichung</langstring>
+			</keyword>
+			<keyword>
+				<langstring xml:lang="en">Difference Equation</langstring>
+			</keyword>
+		</general>
+		<lifecycle>
+			<version>
+				<!-- Versionen werden intern automatisch verwaltet und zählen auch bei
+				jeder Änderung der Metadaten die Minor Version hoch. Die Major Version
+				bleibt immer bei 1. Es ist zu fragen, inwieweit das hilfreich ist. -->
+				<langstring>1.7</langstring>
+			</version>
+			<contribute>
+				<role>
+					<source>
+						<langstring xml:lang="x-none">LOMv1.0</langstring>
+					</source>
+					<value>
+						<langstring xml:lang="x-none">Author</langstring>
+					</value>
+				</role>
+				<centity>
+					<vcard>
+						BEGIN:VCARD
+						VERSION:3.0
+						N:Meier;Thomas
+						FN:Thomas Meier
+						URL:https://orcid.org/0000-0003-3415-7412
+						END:VCARD
+					</vcard>
+				</centity>
+			</contribute>
+		</lifecycle>
+		<metametadata>
+			<contribute>
+				<role>
+					<source>
+						<langstring xml:lang="x-none">LOMv1.0</langstring>
+					</source>
+					<value>
+						<langstring xml:lang="x-none">Creator</langstring>
+					</value>
+				</role>
+				<centity>
+					<vcard>
+						BEGIN:VCARD
+						VERSION:3.0
+						N:Meier;Thomas
+						FN:Thomas Meier
+						URL:https://orcid.org/0000-0003-3415-7412
+						END:VCARD
+					</vcard>
+				</centity>
+				<date>
+					<datetime>2019-02-11</datetime>
+					<description>
+						<langstring>Modified</langstring>
+					</description>
+				</date>
+			</contribute>
+			<!-- Ist das "Herkunft"-Feld hier sinnvoll abgebildet?
+			Die (einzige) Alternative wäre, es in einer <classification> unterzubringen.
+			Allerdings gibt es im Standardvokabular keinen sinnvollen Wert für <purpose>. -->
+			<contribute>
+				<role>
+					<source>
+						<langstring xml:lang="x-none">LOMv1.0</langstring>
+					</source>
+					<value>
+						<langstring xml:lang="x-none">Provider</langstring>
+					</value>
+				</role>
+				<centity>
+					<vcard>
+						BEGIN:VCARD
+						VERSION:3.0
+						ORG:Universität Tübingen
+						URL:https://www.wikidata.org/wiki/Q153978
+						END:VCARD
+					</vcard>
+				</centity>
+			</contribute>
+		</metametadata>
+		<technical>
+			<format>video/mp4</format>
+			<size>45061194</size>
+			<location type="URI">ccrep://uni-tuebingen.de/c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</location>
+			<otherplatformrequirements>Es wird ein Videoplayer für MP4 benötigt.</otherplatformrequirements>
+			<duration>
+				<datetime>00:31:33</datetime>
+				<description>
+					<langstring>Playing time</langstring>
+				</description>
+			</duration>
+		</technical>
+		<educational>
+			<learningResourceType>
+				<source>
+					<langstring xml:lang="x-none">Hochschulcampus Content Custom Model</langstring>
+				</source>
+				<value>
+					<langstring xml:lang="x-none">video</langstring>
+				</value>
+			</learningResourceType>
+			<learningResourceType>
+				<source>
+					<langstring xml:lang="x-none">Hochschulcampus Content Custom Model</langstring>
+				</source>
+				<value>
+					<langstring xml:lang="x-none">course</langstring>
+				</value>
+			</learningResourceType>
+		</educational>
+		<rights>
+			<copyrightandotherrestrictions>
+				<source>
+					<langstring xml:lang="x-none">LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring xml:lang="x-none">yes</langstring>
+				</value>
+			</copyrightandotherrestrictions>
+			<description>
+				<langstring xml:lang="x-t-cc-url">https://creativecommons.org/publicdomain/zero/1.0/deed.en</langstring>
+			</description>
+		</rights>
+		<classification>
+			<purpose>
+				<source>
+					<langstring xml:lang="x-none">LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring xml:lang="x-none">Discipline</langstring>
+				</value>
+			</purpose>
+			<taxonpath>
+				<source>
+					<langstring xml:lang="x-none">Hochschulfaecher</langstring>
+				</source>
+				<taxon>
+					<id>http://w3id.org/class/hochschulfaechersystematik/n4#</id>
+					<entry>
+						<langstring>Mathematik, Naturwissenschaften</langstring>
+					</entry>
+					<taxon>
+						<id>http://w3id.org/class/hochschulfaechersystematik/n37#</id>
+						<entry>
+							<langstring>Studienbereich Mathematik</langstring>
+						</entry>
+						<taxon>
+							<id>http://w3id.org/class/hochschulfaechersystematik/n276#</id>
+							<entry>
+								<langstring>Wirtschaftsmathematik</langstring>
+							</entry>
+						</taxon>
+					</taxon>
+				</taxon>
+			</taxonpath>
+			<taxonpath>
+				<source>
+					<langstring xml:lang="x-none">Hochschulfaecher</langstring>
+				</source>
+				<taxon>
+					<id>http://w3id.org/class/hochschulfaechersystematik/n3#</id>
+					<entry>
+						<langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
+					</entry>
+					<taxon>
+						<id>http://w3id.org/class/hochschulfaechersystematik/n30#</id>
+						<entry>
+							<langstring>Wirtschaftswissenschaften</langstring>
+						</entry>
+					</taxon>
+				</taxon>
+			</taxonpath>
+		</classification>
+	</lom>
 </metadata>

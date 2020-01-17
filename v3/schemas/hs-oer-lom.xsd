@@ -2,9 +2,10 @@
 <!-- Diese XML Shema Description beschreibt ein auf LOM basierendes Metadatenformat, welches
 beim Austausch von Metadaten zwischen OER Hoschschulrepositorien in Deutschland
 verwendet werden soll. Eine Dokumentation des Schemas findet sich unter
-https://www.oerbw.de/hsoerlom/hs-oer-lom-doc.pdf
+https://dini-ag-kim.github.io/hs-oer-lom/
 Dezember 2019 MM -->
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://www.oerbw.de/hsoerlom" xmlns="https://www.oerbw.de/hsoerlom">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="https://www.oerbw.de/hsoerlom" 
+  xmlns="https://www.oerbw.de/hsoerlom">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
   <xs:simpleType name="LOCISURI">
     <xs:restriction base="xs:string">
@@ -15,7 +16,7 @@ Dezember 2019 MM -->
   <xs:complexType name="ATTRLANGNONE">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -32,7 +33,7 @@ Dezember 2019 MM -->
   <xs:complexType name="LANGSTRINGS">
     <xs:simpleContent>
       <xs:extension base="xs:string">
-	<xs:attribute ref="xml:lang"/>
+        <xs:attribute ref="xml:lang"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -49,7 +50,7 @@ Dezember 2019 MM -->
   <xs:complexType name="AGGREGATLEVELVALUE">
     <xs:simpleContent>
       <xs:extension base="AGGREGATLEVELVALUELIST">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -57,15 +58,14 @@ Dezember 2019 MM -->
     <xs:sequence>
       <xs:element name="source" type="LOM1SOURCE"/>
       <xs:element name="value">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="AGGREGATLEVELVALUE"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="AGGREGATLEVELVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-
   <xs:simpleType name="STATUSVALUELIST">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Draft"/>
@@ -77,7 +77,7 @@ Dezember 2019 MM -->
   <xs:complexType name="STATUSVALUE">
     <xs:simpleContent>
       <xs:extension base="STATUSVALUELIST">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -85,11 +85,11 @@ Dezember 2019 MM -->
     <xs:sequence>
       <xs:element name="source" type="LOM1SOURCE"/>
       <xs:element name="value">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="STATUSVALUE"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="STATUSVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -114,7 +114,7 @@ Dezember 2019 MM -->
   <xs:complexType name="CONTENTCONTRIBUTERROLEVALUE">
     <xs:simpleContent>
       <xs:extension base="CONTENTCONTRIBUTERROLELIST">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -122,11 +122,11 @@ Dezember 2019 MM -->
     <xs:sequence>
       <xs:element name="source" type="LOM1SOURCE"/>
       <xs:element name="value">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="CONTENTCONTRIBUTERROLEVALUE"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="CONTENTCONTRIBUTERROLEVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -140,7 +140,7 @@ Dezember 2019 MM -->
   <xs:complexType name="METACONTRIBUTERROLEVALUE">
     <xs:simpleContent>
       <xs:extension base="METACONTRIBUTORROLELIST">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -148,11 +148,11 @@ Dezember 2019 MM -->
     <xs:sequence>
       <xs:element name="source" type="LOM1SOURCE"/>
       <xs:element name="value">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="METACONTRIBUTERROLEVALUE"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="METACONTRIBUTERROLEVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -168,7 +168,6 @@ Dezember 2019 MM -->
       <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
     </xs:sequence>
   </xs:complexType>
-
   <xs:simpleType name="LRTVALUELIST">
     <xs:restriction base="xs:string">
       <xs:enumeration value="application"/>
@@ -200,7 +199,7 @@ Dezember 2019 MM -->
   <xs:complexType name="LRTVALUE">
     <xs:simpleContent>
       <xs:extension base="LRTVALUELIST">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -208,15 +207,14 @@ Dezember 2019 MM -->
     <xs:sequence>
       <xs:element name="source" type="CCCMSOURCE"/>
       <xs:element name="value">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="LRTVALUE"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="LRTVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  
   <xs:simpleType name="RIGHTSVALUELIST">
     <xs:restriction base="xs:string">
       <xs:enumeration value="yes"/>
@@ -226,7 +224,7 @@ Dezember 2019 MM -->
   <xs:complexType name="RIGHTSVALUE">
     <xs:simpleContent>
       <xs:extension base="RIGHTSVALUELIST">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
@@ -234,24 +232,23 @@ Dezember 2019 MM -->
     <xs:sequence>
       <xs:element name="source" type="LOM1SOURCE"/>
       <xs:element name="value">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="RIGHTSVALUE"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="RIGHTSVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-
   <xs:complexType name="FACHCLASSPURPOSE">
     <xs:sequence>
       <xs:element name="source" type="LOM1SOURCE"/>
       <xs:element name="value">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="ATTRLANGNONE" fixed="Discipline"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="ATTRLANGNONE" fixed="Discipline"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
@@ -276,31 +273,29 @@ Dezember 2019 MM -->
   <xs:complexType name="HSFAECHERVALUE">
     <xs:simpleContent>
       <xs:extension base="HSFAECHERVALUELIST">
-	<xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
       </xs:extension>
     </xs:simpleContent>
   </xs:complexType>
   <xs:complexType name="HSFAECHER">
     <xs:sequence>
       <xs:element name="source">
-	<xs:complexType>
-	  <xs:sequence>
-	    <xs:element name="langstring" type="HSFAECHERVALUE"/>
-	  </xs:sequence>
-	</xs:complexType>
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="HSFAECHERVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
       </xs:element>
       <xs:element name="taxon" type="TAXONS"/>
     </xs:sequence>
   </xs:complexType>
-
   <xs:element name="entry">
     <xs:complexType>
       <xs:sequence>
-	<xs:element name="langstring" type="LANGSTRINGS"/>
+        <xs:element name="langstring" type="LANGSTRINGS"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  
   <xs:element name="metadata">
     <xs:complexType>
       <xs:sequence>
@@ -338,7 +333,7 @@ Dezember 2019 MM -->
   <xs:element name="title">
     <xs:complexType>
       <xs:sequence>
-	<xs:element name="langstring" type="LANGSTRINGS"/>
+        <xs:element name="langstring" type="LANGSTRINGS"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -354,14 +349,14 @@ Dezember 2019 MM -->
   <xs:element name="language">
     <xs:simpleType>
       <xs:restriction base="xs:string">
-	<xs:pattern value="[a-z][a-z]"/>
+        <xs:pattern value="[a-z][a-z]"/>
       </xs:restriction>
     </xs:simpleType>
   </xs:element>
   <xs:element name="keyword">
     <xs:complexType>
       <xs:sequence>
-	<xs:element name="langstring" type="LANGSTRINGS"/>
+        <xs:element name="langstring" type="LANGSTRINGS"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -371,13 +366,13 @@ Dezember 2019 MM -->
         <xs:element minOccurs="0" ref="version"/>
         <xs:element minOccurs="0" name="status" type="STATUSTYPE"/>
         <xs:element maxOccurs="14" name="contribute">
-	  <xs:complexType>
-	    <xs:sequence>
-	      <xs:element name="role" type="CONTENTCONTRIBUTORROLE"/>
-	      <xs:element maxOccurs="unbounded" ref="centity"/>
-	    </xs:sequence>
-	  </xs:complexType>
-	</xs:element>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="role" type="CONTENTCONTRIBUTORROLE"/>
+              <xs:element maxOccurs="unbounded" ref="centity"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -385,14 +380,14 @@ Dezember 2019 MM -->
     <xs:complexType>
       <xs:sequence>
         <xs:element maxOccurs="3" name="contribute">
-	  <xs:complexType>
-	    <xs:sequence>
-	      <xs:element name="role" type="METACONTRIBUTORROLE"/>
-	      <xs:element maxOccurs="unbounded" ref="centity"/>
-	      <xs:element minOccurs="0" name="date" type="DATES"/>
-	    </xs:sequence>
-	  </xs:complexType>
-	</xs:element>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="role" type="METACONTRIBUTORROLE"/>
+              <xs:element maxOccurs="unbounded" ref="centity"/>
+              <xs:element minOccurs="0" name="date" type="DATES"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -415,15 +410,14 @@ Dezember 2019 MM -->
        nicht vorgesehen. Der Empfänger muss den Text entsprechend der Beispiele
        parsen können. -->
   <xs:element name="vcard" type="xs:string"/>
-
   <xs:element name="technical">
     <xs:complexType>
       <xs:sequence>
         <xs:element maxOccurs="10" name="format" type="xs:string"/>
         <xs:element minOccurs="0" name="size" type="xs:positiveInteger"/>
-	<xs:element minOccurs="0" ref="location"/>
-	<xs:element minOccurs="0" name="otherplatformrequirements" type="xs:string"/>
-	<xs:element minOccurs="0" name="duration" type="TIMES"/>
+        <xs:element minOccurs="0" ref="location"/>
+        <xs:element minOccurs="0" name="otherplatformrequirements" type="xs:string"/>
+        <xs:element minOccurs="0" name="duration" type="TIMES"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -436,7 +430,6 @@ Dezember 2019 MM -->
       </xs:simpleContent>
     </xs:complexType>
   </xs:element>
-
   <xs:element name="educational">
     <xs:complexType>
       <xs:sequence>
@@ -445,22 +438,20 @@ Dezember 2019 MM -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
   <xs:element name="rights">
     <xs:complexType>
       <xs:sequence>
-	<xs:element  minOccurs="0" name="copyrightandotherrestrictions" type="RIGHTS"/>
+        <xs:element minOccurs="0" name="copyrightandotherrestrictions" type="RIGHTS"/>
         <xs:element name="description" type="DESCRIPTIONS">
-	</xs:element>
+        </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-
   <xs:element name="classification">
     <xs:complexType>
       <xs:sequence>
-	<xs:element name="purpose" type="FACHCLASSPURPOSE"/>
-	<xs:element maxOccurs="10" name="taxonpath" type="HSFAECHER"/>
+        <xs:element name="purpose" type="FACHCLASSPURPOSE"/>
+        <xs:element maxOccurs="10" name="taxonpath" type="HSFAECHER"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
