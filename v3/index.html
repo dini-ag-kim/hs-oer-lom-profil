@@ -35,14 +35,18 @@
  
             Verschiedene Hochschulrepositorien deutscher Bundesländer haben sich
             zum Ziel gesetzt, ihre frei verfügbaren Materialien vernetzt zugänglich
-            zu machen. Für den Austausch von Metadaten über die Materialien wurde eine
-            [XML Schema Description](https://dini-ag-kim.github.io/hs-oer-lom/v3/schemas/hs-oer-lom.xsd)
-            erstellt. Das Schema basiert auf [[LOM]], wurde aber konsequent reduziert
-            auf die für die Repositorien notwendigen Metadaten. Da solche Schemata
-            schwer zu lesen sind, gibt es diese Dokumentation. Kenntnisse über
-            grundlegende XML–Eigenschaften werden vorausgesetzt und nicht erläutert.
-            Vielfältige Informationen dazu gibt es im WWW oder auch in der Einleitung
-            der vorgenannten [[LOM]]-Spezifikation.
+            zu machen. Für den Austausch von Metadaten über die Materialien wurde
+            eine [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Das
+            Schema basiert auf [[LOM]], wurde aber konsequent reduziert auf die für
+            die Repositorien notwendigen Metadaten. Da solche Schemata schwer zu
+            lesen sind, gibt es diese Dokumentation.
+            
+            Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
+            nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
+            auch in der Einleitung der vorgenannten [[LOM]]-Spezifikation.
+
+            Für die Offline-Nutzung und den Ausdruck kann man die Dokumentation
+            [als PDF herunterladen](hs-oer-lom-doc.pdf).
 
         </section>
 
@@ -86,20 +90,20 @@
             ## XML Schema
 
             Für den Austausch von Metadaten über die Materialien wurde eine
-            [XML Schema Description](https://hs-oer-lom.github.io/v3/schemas/hs-oer-lom.xsd)
-            erstellt. Bitte beachten Sie, dass sie nur vollständig mit dem kleinen
-            begleitenden [Dokument](https://hs-oer-lom.github.io/v3/schemas/xml.xsd)
-            ist, das auch für korrekte Validierungen benötigt wird.
+            [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Bitte
+            beachten Sie, dass sie nur vollständig mit dem kleinen begleitenden
+            [Dokument](schemas/xml.xsd) ist, das auch für korrekte Validierungen
+            benötigt wird.
 
-            Eigene XML–Dokumente können gegen das XML Schema mit gängigen Werkzeugen
-            validiert werden, z. B. mit `xmllint`:
+            Eigene XML–Dokumente können gegen das XML Schema mit gängigen
+            Werkzeugen validiert werden, z. B. mit `xmllint`:
 
             `$ xmllint --noout --schema hs-oer-lom.xsd mein-oer-lom.xml`
 
-            Wenn Sie das Schema in Ihrem eigenen XML-Dokument referenzieren möchten,
-            verwenden Sie bitte die folgende URL:
+            Wenn Sie das Schema in Ihrem eigenen XML-Dokument referenzieren
+            möchten, verwenden Sie bitte die folgende URL:
 
-            `https://hs-oer-lom.github.io/v3/schemas/hs-oer-lom.xsd`
+            `https://dini-ag-kim.github.io/hs-oer-lom/v3/schemas/hs-oer-lom.xsd`
 
             <section id="xml-schema">
 
