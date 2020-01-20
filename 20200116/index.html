@@ -20,6 +20,12 @@
                 href: "https://www.imsglobal.org/metadata/imsmdv1p2p1/imsmd_bindv1p2p1.html",
                 status: "Final Specification 1.2.1",
                 publisher: "IMS Global Learning Consortium, Inc."
+            },
+            "OAI-PMH": {
+                title: "Open Archives Initiative Protocol for Metadata Harvesting",
+                href: "https://www.openarchives.org/OAI/openarchivesprotocol.html",
+                status: "Protocol Version 2.0",
+                publisher: "Open Archives Initiative"
             }
         },
         logos: [],
@@ -38,7 +44,7 @@ Verschiedene Hochschulrepositorien deutscher Bundesländer haben sich
 zum Ziel gesetzt, ihre frei verfügbaren Materialien vernetzt zugänglich
 zu machen. Für den Austausch von Metadaten über die Materialien wurde
 eine [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Das
-Schema basiert auf [[LOM]], wurde aber konsequent reduziert auf die für
+Schema basiert auf [[!LOM]], wurde aber konsequent reduziert auf die für
 die Repositorien notwendigen Metadaten. Da solche Schemata schwer zu
 lesen sind, gibt es diese Dokumentation.
 
@@ -57,79 +63,6 @@ erfolgen, welches alle notwendigen Informationen enthält.
 
 <section id="conformance"></section>
 
-<section id="generic-elements">
-
-## Mehrfach vorkommende Elemente
-
-<section data-dfn-for="langstring">
-
-## Das Element <dfn>`<langstring>`</dfn>
-
-Das Element kommt wiederholt im Schema vor. Es wird für einen
-Texteintrag benutzt, der in verschiedenen Sprachen vorliegen kann.
-Das Element `<langstring>` DARF im übergeordneten Element mehrfach
-enthalten sein, dann MUSS sich der Wert des Attributs `xml:lang`
-jeweils unterscheiden.
-
-Im Rahmen der Hochschulrepositorien deutscher Länder wird diese
-Möglichkeit vorerst nicht benutzt, sie wird jedoch offengehalten.
-Solange davon kein Gebrauch gemacht wird, KANN auf das Attribut
-`xml:lang` auch verzichtet werden.
-
-<p class="note">Wird das Element <code>&lt;langstring></code> in den
-Elementen <code><a>&lt;source></a></code> und
-<code><a>&lt;value></a></code> benutzt, so MUSS das Attribut
-`xml:lang` verwendet und auf den Wert `x-none` gesetzt werden!</p>
-
-<dl>
-    <dt>Attribute:</dt>
-    <dd>`xml:lang`</dd>
-    <dt>Elemente:</dt>
-    <dd>keine</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="description">
-
-## Das Element <dfn>`<description>`</dfn>
-
-Das Element beschreibt die Bedeutung oder den Inhalt eines
-übergeordneten Elements genauer.
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es KANN 0 oder 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd><a>&lt;langstring></a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="datetime">
-
-## Das Element <dfn>`<datetime>`</dfn>
-
-Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
-eine Uhrzeit und eine Zeitzone entsprechend [[ISO8601]].
-
-<p class="note">Für eine Zusammenfassung von [[ISO8601]] siehe z. B.
-<a href="https://www.cl.cam.ac.uk/~mgk25/iso-time.html">hier</a>.
-</p>
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
-</dl>
-
-<pre class="example" data-include="examples/datetime-example.xml" data-include-format="text"></pre>
-
-</section>
-
-</section>
-
 <section id="metadata-lom">
 
 ## Metadaten und LOM
@@ -140,7 +73,7 @@ eine Uhrzeit und eine Zeitzone entsprechend [[ISO8601]].
 
 Das Element bildet die Klammer für die Metadaten zu allen Objekten.
 
-<p class="note">Evtl. kommen bei OAI-PMH noch weitere umschließende
+<p class="note">Evtl. kommen bei [[OAI-PMH]] noch weitere umschließende
 Elemente hinzu, die Anfrage an den OAI-Server betreffend. Das hat
 aber keinen weiteren Einfluss auf die hier spezifizierten Angaben zu
 den Metadaten der Lernobjekte.</p>
@@ -205,7 +138,7 @@ Das Element beschreibt das Lernobjekt allgemein.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau einmal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
     <dt>Elemente:</dt>
@@ -220,9 +153,7 @@ Das Element beschreibt das Lernobjekt allgemein.
     </dd>
 </dl>
 
-<pre class="example" data-include="examples/lom-example.xml" data-include-format="text"></pre>
-
-</section>
+<pre class="example" data-include="examples/general-example.xml" data-include-format="text"></pre>
 
 <section data-dfn-for="identifier">
 
@@ -236,20 +167,173 @@ bestimmende Identifikationsmerkmal für ein Lernobjekt.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau einmal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="title">
+
+## Das Element <dfn>`<title>`</dfn>
+
+Das Element gibt den Namen oder Titel des Lernobjekts an.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="catalogentry">
+
+## Das Element <dfn>`<catalogentry>`</dfn>
+
+Das Element bezeichnet einen Eintrag in einem Katalog, d. h. einem
+Identifizierungssystem, der dem Objekt zugeordnet ist. Durch den Eintrag soll das
+Objekt von dritter Seite gesucht und gefunden werden können.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF nicht oder ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;identifier></a><br>
-        <a>&lt;title></a><br>
-        <a>&lt;catalogentry></a><br>
-        <a>&lt;language></a><br>
-        <a>&lt;description></a><br>
-        <a>&lt;keyword></a><br>
-        <a>&lt;aggregationlevel></a>
+        <a>&lt;catalog></a><br>
+        <a>&lt;entry></a>
     </dd>
 </dl>
+
+<section data-dfn-for="catalog">
+
+## Das Element <dfn>`<catalog>`</dfn>
+
+Das Element benennt den Katalog, d.h. das Identifizierungssystem.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;catalogentry></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="entry">
+
+## Das Element <dfn>`<entry>`</dfn>
+
+Das Element bezeichnet den Eintrag des Objekts (ID) im Katalog, d. h.
+Identifizierungssystem.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;catalogentry></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+</section>
+
+<section data-dfn-for="language">
+
+## Das Element <dfn>`<language>`</dfn>
+
+Das Element benennt die Sprache des Inhalts des Lernobjekts.
+
+Der Wert besteht aus einem zweibuchstabigem Kürzel für die Sprache, z. B. `de`,
+nach [[!ISO-639-1]]. Kompliziertere Varianten mit Subtags, z.B. `en-US`, werden bis
+auf weiteres nicht unterstützt.
+
+</section>
+
+</section>
+
+</section>
+
+<section id="generic-elements">
+
+## Mehrfach vorkommende Elemente
+
+<section data-dfn-for="langstring">
+
+## Das Element <dfn>`<langstring>`</dfn>
+
+Das Element kommt wiederholt im Schema vor. Es wird für einen
+Texteintrag benutzt, der in verschiedenen Sprachen vorliegen kann.
+Das Element `<langstring>` DARF im übergeordneten Element mehrfach
+enthalten sein, dann MUSS sich der Wert des Attributs `xml:lang`
+jeweils unterscheiden.
+
+Im Rahmen der Hochschulrepositorien deutscher Länder wird diese
+Möglichkeit vorerst nicht benutzt, sie wird jedoch offengehalten.
+Solange davon kein Gebrauch gemacht wird, KANN auf das Attribut
+`xml:lang` auch verzichtet werden.
+
+<p class="note">Wird das Element <code>&lt;langstring></code> in den
+Elementen <code><a>&lt;source></a></code> und
+<code><a>&lt;value></a></code> benutzt, so MUSS das Attribut
+`xml:lang` verwendet und auf den Wert `x-none` gesetzt werden!</p>
+
+<dl>
+    <dt>Attribute:</dt>
+    <dd>`xml:lang`</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="description">
+
+## Das Element <dfn>`<description>`</dfn>
+
+Das Element beschreibt die Bedeutung oder den Inhalt eines
+übergeordneten Elements genauer.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es KANN 0 oder 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="datetime">
+
+## Das Element <dfn>`<datetime>`</dfn>
+
+Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
+eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
+
+<p class="note">Für eine Zusammenfassung von [[ISO8601]] siehe z. B.
+<a href="https://www.cl.cam.ac.uk/~mgk25/iso-time.html">hier</a>.
+</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+</dl>
+
+<pre class="example" data-include="examples/datetime-example.xml" data-include-format="text"></pre>
 
 </section>
 
