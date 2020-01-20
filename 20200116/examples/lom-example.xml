@@ -1,0 +1,35 @@
+<lom>
+    <general>
+        <identifier>8dee40f6-0b22-4e5c-9d39-7ebeb7d20b9f</identifier>
+        <title>
+            <langstring>Baustein 5 Classroom Action Research</langstring>
+        </title>
+        <catalogentry>
+            <catalog>Handle.Net</catalog>
+            <entry>
+                <langstring>http://hdl.handle.net/10900.3/OER_qiYOaTBN</langstring>
+            </entry>
+        </catalogentry>
+        <language>de</language>
+        <description>
+            <langstring>
+                Studierende führen im Rahmen von Praxisphasen\
+                Klassenforschungsprojekte durch.
+            </langstring>
+        </description>
+        <keyword>
+            <langstring>Aktionsforschung</langstring>
+        </keyword>
+        <keyword>
+            <langstring>forschungsorientierte Lehre</langstring>
+        </keyword>
+        <aggregationlevel>
+            <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">2</langstring>
+            </value>
+        </aggregationlevel>
+    </general>
+</lom>

@@ -124,12 +124,7 @@ eine Uhrzeit und eine Zeitzone entsprechend [[ISO8601]].
     <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
 </dl>
 
-<pre class="example">
-    &lt;datetime>1999-07-26&lt;/datetime>
-    &lt;datetime>00:42:55&lt;/datetime>
-    &lt;datetime>1999-07-26T12:15:35&lt;/datetime>
-    &lt;datetime>1999-07-26T12:15:35+01:00&lt;/datetime>
-</pre>
+<pre class="example" data-include="examples/datetime-example.xml" data-include-format="text"></pre>
 
 </section>
 
@@ -173,6 +168,91 @@ den Metadaten der Lernobjekte.</p>
 
 </section>
 
+<section data-dfn-for="lom">
+
+## Das Element <dfn>`<lom>`</dfn>
+
+Das Element beinhaltet die Metadaten zu einem Objekt.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+        Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;metadata></a>
+        vorkommen. Jeweils ein `<lom>` Element beschreibt somit ein komplettes
+        Lernobjekt.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;general></a><br>
+        <a>&lt;lifecycle></a><br>
+        <a>&lt;metametadata></a><br>
+        <a>&lt;technical></a><br>
+        <a>&lt;educational></a><br>
+        <a>&lt;rights></a><br>
+        <a>&lt;classification></a>
+    </dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="general">
+
+## Das Element <dfn>`<general>`</dfn>
+
+Das Element beschreibt das Lernobjekt allgemein.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau einmal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;identifier></a><br>
+        <a>&lt;title></a><br>
+        <a>&lt;catalogentry></a><br>
+        <a>&lt;language></a><br>
+        <a>&lt;description></a><br>
+        <a>&lt;keyword></a><br>
+        <a>&lt;aggregationlevel></a>
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/lom-example.xml" data-include-format="text"></pre>
+
+</section>
+
+<section data-dfn-for="identifier">
+
+## Das Element <dfn>`<identifier>`</dfn>
+
+Das Element bezeichnet eine innerhalb des Repositoriums eindeutige Identifizierung.
+Es hat Werte vom Typ `String`, die keiner Einschränkung unterliegen.
+
+Bei Anfragen an den OAI-Server eines Repositoriums ist der Wert dieses Elements das
+bestimmende Identifikationsmerkmal für ein Lernobjekt.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau einmal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;identifier></a><br>
+        <a>&lt;title></a><br>
+        <a>&lt;catalogentry></a><br>
+        <a>&lt;language></a><br>
+        <a>&lt;description></a><br>
+        <a>&lt;keyword></a><br>
+        <a>&lt;aggregationlevel></a>
+    </dd>
+</dl>
+
+</section>
+
 </section>
 
 <section id="examples">
@@ -197,7 +277,7 @@ Das ist ein Beispiel für eine OER aus dem ZOERR, deren Metadaten in
 LOM beschrieben werden. Für Vergleichszwecke die Ansicht der OER im
 ZOERR: http://hdl.handle.net/10900.3/OER_ZZxWvFJV
 
-<pre class="example" data-include="examples/oerlom-example-a.xml" data-include-format="text"></pre>
+<pre class="example" data-include="examples/full-example-a.xml" data-include-format="text"></pre>
 
 </section>
 
@@ -209,7 +289,7 @@ Das ist ein Beispiel für eine OER aus dem ZOERR, deren Metadaten in
 LOM beschrieben werden. Für Vergleichszwecke die Ansicht der OER im
 ZOERR: http://hdl.handle.net/10900.3/OER_qiYOaTBN
 
-<pre class="example" data-include="examples/oerlom-example-b.xml" data-include-format="text"></pre>
+<pre class="example" data-include="examples/full-example-b.xml" data-include-format="text"></pre>
 
 </section>
 
