@@ -18,16 +18,16 @@ möchten, verwenden Sie bitte die folgende URL:
 
 <section id="xml-schema">
 
-    ## XML Schema
+## XML Schema
 
-    <pre data-include="schemas/hs-oer-lom.xsd" data-include-format="text"></pre>
+<pre data-include="schemas/hs-oer-lom.xsd" data-include-format="text"></pre>
 
 </section>
 
 <section id="schema-addition">
 
-    ## Schema-Ergänzung
+## Schema-Ergänzung
 
-    <pre data-include="schemas/xml.xsd" data-include-format="text"></pre>
+<pre data-include="schemas/xml.xsd" data-include-format="text"></pre>
 
 </section>
