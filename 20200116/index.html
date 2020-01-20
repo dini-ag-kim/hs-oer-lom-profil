@@ -43,14 +43,12 @@
 Verschiedene Hochschulrepositorien deutscher Bundesländer haben sich
 zum Ziel gesetzt, ihre frei verfügbaren Materialien vernetzt zugänglich
 zu machen. Für den Austausch von Metadaten über die Materialien wurde
-eine [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Das
-Schema basiert auf [[!LOM]], wurde aber konsequent reduziert auf die für
-die Repositorien notwendigen Metadaten. Da solche Schemata schwer zu
-lesen sind, gibt es diese Dokumentation.
+eine [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Da solche
+Schemata schwer zu lesen sind, gibt es diese Dokumentation.
 
 Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
 nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
-auch in der Einleitung der vorgenannten [[LOM]]-Spezifikation.
+auch in der Einleitung der [[LOM]]-Spezifikation.
 
 Für die Offline-Nutzung und den Ausdruck kann man die Dokumentation
 [als PDF herunterladen](hs-oer-lom-doc.pdf).
@@ -105,7 +103,9 @@ den Metadaten der Lernobjekte.</p>
 
 ## Das Element <dfn>`<lom>`</dfn>
 
-Das Element beinhaltet die Metadaten zu einem Objekt.
+Das Element beinhaltet die Metadaten zu einem Objekt. Das Schema basiert auf
+[[!LOM]], wurde aber konsequent reduziert auf die für die Repositorien notwendigen
+Metadaten. 
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
@@ -260,6 +260,15 @@ Der Wert besteht aus einem zweibuchstabigem Kürzel für die Sprache, z. B. `de`
 nach [[!ISO-639-1]]. Kompliziertere Varianten mit Subtags, z.B. `en-US`, werden bis
 auf weiteres nicht unterstützt.
 
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
 </section>
 
 </section>
@@ -276,9 +285,6 @@ auf weiteres nicht unterstützt.
 
 Das Element kommt wiederholt im Schema vor. Es wird für einen
 Texteintrag benutzt, der in verschiedenen Sprachen vorliegen kann.
-Das Element `<langstring>` DARF im übergeordneten Element mehrfach
-enthalten sein, dann MUSS sich der Wert des Attributs `xml:lang`
-jeweils unterscheiden.
 
 Im Rahmen der Hochschulrepositorien deutscher Länder wird diese
 Möglichkeit vorerst nicht benutzt, sie wird jedoch offengehalten.
@@ -291,6 +297,11 @@ Elementen <code><a>&lt;source></a></code> und
 `xml:lang` verwendet und auf den Wert `x-none` gesetzt werden!</p>
 
 <dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+        Es DARF im übergeordneten Element mehrfach enthalten sein, dann MUSS sich
+        der Wert des Attributs `xml:lang` jeweils unterscheiden.
+    </dd>
     <dt>Attribute:</dt>
     <dd>`xml:lang`</dd>
     <dt>Elemente:</dt>
