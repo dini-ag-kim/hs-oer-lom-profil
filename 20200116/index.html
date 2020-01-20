@@ -29,32 +29,17 @@
         </script>
     </head>
     <body>
-        <section id="abstract">
+        <section id="abstract" data-include="contents/abstract.md">
 
             ## Einleitung
- 
-            Verschiedene Hochschulrepositorien deutscher Bundesländer haben sich
-            zum Ziel gesetzt, ihre frei verfügbaren Materialien vernetzt zugänglich
-            zu machen. Für den Austausch von Metadaten über die Materialien wurde
-            eine [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Das
-            Schema basiert auf [[LOM]], wurde aber konsequent reduziert auf die für
-            die Repositorien notwendigen Metadaten. Da solche Schemata schwer zu
-            lesen sind, gibt es diese Dokumentation.
-            
-            Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
-            nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
-            auch in der Einleitung der vorgenannten [[LOM]]-Spezifikation.
-
-            Für die Offline-Nutzung und den Ausdruck kann man die Dokumentation
-            [als PDF herunterladen](hs-oer-lom-doc.pdf).
-
-            Die weitere Entwicklung und Pflege des Standards wird in einem
-            [GitHub-Repositorium](https://github.com/dini-ag-kim/hs-oer-lom-profil/)
-            erfolgen, welches alle notwendigen Informationen enthält.
 
         </section>
 
-        <section id="conformance"></section>
+        <section id="conformance">
+
+            ## Anforderungen
+
+        </section>
 
         <section id="generic-elements">
 
@@ -114,8 +99,9 @@
                 Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
                 eine Uhrzeit und eine Zeitzone entsprechend [[ISO8601]].
                 
-                Für eine Zusammenfassung siehe z. B. hier:
-                https://www.cl.cam.ac.uk/~mgk25/iso-time.html.
+                <p class="note">Für eine Zusammenfassung von [[ISO8601]] siehe z. B.
+                <a href="https://www.cl.cam.ac.uk/~mgk25/iso-time.html">hier</a>.
+                </p>
 
                 <dl>
                     <dt>Mehrwertigkeit:</dt>
@@ -213,67 +199,17 @@
 
         </section>
 
-        <section id="schemas">
+        <section id="schemas" data-include="contents/schema.md">
 
             ## XML Schema
 
-            Für den Austausch von Metadaten über die Materialien wurde eine
-            [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Bitte
-            beachten Sie, dass sie nur vollständig mit dem kleinen begleitenden
-            [Dokument](schemas/xml.xsd) ist, das auch für korrekte Validierungen
-            benötigt wird.
-
-            Eigene XML–Dokumente können gegen das XML Schema mit gängigen
-            Werkzeugen validiert werden, z. B. mit `xmllint`:
-
-            `$ xmllint --noout --schema hs-oer-lom.xsd mein-oer-lom.xml`
-
-            Wenn Sie das Schema in Ihrem eigenen XML-Dokument referenzieren
-            möchten, verwenden Sie bitte die folgende URL:
-
-            `https://dini-ag-kim.github.io/hs-oer-lom-prpofil/20200116/schemas/hs-oer-lom.xsd`
-
-            <section id="xml-schema">
-
-                ## XML Schema
-
-                <pre data-include="schemas/hs-oer-lom.xsd" data-include-format="text"></pre>
-
-            </section>
-
-            <section id="schema-addition">
-
-                ## Schema-Ergänzung
-
-                <pre data-include="schemas/xml.xsd" data-include-format="text"></pre>
-
-            </section>
-
         </section>
 
-        <section id="glossary" class="appendix">
+        <section id="glossary" data-include="contents/glossary.md" class="appendix">
 
             ## Glossar
 
-            <dl>
-                <dt><abbr title="Learning Object Metadata">LOM</abbr></dt>
-                <dd>Learning Object Metadata</dd>
-                <dt><abbr title="Open Archives Initiative">OAI</abbr></dt>
-                <dd>Open Archives Initiative</dd>
-                <dt><abbr title="OAI Protocol for Metadata Harvesting">OAI-PMH</abbr></dt>
-                <dd>OAI Protocol for Metadata Harvesting</dd>
-                <dt><abbr title="Open Educational Resource">OER</abbr></dt>
-                <dd>Open Educational Resource</dd>
-                <dt><abbr title="World Wide Web">WWW</abbr></dt>
-                <dd>World Wide Web</dd>
-                <dt><abbr title="Extensible Markup Language">XML</abbr></dt>
-                <dd>Extensible Markup Language</dd>
-                <dt><abbr title="XML Schema Instance">XSI</abbr></dt>
-                <dd>XML Schema Instance</dd>
-                <dt><abbr title="Zentrales OER-Repositorium der Hochschulen In Baden-Württemberg">ZOERR</abbr></dt>
-                <dd><a href="https://www.oerbw.de/">Zentrales OER-Repositorium der Hochschulen In Baden-Württemberg</a></dd>
-            </dl>
-            
         </section>
+
     </body>
 </html>
