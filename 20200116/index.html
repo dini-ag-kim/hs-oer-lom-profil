@@ -1,38 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset='utf-8'>
-<title>LOM for Higher Education OER Repositories</title>
-<script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
-<script class='remove'>
-    var respecConfig = {
-        editors: [{
-            name: "Michael Menzel",
-            mailto: "michael.menzel@uni-tuebingen.de",
-            company: "Universitätsbibliothek Tübingen - ZOERR",
-            companyURL: "https://www.oerbw.de/"
-        }],
-        format: "markdown",
-        github: "https://github.com/dini-ag-kim/hs-oer-lom-profil",
-        localBiblio: {
-            "LOM": {
-                title: "IMS Learning Resource Meta-Data XML Binding Specification",
-                href: "https://www.imsglobal.org/metadata/imsmdv1p2p1/imsmd_bindv1p2p1.html",
-                status: "Final Specification 1.2.1",
-                publisher: "IMS Global Learning Consortium, Inc."
+    <meta charset='utf-8'>
+    <title>LOM for Higher Education OER Repositories</title>
+    <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
+    <script class='remove'>
+        var respecConfig = {
+            editors: [{
+                name: "Michael Menzel",
+                mailto: "michael.menzel@uni-tuebingen.de",
+                company: "Universitätsbibliothek Tübingen - ZOERR",
+                companyURL: "https://www.oerbw.de/"
+            }],
+            format: "markdown",
+            github: "https://github.com/dini-ag-kim/hs-oer-lom-profil",
+            localBiblio: {
+                "Crossref": {
+                    title: "Crossref",
+                    href: "https://www.crossref.org/",
+                    publisher: "Publishers International Linking Association, Inc."
+                },
+                "DataCite": {
+                    title: "DataCite",
+                    href: "https://datacite.org/",
+                    publisher: "DataCite –International Data Citation Initiative"
+                },
+                "edu-sharing": {
+                    title: "Open Source Bildungsinfrastruktur",
+                    href: "https://edu-sharing.com/",
+                    publisher: "metaVentis GmbH"
+                },
+                "LOMv1.0": {
+                    title: "IEEE Standard for Learning Object Metadata",
+                    href: "https://ieeexplore.ieee.org/document/1032843/",
+                    status: "1484.12.1-2002",
+                    publisher: "IEEE"
+                },
+                "LOMv1.2": {
+                    title: "IMS Learning Resource Meta-Data XML Binding Specification",
+                    href: "https://www.imsglobal.org/metadata/imsmdv1p2p1/imsmd_bindv1p2p1.html",
+                    status: "Final Specification 1.2.1",
+                    publisher: "IMS Global Learning Consortium, Inc."
+                },
+                "OAI-PMH": {
+                    title: "Open Archives Initiative Protocol for Metadata Harvesting",
+                    href: "https://www.openarchives.org/OAI/openarchivesprotocol.html",
+                    status: "Version 2.0",
+                    publisher: "Open Archives Initiative"
+                },
+                "ORCID": {
+                    title: "ORCID",
+                    href: "https://orcid.org/",
+                    publisher: "ORCID, Inc."
+                },
+                "ROR": {
+                    title: "Research Organization Registry",
+                    href: "https://ror.org/",
+                    publisher: "California Digital Library, Crossref, DataCite, and Digital Science"
+                },
+                "Wikidata": {
+                    title: "Wikidata",
+                    href: "https://www.wikidata.org/",
+                    publisher: "The Wikimedia Foundation, Inc."
+                }
             },
-            "OAI-PMH": {
-                title: "Open Archives Initiative Protocol for Metadata Harvesting",
-                href: "https://www.openarchives.org/OAI/openarchivesprotocol.html",
-                status: "Protocol Version 2.0",
-                publisher: "Open Archives Initiative"
-            }
-        },
-        logos: [],
-        publishDate: "2020-01-16",
-        subtitle: "Beschreibung zur XML Schema Definition des Metadatenprofils für Open Educational Resources im Hochschulbereich"
-    };
-</script>
+            logos: [],
+            publishDate: "2020-01-16",
+            subtitle: "Beschreibung zur XML Schema Definition des Metadatenprofils für Open Educational Resources im Hochschulbereich"
+        };
+    </script>
 </head>
 <body>
 
@@ -48,7 +84,7 @@ Schemata schwer zu lesen sind, gibt es diese Dokumentation.
 
 Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
 nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
-auch in der Einleitung der [[LOM]]-Spezifikation.
+auch in der Einleitung der [[LOMv1.2]]-Spezifikation.
 
 Für die Offline-Nutzung und den Ausdruck kann man die Dokumentation
 [als PDF herunterladen](hs-oer-lom-doc.pdf).
@@ -61,13 +97,13 @@ erfolgen, welches alle notwendigen Informationen enthält.
 
 <section id="conformance"></section>
 
-<section id="metadata-lom">
+<section id="basic-structure">
 
-## Metadaten und LOM
+## Grundstruktur
 
-<section data-dfn-for="metadata">
+    <section data-dfn-for="metadata">
 
-## Das Wurzelelement <dfn>`<metadata>`</dfn>
+## Das Wurzelelement <dfn><code>&lt;metadata></code></dfn>
 
 Das Element bildet die Klammer für die Metadaten zu allen Objekten.
 
@@ -97,22 +133,22 @@ den Metadaten der Lernobjekte.</p>
     <dd><a>&lt;lom></a></dd>
 </dl>
 
-</section>
+    </section>
 
-<section data-dfn-for="lom">
+    <section data-dfn-for="lom">
 
-## Das Element <dfn>`<lom>`</dfn>
+## Das Element <dfn><code>&lt;lom></code></dfn>
 
 Das Element beinhaltet die Metadaten zu einem Objekt. Das Schema basiert auf
-[[!LOM]], wurde aber konsequent reduziert auf die für die Repositorien notwendigen
-Metadaten. 
+[[!LOMv1.2]], wurde aber konsequent reduziert auf die für die Repositorien
+notwendigen Metadaten. 
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
     <dd>
         Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;metadata></a>
-        vorkommen. Jeweils ein `<lom>` Element beschreibt somit ein komplettes
-        Lernobjekt.
+        vorkommen. Jeweils ein <code>&lt;lom></code> Element beschreibt somit ein
+        komplettes Lernobjekt.
     </dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
@@ -128,11 +164,17 @@ Metadaten.
     </dd>
 </dl>
 
+    </section>
+
 </section>
 
-<section data-dfn-for="general">
+<section id="general">
 
-## Das Element <dfn>`<general>`</dfn>
+## Allgemeine Beschreibung
+
+    <section data-dfn-for="general">
+
+## Das Element <dfn><code>&lt;general></code></dfn>
 
 Das Element beschreibt das Lernobjekt allgemein.
 
@@ -155,9 +197,9 @@ Das Element beschreibt das Lernobjekt allgemein.
 
 <pre class="example" data-include="examples/general-example.xml" data-include-format="text"></pre>
 
-<section data-dfn-for="identifier">
+        <section data-dfn-for="identifier">
 
-## Das Element <dfn>`<identifier>`</dfn>
+## Das Element <dfn><code>&lt;identifier></code></dfn>
 
 Das Element bezeichnet eine innerhalb des Repositoriums eindeutige Identifizierung.
 Es hat Werte vom Typ `String`, die keiner Einschränkung unterliegen.
@@ -174,11 +216,11 @@ bestimmende Identifikationsmerkmal für ein Lernobjekt.
     <dd>keine</dd>
 </dl>
 
-</section>
+        </section>
 
-<section data-dfn-for="title">
+        <section data-dfn-for="title">
 
-## Das Element <dfn>`<title>`</dfn>
+## Das Element <dfn><code>&lt;title></code></dfn>
 
 Das Element gibt den Namen oder Titel des Lernobjekts an.
 
@@ -191,11 +233,11 @@ Das Element gibt den Namen oder Titel des Lernobjekts an.
     <dd><a>&lt;langstring></a></dd>
 </dl>
 
-</section>
+        </section>
 
-<section data-dfn-for="catalogentry">
+        <section data-dfn-for="catalogentry">
 
-## Das Element <dfn>`<catalogentry>`</dfn>
+## Das Element <dfn><code>&lt;catalogentry></code></dfn>
 
 Das Element bezeichnet einen Eintrag in einem Katalog, d. h. einem
 Identifizierungssystem, der dem Objekt zugeordnet ist. Durch den Eintrag soll das
@@ -213,9 +255,9 @@ Objekt von dritter Seite gesucht und gefunden werden können.
     </dd>
 </dl>
 
-<section data-dfn-for="catalog">
+            <section data-dfn-for="catalog">
 
-## Das Element <dfn>`<catalog>`</dfn>
+## Das Element <dfn><code>&lt;catalog></code></dfn>
 
 Das Element benennt den Katalog, d.h. das Identifizierungssystem.
 
@@ -228,11 +270,11 @@ Das Element benennt den Katalog, d.h. das Identifizierungssystem.
     <dd>keine</dd>
 </dl>
 
-</section>
+            </section>
 
-<section data-dfn-for="entry">
+            <section data-dfn-for="entry">
 
-## Das Element <dfn>`<entry>`</dfn>
+## Das Element <dfn><code>&lt;entry></code></dfn>
 
 Das Element bezeichnet den Eintrag des Objekts (ID) im Katalog, d. h.
 Identifizierungssystem.
@@ -246,13 +288,13 @@ Identifizierungssystem.
     <dd><a>&lt;langstring></a></dd>
 </dl>
 
-</section>
+            </section>
 
-</section>
+        </section>
 
-<section data-dfn-for="language">
+        <section data-dfn-for="language">
 
-## Das Element <dfn>`<language>`</dfn>
+## Das Element <dfn><code>&lt;language></code></dfn>
 
 Das Element benennt die Sprache des Inhalts des Lernobjekts.
 
@@ -269,9 +311,261 @@ auf weiteres nicht unterstützt.
     <dd>keine</dd>
 </dl>
 
-</section>
+        </section>
+
+        <section data-dfn-for="keyword">
+
+## Das Element <dfn><code>&lt;keyword></code></dfn>
+
+Das Element enthält eine Sammlung von Schlagwörten oder Phrasen, die das Lernobjekt
+beschreiben.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF nicht oder ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+        </section>
+
+        <section data-dfn-for="aggregationlevel">
+
+## Das Element <dfn><code>&lt;aggregationlevel></code></dfn>
+
+Das Element beschreibt die Granularität des Lernobjekts nach [[!LOMv1.0]].
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+        <a>&lt;value></a> - Es benennt die Granularität des Lernobjekts.
+
+        Die von [[!LOMv1.0]] erlaubten Werte sind:
+
+        - `1` - für einzelne, atomare Materialien
+
+        - `2` - für eine Anzahl zusammengehöriger atomarer Materialien, z. B. eine
+        HTML-Seite mit eingefügten Bildern, oder ein Übungsblatt mit Erläuterungen und
+        Lösungen
+
+        - `3` - für eine Sammlung von Lernobjekten des 2. Levels, z. B.  ein Webportal oder
+        ein Lernkurs
+
+        - `4` - höchster Level, z. B. für einen ganzen Satz von Kursen, die zu einem
+        Abschluss führen
+    </dd>
+</dl>
+
+        </section>
+
+    </section>
 
 </section>
+
+<section id="lifecycle">
+
+## Angaben zum Lebenszyklus
+
+    <section data-dfn-for="lifecycle">
+
+## Das Element <dfn><code>&lt;lifecycle></code></dfn>
+
+Das Element beschreibt Eigenschaften zu Historie und aktuellem Status des
+Lernobjekts. Es bezeichnet außerdem die Personen und Organisationen, die an seiner
+Erstellung beteiligt waren.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;version></a><br>
+        <a>&lt;status></a><br>
+        <a>&lt;contribute></a>
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/lifecycle-example.xml" data-include-format="text"></pre>
+
+        <section data-dfn-for="version">
+
+## Das Element <dfn><code>&lt;version></code></dfn>
+
+Das Element bezeichnet die gegenwärtige Version des Lernobjekts.
+
+<p class="note">Im [[edu-sharing]] werden Versionen intern automatisch verwaltet
+und zählen auch bei jeder Änderung der Metadaten die Minor Version hoch. Die Major
+Version bleibt immer bei 1. Es ist zu fragen, inwieweit das nützlich ist.</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lifecycle></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+        </section>
+
+        <section data-dfn-for="status">
+
+## Das Element <dfn><code>&lt;status></code></dfn>
+
+Das Element bezeichnet den Veröffentlichungszustand des Lernobjekts.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lifecycle></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+        <a>&lt;value></a> - Es benennt den konkreten Veröffentlichungszustand.
+
+        Die von [[LOMv1.0]] erlaubten Werte sind:
+
+        - `Draft`
+
+        - `Final` - Das sollte der Normalzustand für veröffentliche Objekte sein.
+
+        - `Revised` - In der Praxis Handhabung wie `Final`.
+
+        - `Unavailable` - Das sollte gesetzt sein, wenn ein Objekt aus rechtlichen
+        oder anderen Gründen zurückgegzogen werden musste.
+    </dd>
+</dl>
+
+        </section>
+
+        <section data-dfn-for="contribute">
+
+## Das Element <dfn><code>&lt;contribute></code></dfn>
+
+Das Element beschreibt die Personen und Organisationen, die an der Erstellung des
+Lernobjekts beteiligt waren. Es muss mindestens ein <code>&lt;contribute></code>
+mit Angabe der Autoren angegeben werden.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+        Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;lifecycle></a> vorkommen.
+        Entsprechend der möglichen Rollen ist die Häufigkeit auf höchstens 14 Mal beschränkt.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;role></a><br>
+        <a>&lt;centity></a>
+    </dd>
+</dl>
+
+            <section data-dfn-for="role">
+
+## Das Element <dfn><code>&lt;role></code></dfn>
+
+Das Element beschreibt die Art der Beteiligung.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;contribute></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+        <a>&lt;value></a> - Es beschreibt die Rolle des Beteiligten.
+
+        Die von [[LOMv1.0]] erlaubten Werte sind:
+
+        - `Author`
+
+        - `Content Provider`
+
+        - `Editor`
+
+        - `Educational Validator`
+
+        - `Graphical Designer`
+
+        - `Initiator`
+
+        - `Instructional Designer`
+
+        - `Publisher`
+
+        - `Unknown`
+
+        - `Script Writer`
+
+        - `Technical Implementer`
+
+        - `Technical Validator`
+
+        - `Terminator`
+
+        - `Validator`
+    </dd>
+</dl>
+
+            </section>
+
+            <section data-dfn-for="centity">
+
+## Das Element <dfn><code>&lt;centity></code></dfn>
+
+Das Element enthält die Informationen über die Beteiligten in der angeführten Rolle,
+bedeutendste Beteiligte zuerst.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;contribute></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;vcard></a></dd>
+</dl>
+
+                <section data-dfn-for="vcard">
+
+## Das Element <dfn><code>&lt;vcard></code></dfn>
+
+Der VCard-Eintrag erfolgt in einfacher Textform und richtet sich nach [[!RFC6350]],
+wie im Beispiel zu sehen. Er beschreibt die Person oder Organisation.
+
+Anzumerken ist die Möglichkeit, die [[ORCID]] der Person als Tag `URL` mit anzugeben,
+die genutzt werden soll, wenn die Information zur Verfügung steht. Für Organisationen
+gilt ein ähnlicher Vorschlag, hier soll als `URL` der Eintrag in [[Wikidata]] dienen,
+also z. B. für die Universität Tübingen `https://www.wikidata.org/wiki/Q153978`.
+Diese URL wird gleichzeitig als ID für die Organisationen verwendet.
+
+Alternativ können auch die IDs der Research Organization Registry [[ROR]] genutzt
+werden. [[ROR]] ist noch sehr neu und Geschäftsmodell und Weg sind noch nicht klar.
+Bei der Abdeckung konnten stichprobenartig keine deutlichen Unterschiede festgestellt
+werden. Es muss aber bedacht werden, dass sich [[ROR]] nur mit
+Forschungsorganisationen - allerdings im weitesten Sinne - befasst. Mehrere
+wissenschaftliche Serviceangebote wollen aber allem Anschein nach zukünftig ROR-IDs
+ebenfalls nutzen, wie [[Crossref]], [[DataCite]] und [[ORCID]]. Das spricht sehr
+stark für eine Unterstützung.
+
+                </section>
+
+            </section>
+
+        </section>
+
+    </section>
 
 </section>
 
@@ -279,9 +573,9 @@ auf weiteres nicht unterstützt.
 
 ## Mehrfach vorkommende Elemente
 
-<section data-dfn-for="langstring">
+    <section data-dfn-for="langstring">
 
-## Das Element <dfn>`<langstring>`</dfn>
+## Das Element <dfn><code>&lt;langstring></code></dfn>
 
 Das Element kommt wiederholt im Schema vor. Es wird für einen
 Texteintrag benutzt, der in verschiedenen Sprachen vorliegen kann.
@@ -292,9 +586,8 @@ Solange davon kein Gebrauch gemacht wird, KANN auf das Attribut
 `xml:lang` auch verzichtet werden.
 
 <p class="note">Wird das Element <code>&lt;langstring></code> in den
-Elementen <code><a>&lt;source></a></code> und
-<code><a>&lt;value></a></code> benutzt, so MUSS das Attribut
-`xml:lang` verwendet und auf den Wert `x-none` gesetzt werden!</p>
+Elementen <a>&lt;source></a> und <a>&lt;value></a> benutzt, so MUSS das
+Attribut `xml:lang` verwendet und auf den Wert `x-none` gesetzt werden!</p>
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
@@ -308,11 +601,11 @@ Elementen <code><a>&lt;source></a></code> und
     <dd>keine</dd>
 </dl>
 
-</section>
+    </section>
 
-<section data-dfn-for="description">
+    <section data-dfn-for="description">
 
-## Das Element <dfn>`<description>`</dfn>
+## Das Element <dfn><code>&lt;description></code></dfn>
 
 Das Element beschreibt die Bedeutung oder den Inhalt eines
 übergeordneten Elements genauer.
@@ -326,11 +619,11 @@ Das Element beschreibt die Bedeutung oder den Inhalt eines
     <dd><a>&lt;langstring></a></dd>
 </dl>
 
-</section>
+    </section>
 
-<section data-dfn-for="datetime">
+    <section data-dfn-for="datetime">
 
-## Das Element <dfn>`<datetime>`</dfn>
+## Das Element <dfn><code>&lt;datetime></code></dfn>
 
 Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
 eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
@@ -342,12 +635,48 @@ eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
 <dl>
     <dt>Mehrwertigkeit:</dt>
     <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
 </dl>
 
 <pre class="example" data-include="examples/datetime-example.xml" data-include-format="text"></pre>
 
-</section>
+    </section>
 
+<section data-dfn-for="source">
+
+## Das Element <dfn><code>&lt;source></code></dfn>
+
+Das Element benennt die Quelle des Vokabulars. Es ist auf `LOMv1.0` zu setzen.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a> mit dem Attribut `xml:lang="x-none"`</dd>
+</dl>
+
+    </section>
+
+    <section data-dfn-for="value">
+
+## Das Element <dfn><code>&lt;value></code></dfn>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a> mit dem Attribut `xml:lang="x-none"`</dd>
+</dl>
+
+    </section>
+        
 </section>
 
 <section id="examples">
@@ -364,7 +693,7 @@ umgekehrt Einträge ergänzt.
 Kommentare zu potentiellen Schwierigkeiten bei einzelnen Feldern
 sind dort eingearbeitet.
 
-<section id="example-1">
+    <section id="example-1">
 
 ## Beispiel 1
 
@@ -374,9 +703,9 @@ ZOERR: http://hdl.handle.net/10900.3/OER_ZZxWvFJV
 
 <pre class="example" data-include="examples/full-example-a.xml" data-include-format="text"></pre>
 
-</section>
+    </section>
 
-<section id="example-2">
+    <section id="example-2">
 
 ## Beispiel 2
 
@@ -386,7 +715,7 @@ ZOERR: http://hdl.handle.net/10900.3/OER_qiYOaTBN
 
 <pre class="example" data-include="examples/full-example-b.xml" data-include-format="text"></pre>
 
-</section>
+    </section>
 
 </section>
 
@@ -410,21 +739,21 @@ möchten, verwenden Sie bitte die folgende URL:
 
 `https://w3id.org/dini-ag-kim/hs-oer-lom-profil/20200116/schemas/hs-oer-lom.xsd`
 
-<section id="xml-schema">
+    <section id="xml-schema">
 
 ## XML Schema
 
 <pre data-include="schemas/hs-oer-lom.xsd" data-include-format="text"></pre>
 
-</section>
+    </section>
 
-<section id="schema-addition">
+    <section id="schema-addition">
 
 ## Schema-Ergänzung
 
 <pre data-include="schemas/xml.xsd" data-include-format="text"></pre>
 
-</section>
+    </section>
 
 </section>
 
