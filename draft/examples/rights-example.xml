@@ -1,0 +1,17 @@
+<lom>
+    <rights>
+        <copyrightandotherrestrictions>
+            <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">yes</langstring>
+            </value>
+        </copyrightandotherrestrictions>
+        <description>
+            <langstring xml:lang="x-t-cc-url">
+                https://creativecommons.org/licenses/by-sa/4.0/deed.en
+            </langstring>
+        </description>
+    </rights>
+</lom>

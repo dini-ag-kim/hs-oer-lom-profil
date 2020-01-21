@@ -1,0 +1,19 @@
+<lom>
+    <educational>
+        <learningResourceType>
+            <source>
+                <langstring xml:lang="x-none">
+                    Hochschulcampus Content Custom Model
+                </langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">video</langstring>
+            </value>
+        </learningResourceType>
+        <description>
+            <langstring>
+                Das Arbeiten mit linearen Vektorabbildungen wird vermittelt.
+            </langstring>
+        </description>
+    </educational>
+</lom>
