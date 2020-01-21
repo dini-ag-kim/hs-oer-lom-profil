@@ -292,7 +292,8 @@ Objekt von dritter Seite gesucht und gefunden werden können.
     <dt>Elemente:</dt>
     <dd>
         <a>&lt;catalog></a><br>
-        <a>&lt;entry></a>
+        <a>&lt;entry></a> - Es bezeichnet den Eintrag des Objekts (ID) im Katalog,
+        d. h. Identifizierungssystem.
     </dd>
 </dl>
 
@@ -309,24 +310,6 @@ Das Element benennt den Katalog, d.h. das Identifizierungssystem.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>keine</dd>
-</dl>
-
-            </section>
-
-            <section data-dfn-for="entry">
-
-## Das Element <dfn><code>&lt;entry></code></dfn>
-
-Das Element bezeichnet den Eintrag des Objekts (ID) im Katalog, d. h.
-Identifizierungssystem.
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;catalogentry></a> vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd><a>&lt;langstring></a></dd>
 </dl>
 
             </section>
@@ -903,9 +886,9 @@ der [*Fächersystematik für Studierende an Hochschulen* des Statistischen Bunde
 Dazu gibt es eine Repräsentation der Fachgebiete und der Hierarchie in [[!SKOS-HS]].
 
 <p class="note">Zusätzlich kann eine Klassifikation nach der *Dewey Decimal Classification*
-[[!DDC]] erfolgen. Es sollten nicht mehr als 3 Hierarchiebenen verwendet werden. Im
+[[?DDC]] erfolgen. Es sollten nicht mehr als 3 Hierarchiebenen verwendet werden. Im
 Folgenden wird bei den einzelnen Unterelementen auf Eigenheiten bei der Verwendung der
-[[!DDC]] hingewiesen.</p>
+[[?DDC]] hingewiesen.</p>
 
 Jeder Beteiligte kann die Anzahl der Ebenen in der Hierarchie verwenden, die er für
 sich für angemessen hält. Im Datenaustausch fehlende Ebenen müssen dann von den
@@ -1011,8 +994,13 @@ damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde Klassifikat
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;id></a><br>
-        <a>&lt;entry></a><br>
+        <a>&lt;id></a>
+
+        <a>&lt;entry></a> - Es benennt die konkrete Klassifikation des Objekts im
+        Rahmen der bezeichneten Taxonomie mittels eines Labels. Da die <a>&lt;id></a>
+        das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
+        beschreibenden Charakter.
+
         <a>&lt;taxon></a>
     </dd>
 </dl>
@@ -1052,27 +1040,6 @@ aufgedeckt werden, also z. B. `Hochschulfaecher` mit einem DDC-Zifferncode.</p>
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>keine</dd>
-</dl>
-
-                </section>
-
-                <section data-dfn-for="entry">
-
-## Das Element <dfn><code>&lt;entry></code></dfn>
-
-Das Element benennt die konkrete Klassifikation des Objekts im Rahmen der bezeichneten
-Taxonomie mittels eines Labels.
-
-Da die <a>&lt;id></a> das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
-beschreibenden Charakter.
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;taxon></a> vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd><a>&lt;langstring></a></dd>
 </dl>
 
                 </section>
@@ -1158,6 +1125,23 @@ eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
 </dl>
 
 <pre class="example" data-include="examples/datetime-example.xml" data-include-format="text"></pre>
+
+    </section>
+
+    <section data-dfn-for="entry">
+
+## Das Element <dfn><code>&lt;entry></code></dfn>
+
+Das Element bezeichnet den konkreten Eintrag in einer Taxonomie oder einem Katalog.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
 
     </section>
 
