@@ -36,7 +36,7 @@ Permalink betrachtet und kommentiert werden:
 
 Zur Kommentierung kann entweder der in die [Entwurfsfassung][draft_version]
 eingebundene Annotationsdienst [hypothes.is](https://web.hypothes.is/) (siehe
-rechte Spalte) oder die Kommentarfunktion von [GitHub][multi-line comments]
+rechte Spalte) oder die [Kommentarfunktion von GitHub][multi-line comments]
 ([Beispiel](https://github.com/dini-ag-kim/hs-oer-lom-profil/blob/master/draft/index.html#L122-L126))
 verwendet werden.
 
