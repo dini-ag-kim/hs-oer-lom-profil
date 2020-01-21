@@ -13,7 +13,6 @@
                 companyURL: "https://www.oerbw.de/"
             }],
             format: "markdown",
-            github: "https://github.com/dini-ag-kim/hs-oer-lom-profil",
             localBiblio: {
                 "CC": {
                     title: "Creative Commons Licenses",
@@ -85,6 +84,28 @@
                 }
             },
             logos: [],
+            otherLinks: [{
+                key: "Links zur Spezifikation",
+                data: [{
+                    value: "Permalink zur aktuellsten Version",
+                    href: "https://w3id.org/dini-ag-kim/hs-oer-lom-profil/latest/"
+                }, {
+                    value: "Permalink zu dieser Version",
+                    href: "https://w3id.org/dini-ag-kim/hs-oer-lom-profil/2020016/"
+                }, {
+                    value: "Letzter Entwurf zur Kommentierung",
+                    href: "https://w3id.org/dini-ag-kim/hs-oer-lom-profil/draft/"
+                }]
+            }, {
+                key: "Mitmachen",
+                data: [{
+                    value: "GitHub-Repository",
+                    href: "https://github.com/dini-ag-kim/hs-oer-lom-profil/"
+                }, {
+                    value: "Änderungshistorie",
+                    href: "https://github.com/dini-ag-kim/hs-oer-lom-profil/commits/master"
+                }]
+            }],
             publishDate: "2020-01-16",
             subtitle: "Beschreibung zur XML Schema Definition des Metadatenprofils für Open Educational Resources im Hochschulbereich"
         };
@@ -104,7 +125,7 @@ Schemata schwer zu lesen sind, gibt es diese Dokumentation.
 
 Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
 nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
-auch in der Einleitung der [[LOMv1.2]]-Spezifikation.
+auch in der Einleitung der [[?LOMv1.2]]-Spezifikation.
 
 Für die Offline-Nutzung und den Ausdruck kann man die Dokumentation
 [als PDF herunterladen](hs-oer-lom-doc.pdf).
@@ -127,7 +148,7 @@ erfolgen, welches alle notwendigen Informationen enthält.
 
 Das Element bildet die Klammer für die Metadaten zu allen Objekten.
 
-<p class="note">Evtl. kommen bei [[OAI-PMH]] noch weitere umschließende
+<p class="note">Evtl. kommen bei [[?OAI-PMH]] noch weitere umschließende
 Elemente hinzu, die Anfrage an den OAI-Server betreffend. Das hat
 aber keinen weiteren Einfluss auf die hier spezifizierten Angaben zu
 den Metadaten der Lernobjekte.</p>
@@ -415,7 +436,7 @@ Erstellung beteiligt waren.
         MUSS mindestens ein <code>&lt;contribute></code> mit Angabe der Autoren
         geben.
 
-        Die erlaubten Angaben aus [[LOMv1.0]] für <a>&lt;role></a> sind:
+        Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
 
         - `Author`
 
@@ -455,7 +476,7 @@ Erstellung beteiligt waren.
 
 Das Element bezeichnet die gegenwärtige Version des Lernobjekts.
 
-<p class="note">Im [[edu-sharing]] werden Versionen intern automatisch verwaltet
+<p class="note">Im [[?edu-sharing]] werden Versionen intern automatisch verwaltet
 und zählen auch bei jeder Änderung der Metadaten die Minor Version hoch. Die Major
 Version bleibt immer bei 1. Es ist zu fragen, inwieweit das nützlich ist.</p>
 
@@ -486,7 +507,7 @@ Das Element bezeichnet den Veröffentlichungszustand des Lernobjekts.
         <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
         <a>&lt;value></a> - Es benennt den konkreten Veröffentlichungszustand.
 
-        Die von [[LOMv1.0]] erlaubten Werte sind:
+        Die von [[!LOMv1.0]] erlaubten Werte sind:
 
         - `Draft`
 
@@ -538,7 +559,7 @@ Metadaten beteiligt waren.
         geeignete Stelle, um das Veröffentlichungsdatum im Repositorium als
         <a>&lt;date></a> anzugeben.
 
-        Die erlaubten Angaben aus [[LOMv1.0]] für <a>&lt;role></a> sind:
+        Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
 
         - `Creator`
 
@@ -823,7 +844,7 @@ Das Element beschreibt die Nutzungsbedingungen und Lizenz des Lernobjekts.
         <a>&lt;rights></a> vorkommen.
 
         Die Angabe kann als Text, RDF, URL oder in anderer Form erfolgen. Bei Creative
-        Commons Lizenzen [[CC]] soll das Attribut `xml:lang` im <a>&lt;langstring></a>
+        Commons Lizenzen [[?CC]] soll das Attribut `xml:lang` im <a>&lt;langstring></a>
         für RDF-Ausdrücke auf `x-t-cc` und für URL auf `x-t-cc-url` gesetzt werden.
         Diese Vorgabe wird im Schema aber nicht forciert.
     </dd>
@@ -848,7 +869,7 @@ Das Element gibt an, ob ein Copyright oder andere Einschränkungen bestehen.
         <a>&lt;value></a> - Es gibt an, ob ein Copyright oder andere Einschränkungen
         bestehen.
 
-        Die von [[LOMv1.0]] erlaubten Werte sind:
+        Die von [[!LOMv1.0]] erlaubten Werte sind:
 
         - `yes`
 
@@ -874,7 +895,7 @@ Das Element beschreibt Eigenschaften des Lernobjekts mittels Klassifizierungen. 
 weiteres ist nur eine Klassifizierung nach Fachgebieten vorgesehen. Diese bezieht sich
 ausdrücklich darauf, für welche Fachgebiete das Lernobjekt geeignet ist.
 
-<p class="note">In [[LOMv1.2]] vorgesehene Elemente für Beschreibungen und Schlagwörter
+<p class="note">In [[?LOMv1.2]] vorgesehene Elemente für Beschreibungen und Schlagwörter
 erscheinen in diesem Kontext nicht notwendig und werden daher weggelassen.</p>
 
 Die Klassifikation erfolgt als eine dreistufige Hierarchie von Fachgebieten entsprechend
@@ -882,9 +903,9 @@ der [*Fächersystematik für Studierende an Hochschulen* des Statistischen Bunde
 Dazu gibt es eine Repräsentation der Fachgebiete und der Hierarchie in [[!SKOS-HS]].
 
 <p class="note">Zusätzlich kann eine Klassifikation nach der *Dewey Decimal Classification*
-[[DDC]] erfolgen. Es sollten nicht mehr als 3 Hierarchiebenen verwendet werden. Im
+[[!DDC]] erfolgen. Es sollten nicht mehr als 3 Hierarchiebenen verwendet werden. Im
 Folgenden wird bei den einzelnen Unterelementen auf Eigenheiten bei der Verwendung der
-[[DDC]] hingewiesen.</p>
+[[!DDC]] hingewiesen.</p>
 
 Jeder Beteiligte kann die Anzahl der Ebenen in der Hierarchie verwenden, die er für
 sich für angemessen hält. Im Datenaustausch fehlende Ebenen müssen dann von den
@@ -922,7 +943,7 @@ Das Element charakterisiert die Art der Klassifizierung.
         <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
         <a>&lt;value></a> - Es benennt die konkrete Art der Klassifizierung.
 
-        Die von [[LOMv1.0]] erlaubten Werte sind:
+        Die von [[!LOMv1.0]] erlaubten Werte sind:
 
         - `Accessibility Restrictions`
 
@@ -1007,15 +1028,15 @@ Taxonomie mittels einer ID, die den Anspruch auf Dauerhaftigkeit erhebt.
 
 Es wird der von der [W3C Permanent Identifier Community Group](https://w3id.org/)
 eingerichtete Service für permanente Identifier im WWW genutzt. Damit bekommt jedes
-Fach eine URL als ID, die in [[SKOS-HS]] nachgeschlagen werden können.
+Fach eine URL als ID, die in [[!SKOS-HS]] nachgeschlagen werden können.
 
 Die ID-Nr. besteht dabei aus einem Kleinbuchstaben und einer oder mehreren Ziffern.
-Die URL löst dabei zu den im [[SKOS-HS]] hinterlegten Eintrag zum Fachgebiet nebst
+Die URL löst dabei zu den im [[!SKOS-HS]] hinterlegten Eintrag zum Fachgebiet nebst
 Beschreibung auf.
 
 **Für DDC:**
 
-Aus der [[DDC]] ergeben sich eindeutige Zahlen. Es ist wie in der DDC Summary
+Aus der [[!DDC]] ergeben sich eindeutige Zahlen. Es ist wie in der DDC Summary
 beschrieben mit 0 auf 3 Ziffern aufzufüllen. 
 
 <p class="note">Die XML Schema Definition kann validieren, dass nur gültige URLs
@@ -1123,8 +1144,8 @@ Das Element beschreibt die Bedeutung oder den Inhalt eines
 Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
 eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
 
-<p class="note">Für eine Zusammenfassung von [[ISO8601]] siehe z. B.
-<a href="https://www.cl.cam.ac.uk/~mgk25/iso-time.html">hier</a>.
+<p class="note">Für eine Zusammenfassung von [[!ISO8601]] siehe z. B.
+[hier](https://www.cl.cam.ac.uk/~mgk25/iso-time.html).
 </p>
 
 <dl>
@@ -1146,7 +1167,7 @@ eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
 
 An mehreren Stellen innerhalb der Beschreibung eines Lernobjekts werden beteiligte
 Personen und Körperschaften benannt. Dies erfolgt in Form von vCard-Einträgen in
-einfacher Textform und richtet sich nach [[RFC6350]]. Zusätzlich wird die jeweilige
+einfacher Textform und richtet sich nach [[!RFC6350]]. Zusätzlich wird die jeweilige
 Rolle der Person oder Körperschaft angegeben.
 
         <section data-dfn-for="contribute">
@@ -1188,7 +1209,7 @@ Das Element beschreibt die Art der Beteiligung.
         <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
         <a>&lt;value></a> - Es beschreibt die Rolle des Beteiligten.
 
-        Die jeweils erlaubten Werte von [[LOMv1.0]] sind jeweils beim übergeordneten
+        Die jeweils erlaubten Werte von [[!LOMv1.0]] sind jeweils beim übergeordneten
         Element angegeben.
     </dd>
 </dl>
@@ -1218,19 +1239,19 @@ bedeutendste Beteiligte zuerst.
 Der vCard-Eintrag erfolgt in einfacher Textform und richtet sich nach [[!RFC6350]],
 wie im Beispiel zu sehen. Er beschreibt die Person oder Organisation.
 
-Anzumerken ist die Möglichkeit, die [[ORCID]] der Person als Tag `URL` mit anzugeben,
+Anzumerken ist die Möglichkeit, die [[?ORCID]] der Person als Tag `URL` mit anzugeben,
 die genutzt werden SOLL, wenn die Information zur Verfügung steht. Für Organisationen
-gilt ein ähnlicher Vorschlag, hier SOLL als `URL` der Eintrag in [[Wikidata]] dienen,
+gilt ein ähnlicher Vorschlag, hier SOLL als `URL` der Eintrag in [[?Wikidata]] dienen,
 also z. B. für die Universität Tübingen `https://www.wikidata.org/wiki/Q153978`.
 Diese URL wird gleichzeitig als ID für die Organisationen verwendet.
 
-Alternativ können auch die IDs der Research Organization Registry [[ROR]] genutzt
-werden. [[ROR]] ist noch sehr neu und Geschäftsmodell und Weg sind noch nicht klar.
+Alternativ können auch die IDs der Research Organization Registry [[?ROR]] genutzt
+werden. [[?ROR]] ist noch sehr neu und Geschäftsmodell und Weg sind noch nicht klar.
 Bei der Abdeckung konnten stichprobenartig keine deutlichen Unterschiede festgestellt
-werden. Es muss aber bedacht werden, dass sich [[ROR]] nur mit
+werden. Es muss aber bedacht werden, dass sich [[?ROR]] nur mit
 Forschungsorganisationen - allerdings im weitesten Sinne - befasst. Mehrere
 wissenschaftliche Serviceangebote wollen aber allem Anschein nach zukünftig ROR-IDs
-ebenfalls nutzen, wie [[Crossref]], [[DataCite]] und [[ORCID]]. Das spricht sehr
+ebenfalls nutzen, wie [[?Crossref]], [[?DataCite]] und [[?ORCID]]. Das spricht sehr
 stark für eine Unterstützung.
 
                 </section>
@@ -1277,8 +1298,7 @@ Repositorium wird nicht angegeben.
 ## Kontrollierte Vokabulare
 
 An mehreren Stellen innerhalb der Beschreibung eines Lernobjekts wird auf
-kontrolliertes Vokabular zurückgegriffen. Als Quelle des kontrollierten Vokabulars
-wird ausschließlich [[!LOMv1.0]] verwendet.
+kontrolliertes Vokabular zurückgegriffen.
 
         <section data-dfn-for="source">
 
