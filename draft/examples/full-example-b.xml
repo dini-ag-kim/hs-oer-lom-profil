@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
 <metadata xmlns="https://www.oerbw.de/hsoerlom" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://www.oerbw.de/hsoerlom https://w3id.org/dini-ag-kim/hs-oer-lom-profil/draft/schemas/hs-oer-lom.xsd">
+	xsi:schemaLocation="https://w3id.org/dini-ag-kim/hs-oer-lom-profil/draft/schemas/hs-oer-lom.xsd">
 	<lom>
 		<general>
 			<identifier>8dee40f6-0b22-4e5c-9d39-7ebeb7d20b9f</identifier>
@@ -38,9 +38,6 @@
 		</general>
 		<lifecycle>
 			<version>
-				<!-- Versionen werden intern automatisch verwaltet und zählen auch bei
-				jeder Änderung der Metadaten die Minor Version hoch. Die Major Version
-				bleibt immer bei 1. Es ist zu fragen, inwieweit das hilfreich ist. -->
 				<langstring>1.6</langstring>
 			</version>
 			<status>
@@ -140,9 +137,6 @@
 					</description>
 				</date>
 			</contribute>
-			<!-- Ist das "Herkunft"-Feld hier sinnvoll abgebildet?
-			Die (einzige) Alternative wäre, es in einer <classification> unterzubringen.
-			Allerdings gibt es im Standardvokabular keinen sinnvollen Wert für <purpose>. -->
 			<contribute>
 				<role>
 					<source>
@@ -192,7 +186,9 @@
 				</value>
 			</copyrightandotherrestrictions>
 			<description>
-				<langstring xml:lang="x-t-cc-url">https://creativecommons.org/licenses/by-sa/4.0/deed.en</langstring>
+				<langstring xml:lang="x-t-cc-url">
+					https://creativecommons.org/licenses/by-sa/4.0
+				</langstring>
 			</description>
 		</rights>
 		<classification>

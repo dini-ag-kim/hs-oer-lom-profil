@@ -6,12 +6,52 @@
     <script src='https://www.w3.org/Tools/respec/respec-w3c' async class='remove'></script>
     <script class='remove'>
         var respecConfig = {
-            editors: [{
+            editors: [
+              {
                 name: "Michael Menzel",
                 mailto: "michael.menzel@uni-tuebingen.de",
                 company: "Universitätsbibliothek Tübingen - ZOERR",
-                companyURL: "https://www.oerbw.de/"
-            }],
+                companyURL: "https://www.ub.uni-tuebingen.de/"
+              },
+              {
+                name: "Adrian Pohl",
+                mailto: "pohl@hbz-nrw.de",
+                company: "Hochschulbibliothekszentrum des Landes NRW",
+                companyURL: "https://www.hbz-nrw.de/"
+              }
+            ],
+            authors: [
+              {
+                name: "Konrad Faber",
+                mailto: "faber@vcrp.de",
+                company: "Virtueller Campus Rheinland-Pfalz",
+                companyURL: "https://www.vcrp.de/"
+              },
+              {
+                name: "Holger Kächelein",
+                mailto: "holger.kaechelein@vhb.org",
+                company: "Virtuelle Hochschule Bayern",
+                companyURL: "https://www.vhb.org/"
+              },
+              {
+                name: "Axel Klinger",
+                mailto: "axel.klinger@tib.eu",
+                company: "Technische Informationsbibliothek Hannover",
+                companyURL: "https://www.tib.eu/"
+              },
+              {
+                name: "Patrick Peters",
+                mailto: "p.peters@mmkh.de",
+                company: "Multimediakontor Hamburg GmbH für die Hamburg Open Online University",
+                companyURL: "https://www.mmkh.de/"
+              },
+              {
+                name: "Peter Rempis",
+                mailto: "peter.rempis@uni-tuebingen.de",
+                company: "Universitätsbibliothek Tübingen",
+                companyURL: "https://www.ub.uni-tuebingen.de/"
+              }
+            ],
             format: "markdown",
             localBiblio: {
                 "CC": {
@@ -173,7 +213,7 @@ den Metadaten der Lernobjekte.</p>
         
         `xsi:schemaLocation` - Es benennt den Ort, an dem das XML
         Schema zu finden ist und MUSS den folgenden Wert haben:
-        `https://www.oerbw.de/hsoerlom https://w3id.org/dini-ag-kim/hs-oer-lom-profil/latest/schemas/hs-oer-lom.xsd`
+        `https://w3id.org/dini-ag-kim/hs-oer-lom-profil/latest/schemas/hs-oer-lom.xsd`
     </dd>
     <dt>Elemente:</dt>
     <dd><a>&lt;lom></a></dd>
@@ -508,7 +548,7 @@ Das Element bezeichnet den Veröffentlichungszustand des Lernobjekts.
         - `Revised` - In der Praxis Handhabung wie `Final`.
 
         - `Unavailable` - Das sollte gesetzt sein, wenn ein Objekt aus rechtlichen
-        oder anderen Gründen zurückgegzogen werden musste.
+        oder anderen Gründen zurückgezogen werden musste.
     </dd>
 </dl>
 
@@ -711,14 +751,14 @@ bestimmten Formaten, wie Videos, Audios oder Animationen sinnvoll.
 
 <section id="educational-data">
 
-## Edukative Angaben
+## Pädagogische Angaben
 
 <section data-dfn-for="educational">
 
 ## Das Element <dfn><code>&lt;educational></code></dfn>
 
 Das Element beschreibt die Eigenschaften des Lernobjekts in Bezug auf die Lernerfahrung.
-Da diese Eigenschaften von den Autoren häufig nur widerstrebend angegeben werden und
+Da diese Eigenschaften von den Autoren selten angegeben werden und
 redaktionell schwierig zu bestimmen sind, beschränkt sich die Spezifikation vorerst
 auf zwei Elemente in diesem Bereich.
 
@@ -891,7 +931,7 @@ Das Element gibt an, ob ein Copyright oder andere Einschränkungen bestehen.
 
 Das Element beschreibt Eigenschaften des Lernobjekts mittels Klassifizierungen. Bis auf
 weiteres ist nur eine Klassifizierung nach Fachgebieten vorgesehen. Diese bezieht sich
-ausdrücklich darauf, für welche Fachgebiete das Lernobjekt geeignet ist.
+ausdrücklich darauf, <i>für welche Fachgebiete das Lernobjekt geeignet ist</i>.
 
 <p class="note">In [[?LOMv1.2]] vorgesehene Elemente für Beschreibungen und Schlagwörter
 erscheinen in diesem Kontext nicht notwendig und werden daher weggelassen.</p>
@@ -1011,13 +1051,11 @@ damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde Klassifikat
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;id></a>
-
+        <a>&lt;id></a><br>
         <a>&lt;entry></a> - Es benennt die konkrete Klassifikation des Objekts im
         Rahmen der bezeichneten Taxonomie mittels eines Labels. Da die <a>&lt;id></a>
         das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
-        beschreibenden Charakter.
-
+        beschreibenden Charakter.<br>
         <a>&lt;taxon></a>
     </dd>
 </dl>
@@ -1027,7 +1065,7 @@ damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde Klassifikat
 ## Das Element <dfn><code>&lt;id></code></dfn>
 
 Das Element benennt die konkrete Klassifikation des Objekts im Rahmen der bezeichneten
-Taxonomie mittels einer ID, die den Anspruch auf Dauerhaftigkeit erhebt.
+Taxonomie mittels einer ID, die den Anspruch auf dauerhafte Gültigigkeit erhebt.
 
 **Für Hochschulfächer:**
 
@@ -1129,7 +1167,7 @@ Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
 eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
 
 <p class="note">Für eine Zusammenfassung von [[!ISO8601]] siehe z. B.
-[hier](https://www.cl.cam.ac.uk/~mgk25/iso-time.html).
+<a href="https://www.cl.cam.ac.uk/~mgk25/iso-time.html">hier</a>.
 </p>
 
 <dl>
@@ -1240,16 +1278,17 @@ bedeutendste Beteiligte zuerst.
 ## Das Element <dfn><code>&lt;vcard></code></dfn>
 
 Der vCard-Eintrag erfolgt in einfacher Textform und richtet sich nach [[!RFC6350]],
-wie im Beispiel zu sehen. Er beschreibt die Person oder Organisation.
+wie in den Beispielen zu sehen. Er beschreibt die Person oder Organisation.
 
 Anzumerken ist die Möglichkeit, die [[?ORCID]] der Person als Tag `URL` mit anzugeben,
-die genutzt werden SOLL, wenn die Information zur Verfügung steht. Für Organisationen
-gilt ein ähnlicher Vorschlag, hier SOLL als `URL` der Eintrag in [[?Wikidata]] dienen,
-also z. B. für die Universität Tübingen `https://www.wikidata.org/wiki/Q153978`.
-Diese URL wird gleichzeitig als ID für die Organisationen verwendet.
+die genutzt werden SOLL, wenn die Information zur Verfügung steht.
 
+Für Organisationen gilt ein ähnlicher Vorschlag, hier SOLL als `URL` der Eintrag
+in [[?Wikidata]] dienen,
+also z. B. für die Universität Tübingen `https://www.wikidata.org/wiki/Q153978`.
+Diese URL wird gleichzeitig als ID für die Organisationen verwendet.<br>
 Alternativ können auch die IDs der Research Organization Registry [[?ROR]] genutzt
-werden. [[?ROR]] ist noch sehr neu und Geschäftsmodell und Weg sind noch nicht klar.
+werden. [[?ROR]] ist noch relativ neu und Geschäftsmodell und Weg sind noch nicht klar.
 Bei der Abdeckung konnten stichprobenartig keine deutlichen Unterschiede festgestellt
 werden. Es muss aber bedacht werden, dass sich [[?ROR]] nur mit
 Forschungsorganisationen - allerdings im weitesten Sinne - befasst. Mehrere
@@ -1352,13 +1391,6 @@ kontrollierten Vokabular.
 Zur Illustration sind zwei Beispiele für Metadatenbeschreibungen von
 Lernobjekten in XML hier zu finden.
 
-An wenigen Stellen wurden sich strukturell wiederholende Einträge
-weggelassen, wenn sie keinen Mehrwert zum Verständnis bringen,
-umgekehrt Einträge ergänzt.
-
-Kommentare zu potentiellen Schwierigkeiten bei einzelnen Feldern
-sind dort eingearbeitet.
-
 <section id="example-1">
 
 ## Beispiel 1
@@ -1377,7 +1409,7 @@ ZOERR: http://hdl.handle.net/10900.3/OER_ZZxWvFJV
 
 ## Beispiel 2
 
-Das ist ein Beispiel für eine OER aus dem ZOERR, deren Metadaten in
+Das ist ein weiteres Beispiel für eine OER aus dem ZOERR, deren Metadaten in
 LOM beschrieben werden. Für Vergleichszwecke die Ansicht der OER im
 ZOERR: http://hdl.handle.net/10900.3/OER_qiYOaTBN
 
