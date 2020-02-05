@@ -27,9 +27,6 @@
 		</general>
 		<lifecycle>
 			<version>
-				<!-- Versionen werden intern automatisch verwaltet und zählen auch bei
-				jeder Änderung der Metadaten die Minor Version hoch. Die Major Version
-				bleibt immer bei 1. Es ist zu fragen, inwieweit das hilfreich ist. -->
 				<langstring>1.7</langstring>
 			</version>
 			<contribute>
@@ -80,9 +77,6 @@
 					</description>
 				</date>
 			</contribute>
-			<!-- Ist das "Herkunft"-Feld hier sinnvoll abgebildet?
-			Die (einzige) Alternative wäre, es in einer <classification> unterzubringen.
-			Allerdings gibt es im Standardvokabular keinen sinnvollen Wert für <purpose>. -->
 			<contribute>
 				<role>
 					<source>
@@ -118,7 +112,9 @@
 		<educational>
 			<learningResourceType>
 				<source>
-					<langstring xml:lang="x-none">Hochschulcampus Content Custom Model</langstring>
+					<langstring xml:lang="x-none">
+						Hochschulcampus Content Custom Model
+					</langstring>
 				</source>
 				<value>
 					<langstring xml:lang="x-none">video</langstring>
@@ -126,7 +122,9 @@
 			</learningResourceType>
 			<learningResourceType>
 				<source>
-					<langstring xml:lang="x-none">Hochschulcampus Content Custom Model</langstring>
+					<langstring xml:lang="x-none">
+						Hochschulcampus Content Custom Model
+					</langstring>
 				</source>
 				<value>
 					<langstring xml:lang="x-none">course</langstring>
@@ -139,11 +137,13 @@
 					<langstring xml:lang="x-none">LOMv1.0</langstring>
 				</source>
 				<value>
-					<langstring xml:lang="x-none">yes</langstring>
+					<langstring xml:lang="x-none">no</langstring>
 				</value>
 			</copyrightandotherrestrictions>
 			<description>
-				<langstring xml:lang="x-t-cc-url">https://creativecommons.org/publicdomain/zero/1.0/deed.en</langstring>
+				<langstring xml:lang="x-t-cc-url">
+					https://creativecommons.org/publicdomain/zero/1.0/legalcode
+				</langstring>
 			</description>
 		</rights>
 		<classification>

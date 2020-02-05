@@ -38,9 +38,6 @@
 		</general>
 		<lifecycle>
 			<version>
-				<!-- Versionen werden intern automatisch verwaltet und zählen auch bei
-				jeder Änderung der Metadaten die Minor Version hoch. Die Major Version
-				bleibt immer bei 1. Es ist zu fragen, inwieweit das hilfreich ist. -->
 				<langstring>1.6</langstring>
 			</version>
 			<status>
@@ -140,9 +137,6 @@
 					</description>
 				</date>
 			</contribute>
-			<!-- Ist das "Herkunft"-Feld hier sinnvoll abgebildet?
-			Die (einzige) Alternative wäre, es in einer <classification> unterzubringen.
-			Allerdings gibt es im Standardvokabular keinen sinnvollen Wert für <purpose>. -->
 			<contribute>
 				<role>
 					<source>
@@ -192,7 +186,9 @@
 				</value>
 			</copyrightandotherrestrictions>
 			<description>
-				<langstring xml:lang="x-t-cc-url">https://creativecommons.org/licenses/by-sa/4.0/deed.en</langstring>
+				<langstring xml:lang="x-t-cc-url">
+					https://creativecommons.org/licenses/by-sa/4.0
+				</langstring>
 			</description>
 		</rights>
 		<classification>
