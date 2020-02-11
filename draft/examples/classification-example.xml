@@ -10,7 +10,7 @@
         </purpose>
         <taxonpath>
             <source>
-                <langstring xml:lang="x-none">Hochschulfaecher</langstring>
+                <langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme#</langstring>
             </source>
             <taxon>
                 <id>http://w3id.org/class/hochschulfaechersystematik/n4#</id>
@@ -33,7 +33,7 @@
         </taxonpath>
         <taxonpath>
             <source>
-                <langstring xml:lang="x-none">Hochschulfaecher</langstring>
+                <langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme#</langstring>
             </source>
             <taxon>
                 <id>http://w3id.org/class/hochschulfaechersystematik/n3#</id>

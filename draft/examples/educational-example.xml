@@ -2,13 +2,12 @@
     <educational>
         <learningResourceType>
             <source>
-                <langstring xml:lang="x-none">
-                    Hochschulcampus Content Custom Model
-                </langstring>
-            </source>
-            <value>
-                <langstring xml:lang="x-none">video</langstring>
-            </value>
+                <langstring xml:lang="x-none">https://w3id.org/dini-ag-kim/hcrt/scheme</langstring>
+	    </source>
+	    <id>https://w3id.org/dini-ag-kim/hcrt/video</id>
+            <entry>
+                <langstring xml:lang="de">Video</langstring>
+            </entry>
         </learningResourceType>
         <description>
             <langstring>

@@ -112,23 +112,21 @@
 		<educational>
 			<learningResourceType>
 				<source>
-					<langstring xml:lang="x-none">
-						Hochschulcampus Content Custom Model
-					</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/dini-ag-kim/hcrt/scheme</langstring>
 				</source>
-				<value>
-					<langstring xml:lang="x-none">video</langstring>
-				</value>
+				<id>https://w3id.org/dini-ag-kim/hcrt/video</id>
+				<entry>
+					<langstring xml:lang="de">Video</langstring>
+				</entry>
 			</learningResourceType>
 			<learningResourceType>
 				<source>
-					<langstring xml:lang="x-none">
-						Hochschulcampus Content Custom Model
-					</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/dini-ag-kim/hcrt/scheme</langstring>
 				</source>
-				<value>
-					<langstring xml:lang="x-none">course</langstring>
-				</value>
+				<id>https://w3id.org/dini-ag-kim/hcrt/course</id>
+				<entry>
+					<langstring xml:lang="de">Lernkurs</langstring>
+				</entry>
 			</learningResourceType>
 		</educational>
 		<rights>
@@ -157,7 +155,7 @@
 			</purpose>
 			<taxonpath>
 				<source>
-					<langstring xml:lang="x-none">Hochschulfaecher</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme#</langstring>
 				</source>
 				<taxon>
 					<id>http://w3id.org/class/hochschulfaechersystematik/n4#</id>
@@ -180,7 +178,7 @@
 			</taxonpath>
 			<taxonpath>
 				<source>
-					<langstring xml:lang="x-none">Hochschulfaecher</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme#</langstring>
 				</source>
 				<taxon>
 					<id>http://w3id.org/class/hochschulfaechersystematik/n3#</id>
