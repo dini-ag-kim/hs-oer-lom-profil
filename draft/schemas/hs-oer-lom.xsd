@@ -44,6 +44,13 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
       <xs:element name="langstring" type="LANGSTRINGS"/>
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="CATALOGS">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DOI"/>
+      <xs:enumeration value="HDL"/>
+      <xs:enumeration value="URN"/>
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="AGGREGATLEVELVALUELIST">
     <xs:restriction base="xs:positiveInteger">
       <xs:maxInclusive value="4"/>
@@ -258,7 +265,6 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
     <xs:sequence>
       <xs:element name="id" type="IDS"/>
       <xs:element ref="entry"/>
-      <xs:element minOccurs="0" name="taxon" type="TAXONS"/>
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="IDS">
@@ -288,7 +294,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
           </xs:sequence>
         </xs:complexType>
       </xs:element>
-      <xs:element name="taxon" type="TAXONS"/>
+      <xs:element maxOccurs="unbounded" name="taxon" type="TAXONS"/>
     </xs:sequence>
   </xs:complexType>
   <xs:element name="entry">
@@ -347,7 +353,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="catalog" type="xs:NCName"/>
+  <xs:element name="catalog" type="CATALOGS"/>
   <xs:element name="language">
     <xs:simpleType>
       <xs:restriction base="xs:string">
@@ -415,7 +421,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   <xs:element name="technical">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="10" name="format" type="xs:string"/>
+        <xs:element maxOccurs="unbounded" name="format" type="xs:string"/>
         <xs:element minOccurs="0" name="size" type="xs:positiveInteger"/>
         <xs:element minOccurs="0" ref="location"/>
         <xs:element minOccurs="0" name="otherplatformrequirements" type="xs:string"/>
@@ -435,7 +441,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   <xs:element name="educational">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="10" name="learningResourceType" type="LRT"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="learningResourceType" type="LRT"/>
         <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
       </xs:sequence>
     </xs:complexType>
@@ -453,7 +459,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
     <xs:complexType>
       <xs:sequence>
         <xs:element name="purpose" type="FACHCLASSPURPOSE"/>
-        <xs:element maxOccurs="10" name="taxonpath" type="HSFAECHER"/>
+        <xs:element maxOccurs="unbounded" name="taxonpath" type="HSFAECHER"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
