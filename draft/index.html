@@ -79,9 +79,9 @@
                     href: "https://edu-sharing.com/",
                     publisher: "metaVentis GmbH"
                 },
-                "GND-ID": {
-                    title: "Gemeinsame Normdaten der Deutschen Nationalbibliothek - Personen",
-                    href: "https://???",
+                "GND": {
+                    title: "Gemeinsame Normdatei (GND)",
+                    href: "https://www.dnb.de/gnd",
                     publisher: "Deutsche Nationalbibliothek"
                 },
                 "LOMv1.0": {
@@ -1235,13 +1235,16 @@ bedeutendste Beteiligte zuerst.
 Der vCard-Eintrag erfolgt in einfacher Textform und richtet sich nach [[!RFC6350]],
 wie in den Beispielen zu sehen. Er beschreibt die Person oder Organisation.
 
-Anzumerken ist die Möglichkeit, die [[?ORCID]] oder die [[?GND-ID]] der Person
+Anzumerken ist die Möglichkeit, die [[?ORCID]] oder die [[?GND]] -ID der Person
 als Tag `URL` mit anzugeben, die genutzt werden SOLL, wenn die Information zur Verfügung steht.
+Der entsprechende Identifier MUSS bei Angabe als HTTP-URI angegeben werden, z.B.
+`https://orcid.org/0000-0001-9083-7442` oder `https://d-nb.info/gnd/14326723X`.
 
-Für Organisationen gilt ein ähnlicher Vorschlag, hier SOLL als `URL` der Eintrag
-in [[?Wikidata]] dienen,
-also z. B. für die Universität Tübingen `https://www.wikidata.org/wiki/Q153978`.
-Diese URL wird gleichzeitig als ID für die Organisationen verwendet.<br>
+Für Organisationen gilt ein ähnlicher Vorschlag, hier SOLL als `URL` der URI des
+entsprechenden [[?Wikidata]]-Items genannt werden oder die [[?GND]]-URI,
+also z. B. für die Universität Tübingen `http://www.wikidata.org/entity/Q153978`
+oder `https://d-nb.info/gnd/36187-2`.
+<br>
 Alternativ können auch die IDs der Research Organization Registry [[?ROR]] genutzt
 werden. [[?ROR]] ist noch relativ neu und Geschäftsmodell und Weg sind noch nicht klar.
 Bei der Abdeckung konnten stichprobenartig keine deutlichen Unterschiede festgestellt
