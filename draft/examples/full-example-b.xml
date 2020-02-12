@@ -205,20 +205,20 @@
 			</purpose>
 			<taxonpath>
 				<source>
-					<langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme#</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme</langstring>
 				</source>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n3#</id>
+					<id>http://w3id.org/class/hochschulfaechersystematik/n3</id>
 					<entry>
 						<langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
 					</entry>
 					<taxon>
-						<id>http://w3id.org/class/hochschulfaechersystematik/n33#</id>
+						<id>http://w3id.org/class/hochschulfaechersystematik/n33</id>
 						<entry>
 							<langstring>Erziehungswissenschaften</langstring>
 						</entry>
 						<taxon>
-							<id>http://w3id.org/class/hochschulfaechersystematik/n052#</id>
+							<id>http://w3id.org/class/hochschulfaechersystematik/n052</id>
 							<entry>
 								<langstring>Erziehungswissenschaft (Pädagogik)</langstring>
 							</entry>

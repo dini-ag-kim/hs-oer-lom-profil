@@ -233,7 +233,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   </xs:simpleType>
   <xs:simpleType name="HSFAECHERVALUELIST">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="https://w3id.org/class/hochschulfaechersystematik/scheme#"/>
+      <xs:enumeration value="https://w3id.org/class/hochschulfaechersystematik/scheme"/>
       <xs:enumeration value="DDC"/>
     </xs:restriction>
   </xs:simpleType>
