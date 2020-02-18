@@ -2,9 +2,9 @@
     <educational>
         <learningResourceType>
             <source>
-                <langstring xml:lang="x-none">https://w3id.org/dini-ag-kim/hcrt/scheme</langstring>
+                <langstring xml:lang="x-none">https://w3id.org/kim/hcrt/scheme</langstring>
 	    </source>
-	    <id>https://w3id.org/dini-ag-kim/hcrt/video</id>
+	    <id>https://w3id.org/kim/hcrt/video</id>
             <entry>
                 <langstring xml:lang="de">Video</langstring>
             </entry>

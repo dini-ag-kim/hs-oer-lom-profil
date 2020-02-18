@@ -8,7 +8,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   targetNamespace="https://www.oerbw.de/hsoerlom" 
   xmlns="https://www.oerbw.de/hsoerlom">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-    schemaLocation="https://w3id.org/dini-ag-kim/hs-oer-lom-profil/draft/schemas/xml.xsd"/>
+    schemaLocation="xml.xsd"/>
   <xs:simpleType name="LOCISURI">
     <xs:restriction base="xs:string">
       <xs:enumeration value="URI"/>
@@ -29,7 +29,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   </xs:complexType>
   <xs:complexType name="CCCMSOURCE">
     <xs:sequence>
-      <xs:element name="langstring" type="ATTRLANGNONE" fixed="https://w3id.org/dini-ag-kim/hcrt/scheme"/>
+      <xs:element name="langstring" type="ATTRLANGNONE" fixed="https://w3id.org/kim/hcrt/scheme"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="LANGSTRINGS">
@@ -179,7 +179,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   </xs:complexType>
   <xs:simpleType name="LRTIDS">
     <xs:restriction base="xs:string">
-      <xs:pattern value="https://w3id.org/dini-ag-kim/hcrt/([A-Za-z0-9_-])+"/>
+      <xs:pattern value="https://w3id.org/kim/hcrt/([A-Za-z0-9_-])+"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="RIGHTSVALUELIST">
@@ -228,12 +228,12 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   </xs:complexType>
   <xs:simpleType name="IDS">
     <xs:restriction base="xs:string">
-      <xs:pattern value="http://w3id.org/class/hochschulfaechersystematik/[a-z]([0-9])+#|[0-9][0-9][0-9]"/>
+      <xs:pattern value="http://w3id.org/kim/hochschulfaechersystematik/[a-z]([0-9])+|[0-9][0-9][0-9]"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="HSFAECHERVALUELIST">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="https://w3id.org/class/hochschulfaechersystematik/scheme"/>
+      <xs:enumeration value="https://w3id.org/kim/hochschulfaechersystematik/scheme"/>
       <xs:enumeration value="DDC"/>
     </xs:restriction>
   </xs:simpleType>

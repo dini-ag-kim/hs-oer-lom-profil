@@ -42,8 +42,8 @@
 					<vcard>
 						BEGIN:VCARD
 						VERSION:3.0
-						N:Meier;Thomas
-						FN:Thomas Meier
+						N:Dimpfl;Thomas
+						FN:Thomas Dimpfl
 						URL:https://orcid.org/0000-0003-3415-7412
 						END:VCARD
 					</vcard>
@@ -64,8 +64,8 @@
 					<vcard>
 						BEGIN:VCARD
 						VERSION:3.0
-						N:Meier;Thomas
-						FN:Thomas Meier
+						N:Dimpfl;Thomas
+						FN:Thomas Dimpfl
 						URL:https://orcid.org/0000-0003-3415-7412
 						END:VCARD
 					</vcard>
@@ -112,18 +112,18 @@
 		<educational>
 			<learningResourceType>
 				<source>
-					<langstring xml:lang="x-none">https://w3id.org/dini-ag-kim/hcrt/scheme</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hcrt/scheme</langstring>
 				</source>
-				<id>https://w3id.org/dini-ag-kim/hcrt/video</id>
+				<id>https://w3id.org/kim/hcrt/video</id>
 				<entry>
 					<langstring xml:lang="de">Video</langstring>
 				</entry>
 			</learningResourceType>
 			<learningResourceType>
 				<source>
-					<langstring xml:lang="x-none">https://w3id.org/dini-ag-kim/hcrt/scheme</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hcrt/scheme</langstring>
 				</source>
-				<id>https://w3id.org/dini-ag-kim/hcrt/course</id>
+				<id>https://w3id.org/kim/hcrt/course</id>
 				<entry>
 					<langstring xml:lang="de">Lernkurs</langstring>
 				</entry>
@@ -155,20 +155,20 @@
 			</purpose>
 			<taxonpath>
 				<source>
-					<langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hochschulfaechersystematik/scheme</langstring>
 				</source>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n4</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n4</id>
 					<entry>
 						<langstring>Mathematik, Naturwissenschaften</langstring>
 					</entry>
 					<taxon>
-						<id>http://w3id.org/class/hochschulfaechersystematik/n37</id>
+						<id>http://w3id.org/kim/hochschulfaechersystematik/n37</id>
 						<entry>
 							<langstring>Studienbereich Mathematik</langstring>
 						</entry>
 						<taxon>
-							<id>http://w3id.org/class/hochschulfaechersystematik/n276</id>
+							<id>http://w3id.org/kim/hochschulfaechersystematik/n276</id>
 							<entry>
 								<langstring>Wirtschaftsmathematik</langstring>
 							</entry>
@@ -178,15 +178,15 @@
 			</taxonpath>
 			<taxonpath>
 				<source>
-					<langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hochschulfaechersystematik/scheme</langstring>
 				</source>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n3</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n3</id>
 					<entry>
 						<langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
 					</entry>
 					<taxon>
-						<id>http://w3id.org/class/hochschulfaechersystematik/n30</id>
+						<id>http://w3id.org/kim/hochschulfaechersystematik/n30</id>
 						<entry>
 							<langstring>Wirtschaftswissenschaften</langstring>
 						</entry>

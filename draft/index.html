@@ -114,12 +114,12 @@
                 },
                 "SKOS-HS": {
                     title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
-                    href: "https://w3id.org/class/hochschulfaechersystematik/scheme",
+                    href: "https://w3id.org/kim/hochschulfaechersystematik/scheme",
                     publisher: "Statistisches Bundesamt der Bundesrepublik Deutschland"
                 },
                 "SKOS-LRT": {
                     title: "Hochschulcampus Ressourcentypen",
-                    href: "https://w3id.org/dini-ag-kim/hcrt/scheme",
+                    href: "https://w3id.org/kim/hcrt/scheme",
                     publisher: "OER-Repo AG der Länder"
                 },
                 "Wikidata": {
@@ -174,9 +174,9 @@ Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
 nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
 auch in der [[?LOMv1.2]]-Spezifikation.
 
-Die weitere Entwicklung und Pflege des Standards wird in einem
-[GitHub-Repositorium](https://github.com/dini-ag-kim/hs-oer-lom-profil/)
-erfolgen, welches alle notwendigen Informationen enthält.
+Die weitere Entwicklung und Pflege des Standards erfolgt in einem
+[GitHub-Repositorium](https://github.com/dini-ag-kim/hs-oer-lom-profil/),
+welches alle notwendigen Informationen enthält.
 
 <p class="copyright">
 <img alt="CC-BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
@@ -799,7 +799,7 @@ Das Element benennt die Art des Lernobjekts.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> mit dem Wert `https://w3id.org/dini-ag-kim/hcrt/scheme`<br>
+        <a>&lt;source></a> mit dem Wert `https://w3id.org/kim/hcrt/scheme`<br>
         <a>&lt;id></a><br>
         <a>&lt;entry></a> - Es benennt die konkrete Art des Objekts
         mittels eines Labels. Da die <a>&lt;id></a>
@@ -968,7 +968,7 @@ Das Element beschreibt den Pfad der Taxonomie in der konkreten Klassifizierung.
     <dt>Elemente:</dt>
     <dd>
         <a>&lt;source></a> - Je nach verwendeter Klassifizierung wird es auf den
-        Wert `https://w3id.org/class/hochschulfaechersystematik/scheme` oder `DDC` gesetzt.
+        Wert `https://w3id.org/kim/hochschulfaechersystematik/scheme` oder `DDC` gesetzt.
 
         <a>&lt;taxon></a>
     </dd>
@@ -1298,8 +1298,8 @@ kontrolliertes Vokabular zurückgegriffen.
 ## Das Element <dfn><code>&lt;source></code></dfn>
 
 Das Element benennt die Quelle des Vokabulars. Es ist abhängig vom Kontext der
-Verwendung auf `LOMv1.0`, `https://w3id.org/dini-ag-kim/hcrt/scheme`,
-`https://w3id.org/class/hochschulfaechersystematik/scheme` oder `DDC` zu
+Verwendung auf `LOMv1.0`, `https://w3id.org/dini-ag-kim/kim/scheme`,
+`https://w3id.org/kim/hochschulfaechersystematik/scheme` oder `DDC` zu
 setzen. Die zulässigen Werte sind jeweils beim übergeordneten Element angegeben.
 
 <dl>

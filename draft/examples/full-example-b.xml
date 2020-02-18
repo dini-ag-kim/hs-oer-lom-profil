@@ -164,13 +164,11 @@
 		<educational>
 			<learningResourceType>
 				<source>
-					<langstring xml:lang="x-none">https://w3id.org/dini-ag-kim/hcrt/scheme</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hcrt/scheme</langstring>
 				</source>
-				<id>https://w3id.org/dini-ag-kim/hcrt/lesson_plan</id>
+				<id>https://w3id.org/kim/hcrt/lesson_plan</id>
 				<entry>
-					<langstring xml:lang="de">
-						Unterrichtsplanung
-					</langstring>
+					<langstring xml:lang="de">Unterrichtsplanung</langstring>
 				</entry>
 			</learningResourceType>
 			<description>
@@ -205,20 +203,20 @@
 			</purpose>
 			<taxonpath>
 				<source>
-					<langstring xml:lang="x-none">https://w3id.org/class/hochschulfaechersystematik/scheme</langstring>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hochschulfaechersystematik/scheme</langstring>
 				</source>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n3</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n3</id>
 					<entry>
 						<langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
 					</entry>
 					<taxon>
-						<id>http://w3id.org/class/hochschulfaechersystematik/n33</id>
+						<id>http://w3id.org/kim/hochschulfaechersystematik/n33</id>
 						<entry>
 							<langstring>Erziehungswissenschaften</langstring>
 						</entry>
 						<taxon>
-							<id>http://w3id.org/class/hochschulfaechersystematik/n052</id>
+							<id>http://w3id.org/kim/hochschulfaechersystematik/n052</id>
 							<entry>
 								<langstring>Erziehungswissenschaft (Pädagogik)</langstring>
 							</entry>
