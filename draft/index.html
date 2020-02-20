@@ -512,10 +512,6 @@ Erstellung beteiligt waren.
 
 Das Element bezeichnet die gegenwärtige Version des Lernobjekts.
 
-<p class="note">Im [[?edu-sharing]] werden Versionen intern automatisch verwaltet
-und zählen auch bei jeder Änderung der Metadaten die Minor Version hoch. Die Major
-Version bleibt immer bei 1. Es ist zu fragen, inwieweit das nützlich ist.</p>
-
 <dl>
     <dt>Mehrwertigkeit:</dt>
     <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lifecycle></a> vorkommen.</dd>
@@ -604,6 +600,10 @@ Metadaten beteiligt waren.
         - `Validator`
     </dd>
 </dl>
+
+<pre class="example" data-include="examples/metametadata-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/metametadata-example.xml)
 
 </section>
 
@@ -1197,7 +1197,7 @@ Das Element bezeichnet den konkreten Eintrag in einer Taxonomie oder einem Katal
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb übergeordneten Elements vorkommen.</dd>
+    <dd>Es DARF genau 1 Mal innerhalb übergeordneten Elements vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
     <dt>Elemente:</dt>
@@ -1254,7 +1254,7 @@ Das Element beschreibt die Art der Beteiligung.
         <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
         <a>&lt;value></a> - Es beschreibt die Rolle des Beteiligten.
 
-        Die jeweils erlaubten Werte von [[!LOMv1.0]] sind jeweils beim übergeordneten
+        Die erlaubten Werte von [[!LOMv1.0]] sind jeweils beim übergeordneten
         Element angegeben.
     </dd>
 </dl>
@@ -1323,7 +1323,7 @@ Materials im Repositorium wird nicht angegeben.</p>
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
-    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;contribute></a>vorkommen.</dd>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;contribute></a> vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
     <dt>Elemente:</dt>

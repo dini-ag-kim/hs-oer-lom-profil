@@ -257,7 +257,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   <xs:complexType name="TAXONS">
     <xs:sequence>
       <xs:element name="id" type="IDS"/>
-      <xs:element ref="entry"/>
+      <xs:element minOccurs="0" ref="entry"/>
       <xs:element minOccurs="0" name="taxon" type="TAXONS"/>
     </xs:sequence>
   </xs:complexType>
