@@ -207,17 +207,17 @@ den Metadaten der Lernobjekte.</p>
     <dd>Es MUSS genau 1 Mal in der XML-Metadatendatei vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>
-        `xmlns` - Es benennt den durch diese XML Schema Description
-        deklarierten Namespace und SOLL folgenden Wert haben:
-        `https://www.oerbw.de/hsoerlom`
+`xmlns` - Es benennt den durch diese XML Schema Description
+deklarierten Namespace und SOLL folgenden Wert haben:
+`https://www.oerbw.de/hsoerlom`
 
-        `xmlns:xsi` - Es benennt den Namespace für XSI-Elemente und
-        MUSS den folgenden Wert haben:
-        `http://www.w3.org/2001/XMLSchema-instance`
-        
-        `xsi:schemaLocation` - Es benennt den Ort, an dem das XML
-        Schema zu finden ist und MUSS den folgenden Wert haben:
-        `https://www.oerbw.de/hsoerlom https://w3id.org/kim/hs-oer-lom-profil/latest/schemas/hs-oer-lom.xsd`
+`xmlns:xsi` - Es benennt den Namespace für XSI-Elemente und
+MUSS den folgenden Wert haben:
+`http://www.w3.org/2001/XMLSchema-instance`
+
+`xsi:schemaLocation` - Es benennt den Ort, an dem das XML
+Schema zu finden ist und MUSS den folgenden Wert haben:
+`https://www.oerbw.de/hsoerlom https://w3id.org/kim/hs-oer-lom-profil/latest/schemas/hs-oer-lom.xsd`
     </dd>
     <dt>Elemente:</dt>
     <dd><a>&lt;lom></a></dd>
@@ -419,22 +419,22 @@ Das Element beschreibt die Granularität des Lernobjekts nach [[!LOMv1.0]].
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
-        <a>&lt;value></a> - Es benennt die Granularität des Lernobjekts.
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es benennt die Granularität des Lernobjekts.
 
-        Die von [[!LOMv1.0]] erlaubten Werte sind:
+Die von [[!LOMv1.0]] erlaubten Werte sind:
 
-        - `1` - für einzelne, atomare Materialien
+- `1` - für einzelne, atomare Materialien
 
-        - `2` - für eine Anzahl zusammengehöriger atomarer Materialien, z. B. eine
-        HTML-Seite mit eingefügten Bildern, oder ein Übungsblatt mit Erläuterungen und
-        Lösungen
+- `2` - für eine Anzahl zusammengehöriger atomarer Materialien, z. B. eine
+HTML-Seite mit eingefügten Bildern, oder ein Übungsblatt mit Erläuterungen und
+Lösungen
 
-        - `3` - für eine Sammlung von Lernobjekten des 2. Levels, z. B.  ein Webportal oder
-        ein Lernkurs
+- `3` - für eine Sammlung von Lernobjekten des 2. Levels, z. B.  ein Webportal oder
+ein Lernkurs
 
-        - `4` - höchster Level, z. B. für einen ganzen Satz von Kursen, die zu einem
-        Abschluss führen
+- `4` - höchster Level, z. B. für einen ganzen Satz von Kursen, die zu einem
+Abschluss führen
     </dd>
 </dl>
 
@@ -463,42 +463,42 @@ Erstellung beteiligt waren.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;version></a><br>
-        <a>&lt;status></a><br>
-        <a>&lt;contribute></a> - Das Element beschreibt die Personen und
-        Organisationen, die an der Erstellung des Lernobjekts beteiligt waren. Es
-        MUSS mindestens ein <code>&lt;contribute></code> mit Angabe der Autoren
-        geben.
+<a>&lt;version></a><br>
+<a>&lt;status></a><br>
+<a>&lt;contribute></a> - Das Element beschreibt die Personen und
+Organisationen, die an der Erstellung des Lernobjekts beteiligt waren. Es
+MUSS mindestens ein <code>&lt;contribute></code> mit Angabe der Autoren
+geben.
 
-        Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
+Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
 
-        - `Author`
+- `Author`
 
-        - `Content Provider`
+- `Content Provider`
 
-        - `Editor`
+- `Editor`
 
-        - `Educational Validator`
+- `Educational Validator`
 
-        - `Graphical Designer`
+- `Graphical Designer`
 
-        - `Initiator`
+- `Initiator`
 
-        - `Instructional Designer`
+- `Instructional Designer`
 
-        - `Publisher`
+- `Publisher`
 
-        - `Unknown`
+- `Unknown`
 
-        - `Script Writer`
+- `Script Writer`
 
-        - `Technical Implementer`
+- `Technical Implementer`
 
-        - `Technical Validator`
+- `Technical Validator`
 
-        - `Terminator`
+- `Terminator`
 
-        - `Validator`
+- `Validator`
     </dd>
 </dl>
 
@@ -536,19 +536,19 @@ Das Element bezeichnet den Veröffentlichungszustand des Lernobjekts.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
-        <a>&lt;value></a> - Es benennt den konkreten Veröffentlichungszustand.
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es benennt den konkreten Veröffentlichungszustand.
 
-        Die von [[!LOMv1.0]] erlaubten Werte sind:
+Die von [[!LOMv1.0]] erlaubten Werte sind:
 
-        - `Draft`
+- `Draft`
 
-        - `Final` - Das sollte der Normalzustand für veröffentliche Objekte sein.
+- `Final` - Das sollte der Normalzustand für veröffentliche Objekte sein.
 
-        - `Revised` - In der Praxis Handhabung wie `Final`.
+- `Revised` - In der Praxis Handhabung wie `Final`.
 
-        - `Unavailable` - Das sollte gesetzt sein, wenn ein Objekt aus rechtlichen
-        oder anderen Gründen zurückgezogen werden musste.
+- `Unavailable` - Das sollte gesetzt sein, wenn ein Objekt aus rechtlichen
+oder anderen Gründen zurückgezogen werden musste.
     </dd>
 </dl>
 
@@ -577,27 +577,27 @@ Metadaten beteiligt waren.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;contribute></a> - Das Element beschreibt die Personen und
-        Organisationen, die an der Erstellung der Metadaten des Lernobjekts und an
-        seiner Einstellung ins Repositorium beteiligt waren.
-        
-        Es wird vereinbart, in der Rolle des `Provider` die Hochschule bzw.
-        Organisation zu benennen, über die das Material zur Verfügung gestellt
-        wurde. (Im ZOERR entspricht das dem Feld *Herkunft*.)
-        
-        Die das Material prüfende Person aus dem Redaktionsteam ist in der Rolle
-        `Validator` einzutragen. Damit lässt sich auch nachvollziehen, wer das
-        Lernobjekt zur Veröffentlichung freigegeben hat. Zudem ist es auch die
-        geeignete Stelle, um das Veröffentlichungsdatum im Repositorium als
-        <a>&lt;date></a> anzugeben.
+<a>&lt;contribute></a> - Das Element beschreibt die Personen und
+Organisationen, die an der Erstellung der Metadaten des Lernobjekts und an
+seiner Einstellung ins Repositorium beteiligt waren.
 
-        Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
+Es wird vereinbart, in der Rolle des `Provider` die Hochschule bzw.
+Organisation zu benennen, über die das Material zur Verfügung gestellt
+wurde. (Im ZOERR entspricht das dem Feld *Herkunft*.)
 
-        - `Creator`
+Die das Material prüfende Person aus dem Redaktionsteam ist in der Rolle
+`Validator` einzutragen. Damit lässt sich auch nachvollziehen, wer das
+Lernobjekt zur Veröffentlichung freigegeben hat. Zudem ist es auch die
+geeignete Stelle, um das Veröffentlichungsdatum im Repositorium als
+<a>&lt;date></a> anzugeben.
 
-        - `Provider`
+Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
 
-        - `Validator`
+- `Creator`
+
+- `Provider`
+
+- `Validator`
     </dd>
 </dl>
 
@@ -694,14 +694,14 @@ in der Regel ein Universal Resource Locator (URL). Siehe auch das Attribut `type
     <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;technical></a> vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>
-        `type` - Beschreibt die Art der Angabe.
+`type` - Beschreibt die Art der Angabe.
 
-        Gültige Werte für `type` sind:
+Gültige Werte für `type` sind:
 
-        - `URI` - ein Identifier (Uniform Resource Identifier) für eine physische oder 
-        abstrakte Ressource
+- `URI` - ein Identifier (Uniform Resource Identifier) für eine physische oder 
+abstrakte Ressource
 
-        - `TEXT` - eine Ortsbeschreibung des Objekts als Text
+- `TEXT` - eine Ortsbeschreibung des Objekts als Text
     </dd>
     <dt>Elemente:</dt>
     <dd>keine</dd>
@@ -798,60 +798,60 @@ Das Element benennt die Art des Lernobjekts.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> mit dem Wert `Hochschulcampus Content Custom Model`<br>
-        <a>&lt;value></a>
+<a>&lt;source></a> mit dem Wert `Hochschulcampus Content Custom Model`<br>
+<a>&lt;value></a>
 
-        Für das `Hochschulcampus Content Custom Model` sind die erlaubten Werte (mit
-        erläuternden Bedeutungen in deutsch), die bei Bedarf und nach Abstimmung
-        erweitert werden können:
+Für das `Hochschulcampus Content Custom Model` sind die erlaubten Werte (mit
+erläuternden Bedeutungen in deutsch), die bei Bedarf und nach Abstimmung
+erweitert werden können:
 
-        - `application` - Anwendung, Software
+- `application` - Anwendung, Software
 
-        - `assessment` - Lernkontrolle, (Selbst-)Test
+- `assessment` - Lernkontrolle, (Selbst-)Test
 
-        - `audio` - Tonaufnahme
+- `audio` - Tonaufnahme
 
-        - `case_study` - Fallstudie
+- `case_study` - Fallstudie
 
-        - `course` - Lernkurs
+- `course` - Lernkurs
 
-        - `data` - (Roh-, Beispiel-) Daten
+- `data` - (Roh-, Beispiel-) Daten
 
-        - `diagram` - Diagramm, Grafik
+- `diagram` - Diagramm, Grafik
 
-        - `drill_and_practice` - Übung
+- `drill_and_practice` - Übung
 
-        - `educational_game` - Lernspiel
+- `educational_game` - Lernspiel
 
-        - `experiment` - Experiment
+- `experiment` - Experiment
 
-        - `image` - Abbildung, Foto, Bild
+- `image` - Abbildung, Foto, Bild
 
-        - `index` - Glossar, Nachschlagewerk, Wiki, Lexikon
+- `index` - Glossar, Nachschlagewerk, Wiki, Lexikon
 
-        - `lesson_plan` - Unterrichtsplanung, Unterrichtsgestaltung
+- `lesson_plan` - Unterrichtsplanung, Unterrichtsgestaltung
 
-        - `map` - Karte
+- `map` - Karte
 
-        - `portal` - (Web-, Wissens-) Portal
+- `portal` - (Web-, Wissens-) Portal
 
-        - `questionnaire` - Fragebogen, Rechercheauftrag
+- `questionnaire` - Fragebogen, Rechercheauftrag
 
-        - `script` - Skript
+- `script` - Skript
 
-        - `simulation` - Simulation
+- `simulation` - Simulation
 
-        - `slide` - Präsentation, Folien
+- `slide` - Präsentation, Folien
 
-        - `text` - Artikel, Aufstatz, Text, Abhandlung 
+- `text` - Artikel, Aufstatz, Text, Abhandlung 
 
-        - `video` - Video
+- `video` - Video
 
-        - `web_page` - Webseite
+- `web_page` - Webseite
 
-        - `worksheet` - Arbeitsblatt, Arbeitsmaterial
+- `worksheet` - Arbeitsblatt, Arbeitsmaterial
 
-        - `other` - sonstiges
+- `other` - sonstiges
     </dd>
 </dl>
 
@@ -878,15 +878,15 @@ Das Element beschreibt die Nutzungsbedingungen und Lizenz des Lernobjekts.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;copyrightandotherrestrictions></a><br>
-        <a>&lt;description></a> - Das Element beschreibt die Lizenz und
-        Nutzungsbedingungen genauer. Es MUSS genau 1 Mal innerhalb des Elements
-        <a>&lt;rights></a> vorkommen.
+<a>&lt;copyrightandotherrestrictions></a><br>
+<a>&lt;description></a> - Das Element beschreibt die Lizenz und
+Nutzungsbedingungen genauer. Es MUSS genau 1 Mal innerhalb des Elements
+<a>&lt;rights></a> vorkommen.
 
-        Die Angabe kann als Text, RDF, URL oder in anderer Form erfolgen. Bei Creative
-        Commons Lizenzen [[?CC]] soll das Attribut `xml:lang` im <a>&lt;langstring></a>
-        für RDF-Ausdrücke auf `x-t-cc` und für URL auf `x-t-cc-url` gesetzt werden.
-        Diese Vorgabe wird im Schema aber nicht forciert.
+Die Angabe kann als Text, RDF, URL oder in anderer Form erfolgen. Bei Creative
+Commons Lizenzen [[?CC]] soll das Attribut `xml:lang` im <a>&lt;langstring></a>
+für RDF-Ausdrücke auf `x-t-cc` und für URL auf `x-t-cc-url` gesetzt werden.
+Diese Vorgabe wird im Schema aber nicht forciert.
     </dd>
 </dl>
 
@@ -907,15 +907,15 @@ Das Element gibt an, ob ein Copyright oder andere Einschränkungen bestehen.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
-        <a>&lt;value></a> - Es gibt an, ob ein Copyright oder andere Einschränkungen
-        bestehen.
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es gibt an, ob ein Copyright oder andere Einschränkungen
+bestehen.
 
-        Die von [[!LOMv1.0]] erlaubten Werte sind:
+Die von [[!LOMv1.0]] erlaubten Werte sind:
 
-        - `yes`
+- `yes`
 
-        - `no`
+- `no`
     </dd>
 </dl>
             
@@ -984,29 +984,29 @@ Das Element charakterisiert die Art der Klassifizierung.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
-        <a>&lt;value></a> - Es benennt die konkrete Art der Klassifizierung.
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es benennt die konkrete Art der Klassifizierung.
 
-        Die von [[!LOMv1.0]] erlaubten Werte sind:
+Die von [[!LOMv1.0]] erlaubten Werte sind:
 
-        - `Accessibility Restrictions`
+- `Accessibility Restrictions`
 
-        - `Discipline`
+- `Discipline`
 
-        - `Educational Level`
+- `Educational Level`
 
-        - `Educational Objective`
+- `Educational Objective`
 
-        - `Idea`
+- `Idea`
 
-        - `Prerequisite`
+- `Prerequisite`
 
-        - `Security Level`
+- `Security Level`
 
-        - `Skill Level`
+- `Skill Level`
 
-        Für den Zweck der Klassifizierung nach Fachgebieten ist nur `Discipline`
-        interessant und im XML Schema auch forciert.
+Für den Zweck der Klassifizierung nach Fachgebieten ist nur `Discipline`
+interessant und im XML Schema auch forciert.
     </dd>
 </dl>
 
@@ -1028,10 +1028,10 @@ Das Element beschreibt den Pfad der Taxonomie in der konkreten Klassifizierung.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> - Je nach verwendeter Klassifizierung wird es auf den
-        Wert `Hochschulfaecher` oder `DDC` gesetzt.
+<a>&lt;source></a> - Je nach verwendeter Klassifizierung wird es auf den
+Wert `Hochschulfaecher` oder `DDC` gesetzt.
 
-        <a>&lt;taxon></a>
+<a>&lt;taxon></a>
     </dd>
 </dl>
 
@@ -1055,12 +1055,12 @@ damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde Klassifikat
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;id></a><br>
-        <a>&lt;entry></a> - Es benennt die konkrete Klassifikation des Objekts im
-        Rahmen der bezeichneten Taxonomie mittels eines Labels. Da die <a>&lt;id></a>
-        das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
-        beschreibenden Charakter.<br>
-        <a>&lt;taxon></a>
+<a>&lt;id></a><br>
+<a>&lt;entry></a> - Es benennt die konkrete Klassifikation des Objekts im
+Rahmen der bezeichneten Taxonomie mittels eines Labels. Da die <a>&lt;id></a>
+das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
+beschreibenden Charakter.<br>
+<a>&lt;taxon></a>
     </dd>
 </dl>
 
@@ -1251,11 +1251,11 @@ Das Element beschreibt die Art der Beteiligung.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
-        <a>&lt;value></a> - Es beschreibt die Rolle des Beteiligten.
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es beschreibt die Rolle des Beteiligten.
 
-        Die erlaubten Werte von [[!LOMv1.0]] sind jeweils beim übergeordneten
-        Element angegeben.
+Die erlaubten Werte von [[!LOMv1.0]] sind jeweils beim übergeordneten
+Element angegeben.
     </dd>
 </dl>
 
@@ -1328,11 +1328,11 @@ Materials im Repositorium wird nicht angegeben.</p>
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-        <a>&lt;datetime></a><br>
-        <a>&lt;description></a> - Es beschreibt die Bedeutung des Datums.
-        
-        Es wird vorgeschlagen, als Konvention die Begriffe `Modified` und
-        `Published` zu verwenden.
+<a>&lt;datetime></a><br>
+<a>&lt;description></a> - Es beschreibt die Bedeutung des Datums.
+
+Es wird vorgeschlagen, als Konvention die Begriffe `Modified` und
+`Published` zu verwenden.
     </dd>
 </dl>
 
