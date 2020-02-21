@@ -212,13 +212,13 @@
 					</entry>
 				</taxon>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n33</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n33</id>
 					<entry>
 						<langstring>Erziehungswissenschaften</langstring>
 					</entry>
 				</taxon>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n052</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n052</id>
 					<entry>
 						<langstring>Erziehungswissenschaft (Pädagogik)</langstring>
 					</entry>

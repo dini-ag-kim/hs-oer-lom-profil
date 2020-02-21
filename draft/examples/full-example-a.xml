@@ -9,6 +9,12 @@
 				<langstring>Introduction to Difference Equations</langstring>
 			</title>
 			<catalogentry>
+				<catalog>DOI</catalog>
+				<entry>
+					<langstring>10.1137/S0036144500378302</langstring>
+				</entry>
+			</catalogentry>
+			<catalogentry>
 				<catalog>HDL</catalog>
 				<entry>
 					<langstring>10900.3/OER_ZZxWvFJV</langstring>
@@ -164,13 +170,13 @@
 					</entry>
 				</taxon>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n37</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n37</id>
 					<entry>
 						<langstring>Studienbereich Mathematik</langstring>
 					</entry>
 				</taxon>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n276</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n276</id>
 					<entry>
 						<langstring>Wirtschaftsmathematik</langstring>
 					</entry>
@@ -187,7 +193,7 @@
 					</entry>
 				</taxon>
 				<taxon>
-					<id>http://w3id.org/class/hochschulfaechersystematik/n30</id>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n30</id>
 					<entry>
 						<langstring>Wirtschaftswissenschaften</langstring>
 					</entry>
