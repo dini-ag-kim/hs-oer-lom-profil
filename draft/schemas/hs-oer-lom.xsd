@@ -29,7 +29,7 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   </xs:complexType>
   <xs:complexType name="CCCMSOURCE">
     <xs:sequence>
-      <xs:element name="langstring" type="ATTRLANGNONE" fixed="Hochschulcampus Content Custom Model"/>
+      <xs:element name="langstring" type="ATTRLANGNONE" fixed="https://w3id.org/kim/hcrt/scheme"/>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="LANGSTRINGS">
@@ -177,53 +177,18 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
       <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
     </xs:sequence>
   </xs:complexType>
-  <xs:simpleType name="LRTVALUELIST">
-    <xs:restriction base="xs:string">
-      <xs:enumeration value="application"/>
-      <xs:enumeration value="assessment"/>
-      <xs:enumeration value="audio"/>
-      <xs:enumeration value="case_study"/>
-      <xs:enumeration value="course"/>
-      <xs:enumeration value="data"/>
-      <xs:enumeration value="diagram"/>
-      <xs:enumeration value="drill_and_practice"/>
-      <xs:enumeration value="educational_game"/>
-      <xs:enumeration value="experiment"/>
-      <xs:enumeration value="image"/>
-      <xs:enumeration value="index"/>
-      <xs:enumeration value="lesson_plan"/>
-      <xs:enumeration value="map"/>
-      <xs:enumeration value="other"/>
-      <xs:enumeration value="portal"/>
-      <xs:enumeration value="questionnaire"/>
-      <xs:enumeration value="script"/>
-      <xs:enumeration value="simulation"/>
-      <xs:enumeration value="slide"/>
-      <xs:enumeration value="text"/>
-      <xs:enumeration value="video"/>
-      <xs:enumeration value="web_page"/>
-      <xs:enumeration value="worksheet"/>
-    </xs:restriction>
-  </xs:simpleType>
-  <xs:complexType name="LRTVALUE">
-    <xs:simpleContent>
-      <xs:extension base="LRTVALUELIST">
-        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
-      </xs:extension>
-    </xs:simpleContent>
-  </xs:complexType>
   <xs:complexType name="LRT">
     <xs:sequence>
       <xs:element name="source" type="CCCMSOURCE"/>
-      <xs:element name="value">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element name="langstring" type="LRTVALUE"/>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
+      <xs:element name="id" type="LRTIDS"/>
+      <xs:element minOccurs="0" ref="entry"/>
     </xs:sequence>
   </xs:complexType>
+  <xs:simpleType name="LRTIDS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="https://w3id.org/kim/hcrt/([A-Za-z0-9_-])+"/>
+    </xs:restriction>
+  </xs:simpleType>
   <xs:simpleType name="RIGHTSVALUELIST">
     <xs:restriction base="xs:string">
       <xs:enumeration value="yes"/>
@@ -269,12 +234,12 @@ https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
   </xs:complexType>
   <xs:simpleType name="IDS">
     <xs:restriction base="xs:string">
-      <xs:pattern value="http://w3id.org/class/hochschulfaechersystematik/[a-z]([0-9])+#|[0-9][0-9][0-9]"/>
+      <xs:pattern value="http://w3id.org/kim/hochschulfaechersystematik/[a-z]([0-9])+|[0-9][0-9][0-9]"/>
     </xs:restriction>
   </xs:simpleType>
   <xs:simpleType name="HSFAECHERVALUELIST">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="Hochschulfaecher"/>
+      <xs:enumeration value="https://w3id.org/kim/hochschulfaechersystematik/scheme"/>
       <xs:enumeration value="DDC"/>
     </xs:restriction>
   </xs:simpleType>

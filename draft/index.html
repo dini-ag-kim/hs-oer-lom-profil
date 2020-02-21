@@ -97,9 +97,9 @@
                     publisher: "IEEE"
                 },
                 "LOMv1.2": {
-                    title: "IMS Learning Resource Meta-Data XML Binding Specification",
-                    href: "https://www.imsglobal.org/metadata/imsmdv1p2p1/imsmd_bindv1p2p1.html",
-                    status: "Final Specification 1.2.1",
+                    title: "IMS Learning Resource Meta-data Specification",
+                    href: "https://www.imsglobal.org/metadata/index.html",
+                    status: "Maintenance Release 1.2.4",
                     publisher: "IMS Global Learning Consortium, Inc."
                 },
                 "MIME": {
@@ -125,8 +125,13 @@
                 },
                 "SKOS-HS": {
                     title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
-                    href: "https://w3id.org/class/hochschulfaechersystematik/scheme#",
+                    href: "https://w3id.org/kim/hochschulfaechersystematik/scheme",
                     publisher: "Statistisches Bundesamt der Bundesrepublik Deutschland"
+                },
+                "SKOS-LRT": {
+                    title: "Hochschulcampus Ressourcentypen",
+                    href: "https://w3id.org/kim/hcrt/scheme",
+                    publisher: "OER-Repo AG der Länder"
                 },
                 "Wikidata": {
                     title: "Wikidata",
@@ -177,11 +182,11 @@ Schemata schwer zu lesen sind, gibt es diese Dokumentation.
 
 Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
 nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
-auch in der Einleitung der [[?LOMv1.2]]-Spezifikation.
+auch in der [[?LOMv1.2]]-Spezifikation.
 
-Die weitere Entwicklung und Pflege des Standards wird in einem
-[GitHub-Repositorium](https://github.com/dini-ag-kim/hs-oer-lom-profil/)
-erfolgen, welches alle notwendigen Informationen enthält.
+Die weitere Entwicklung und Pflege des Standards erfolgt in einem
+[GitHub-Repositorium](https://github.com/dini-ag-kim/hs-oer-lom-profil/),
+welches alle notwendigen Informationen enthält.
 
 <p class="copyright">
 <img alt="CC-BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
@@ -604,7 +609,7 @@ Lernobjekt zur Veröffentlichung freigegeben hat. Zudem ist es auch die
 geeignete Stelle, um das Veröffentlichungsdatum im Repositorium als
 <a>&lt;date></a> anzugeben.
 
-Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
+Die erlaubten Angaben für <a>&lt;role></a> sind:
 
 - `Creator`
 
@@ -811,60 +816,17 @@ Das Element benennt die Art des Lernobjekts.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>
-<a>&lt;source></a> mit dem Wert `Hochschulcampus Content Custom Model`<br>
-<a>&lt;value></a>
+<a>&lt;source></a> mit dem Wert `https://w3id.org/kim/hcrt/scheme`<br>
+<a>&lt;id></a><br>
+<a>&lt;entry></a> - Es benennt die konkrete Art des Objekts
+mittels eines Labels. Da die <a>&lt;id></a>
+das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
+beschreibenden Charakter.<br>
 
-Für das `Hochschulcampus Content Custom Model` sind die erlaubten Werte (mit
-erläuternden Bedeutungen in deutsch), die bei Bedarf und nach Abstimmung
-erweitert werden können:
-
-- `application` - Anwendung, Software
-
-- `assessment` - Lernkontrolle, (Selbst-)Test
-
-- `audio` - Tonaufnahme
-
-- `case_study` - Fallstudie
-
-- `course` - Lernkurs
-
-- `data` - (Roh-, Beispiel-) Daten
-
-- `diagram` - Diagramm, Grafik
-
-- `drill_and_practice` - Übung
-
-- `educational_game` - Lernspiel
-
-- `experiment` - Experiment
-
-- `image` - Abbildung, Foto, Bild
-
-- `index` - Glossar, Nachschlagewerk, Wiki, Lexikon
-
-- `lesson_plan` - Unterrichtsplanung, Unterrichtsgestaltung
-
-- `map` - Karte
-
-- `portal` - (Web-, Wissens-) Portal
-
-- `questionnaire` - Fragebogen, Rechercheauftrag
-
-- `script` - Skript
-
-- `simulation` - Simulation
-
-- `slide` - Präsentation, Folien
-
-- `text` - Artikel, Aufstatz, Text, Abhandlung 
-
-- `video` - Video
-
-- `web_page` - Webseite
-
-- `worksheet` - Arbeitsblatt, Arbeitsmaterial
-
-- `other` - sonstiges
+Für die Arten des Lernobjekts wurden „Hochschulcampus Ressourcentypen“
+in Anlehnung an LOM spezifiziert, die in [[!SKOS-LRT]] repräsentiert
+sind. Die angegebene URL in <a>&lt;source></a> stellt den persistenten
+Link zur Repräsentation dar.
     </dd>
 </dl>
 
@@ -958,7 +920,7 @@ der [*Fächersystematik für Studierende an Hochschulen* des Statistischen Bunde
 Dazu gibt es eine Repräsentation der Fachgebiete und der Hierarchie in [[!SKOS-HS]].
 
 <p class="note">Zusätzlich kann eine Klassifikation nach der <em>Dewey Decimal
-Classification</em> [[?DDC]] erfolgen. Es sollten nicht mehr als 3 Hierarchiebenen
+Classification</em> [[?DDC]] erfolgen. Es dürfen nicht mehr als 3 Hierarchiebenen
 verwendet werden. Im Folgenden wird bei den einzelnen Unterelementen auf Eigenheiten
 bei der Verwendung der [[?DDC]] hingewiesen.</p>
 
@@ -998,28 +960,9 @@ Das Element charakterisiert die Art der Klassifizierung.
     <dt>Elemente:</dt>
     <dd>
 <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
-<a>&lt;value></a> - Es benennt die konkrete Art der Klassifizierung.
-
-Die von [[!LOMv1.0]] erlaubten Werte sind:
-
-- `Accessibility Restrictions`
-
-- `Discipline`
-
-- `Educational Level`
-
-- `Educational Objective`
-
-- `Idea`
-
-- `Prerequisite`
-
-- `Security Level`
-
-- `Skill Level`
-
-Für den Zweck der Klassifizierung nach Fachgebieten ist nur `Discipline`
-interessant und im XML Schema auch forciert.
+<a>&lt;value></a> - Es benennt die konkrete Art der Klassifizierung.<br>
+Da die Klassifizierung nur nach Fachgebieten vorgesehen ist, ist nur der
+Wert `Discipline` erlaubt und wird im XML Schema auch forciert.
     </dd>
 </dl>
 
@@ -1042,8 +985,7 @@ Das Element beschreibt den Pfad der Taxonomie in der konkreten Klassifizierung.
     <dt>Elemente:</dt>
     <dd>
 <a>&lt;source></a> - Je nach verwendeter Klassifizierung wird es auf den
-Wert `Hochschulfaecher` oder `DDC` gesetzt.
-
+Wert `https://w3id.org/kim/hochschulfaechersystematik/scheme` oder `DDC` gesetzt.<br>
 <a>&lt;taxon></a>
     </dd>
 </dl>
@@ -1075,45 +1017,6 @@ das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
 beschreibenden Charakter.<br>
     </dd>
 </dl>
-
-<section data-dfn-for="id">
-
-## Das Element <dfn><code>&lt;id></code></dfn>
-
-Das Element benennt die konkrete Klassifikation des Objekts im Rahmen der bezeichneten
-Taxonomie mittels einer ID, die den Anspruch auf dauerhafte Gültigkeit erhebt.
-
-**Für Hochschulfächer:**
-
-Es wird der von der [W3C Permanent Identifier Community Group](https://w3id.org/)
-eingerichtete Service für permanente Identifier im WWW genutzt. Damit bekommt jedes
-Fach eine URL als ID, die in [[!SKOS-HS]] nachgeschlagen werden können.
-
-Die ID-Nr. besteht dabei aus einem Kleinbuchstaben und einer oder mehreren Ziffern.
-Die URL löst dabei zu den im [[!SKOS-HS]] hinterlegten Eintrag zum Fachgebiet nebst
-Beschreibung auf.
-
-**Für DDC:**
-
-Aus der [[!DDC]] ergeben sich eindeutige Zahlen. Es ist wie in der DDC Summary
-beschrieben mit 0 auf 3 Ziffern aufzufüllen. 
-
-<p class="note">Die XML Schema Definition kann validieren, dass nur gültige URLs
-oder DDC-Codes verwendet werden und ebenfalls dass im obigen Element <a>&lt;source></a>
-nur einer der beiden spezifizierten Werte angegeben wird. Aufgrund von sprachlichen
-Limitierungen können jedoch bei der Validierung keine falschen Angaben über Kreuz
-aufgedeckt werden, also z. B. `Hochschulfaecher` mit einem DDC-Zifferncode.</p>
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;taxon></a> vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd>keine</dd>
-</dl>
-
-</section>
 
 </section>
 
@@ -1209,7 +1112,8 @@ Das Element bezeichnet den konkreten Eintrag in einer Taxonomie oder einem Katal
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
-    <dd>Es DARF genau 1 Mal innerhalb übergeordneten Elements vorkommen.</dd>
+    <dd>Es DARF genau 1 Mal innerhalb übergeordneten Elements vorkommen. Im Falle des 
+<a>&lt;catalogentry></a> MUSS es genau 1 Mal vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
     <dt>Elemente:</dt>
@@ -1366,9 +1270,9 @@ kontrolliertes Vokabular zurückgegriffen.
 ## Das Element <dfn><code>&lt;source></code></dfn>
 
 Das Element benennt die Quelle des Vokabulars. Es ist abhängig vom Kontext der
-Verwendung auf `LOMv1.0`, `Hochschulcampus Content Custom Model`, `Hochschulfaecher`
-oder `DDC` zu setzen. Die zulässigen Werte sind jeweils beim übergeordneten Element
-angegeben.
+Verwendung auf `LOMv1.0`, `https://w3id.org/kim/hcrt/scheme`,
+`https://w3id.org/kim/hochschulfaechersystematik/scheme` oder `DDC` zu
+setzen. Die zulässigen Werte sind jeweils beim übergeordneten Element angegeben.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
@@ -1377,6 +1281,51 @@ angegeben.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd><a>&lt;langstring></a> mit dem Attribut `xml:lang="x-none"`</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="id">
+
+## Das Element <dfn><code>&lt;id></code></dfn>
+
+Das Element enthält einen URI, mittels dessen die konkrete Kategorie eindeutig
+identifiziert wird, der das Objekts im Rahmen der bezeichneten
+Taxonomie zugeordnet wird.
+
+**Für Hochschulcampus Ressourcentypen:**
+
+Es werden [permanente Identifier im WWW](https://w3id.org/) genutzt. Damit
+bekommt jeder Ressourcentyp eine URL als ID, die in [[!SKOS-LRT]] nachgeschlagen werden kann.
+Die URL löst dabei zu den im [[!SKOS-LRT]] hinterlegten Eintrag zu diesem
+Hochschulcampus Ressourcentyp nebst einer eventuellen Erläuterung auf.
+
+**Für Hochschulfächer:**
+
+Es werden [permanente Identifier im WWW](https://w3id.org/) genutzt. Damit bekommt jedes
+Fach eine URL als ID, die in [[!SKOS-HS]] nachgeschlagen werden kann.
+Die URL löst dabei zu den im [[!SKOS-HS]] hinterlegten Eintrag zum Fachgebiet nebst
+Beschreibung auf.
+
+**Für DDC:**
+
+Aus der [[!DDC]] ergeben sich eindeutige Zahlen. Es ist wie in der DDC Summary
+beschrieben mit 0 auf 3 Ziffern aufzufüllen. Die Klassifikation wird auf
+maximal die 3 Hauptebenen beschränkt, feinere Unterteilungen werden nicht unterstützt.
+
+<p class="note">Die XML Schema Definition kann validieren, dass nur gültige URLs
+oder DDC-Codes verwendet werden und ebenfalls dass im obigen Element <a>&lt;source></a>
+nur einer der beiden spezifizierten Werte angegeben wird. Aufgrund von sprachlichen
+Limitierungen können jedoch bei der Validierung keine falschen Angaben über Kreuz
+aufgedeckt werden, also z. B. Hochschulfächer mit einem DDC-Zifferncode.</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordnetenElements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
 </dl>
 
 </section>
@@ -1407,16 +1356,14 @@ kontrollierten Vokabular.
 
 ## Beispiele
 
-Zur Illustration sind zwei Beispiele für Metadatenbeschreibungen von
-Lernobjekten in XML hier zu finden.
+Zur Illustration werden zwei Beispiele für Metadatenbeschreibungen von
+Lernobjekten entsprechend dieser Spezifikation vorgestellt.
 
 <section id="example-1">
 
 ## Beispiel 1
 
-Das ist ein Beispiel für eine OER aus dem ZOERR, deren Metadaten in
-LOM beschrieben werden. Für Vergleichszwecke die Ansicht der OER im
-ZOERR: http://hdl.handle.net/10900.3/OER_ZZxWvFJV
+Das ist ein Beispiel für eine OER aus dem Bereich Mathematik.
 
 <pre class="example" data-include="examples/full-example-a.xml" data-include-format="text"></pre>
 
@@ -1428,9 +1375,7 @@ ZOERR: http://hdl.handle.net/10900.3/OER_ZZxWvFJV
 
 ## Beispiel 2
 
-Das ist ein weiteres Beispiel für eine OER aus dem ZOERR, deren Metadaten in
-LOM beschrieben werden. Für Vergleichszwecke die Ansicht der OER im
-ZOERR: http://hdl.handle.net/10900.3/OER_qiYOaTBN
+Das ist ein weiteres Beispiel für eine OER mit einer DDC-Klassifizierung.
 
 <pre class="example" data-include="examples/full-example-b.xml" data-include-format="text"></pre>
 
