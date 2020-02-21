@@ -1,0 +1,74 @@
+<lom>
+    <metametadata>
+        <contribute>
+            <role>
+                <source>
+                    <langstring xml:lang="x-none">LOMv1.0</langstring>
+                </source>
+                <value>
+                    <langstring xml:lang="x-none">Creator</langstring>
+                </value>
+            </role>
+            <centity>
+                <vcard>
+                    BEGIN:VCARD
+                    VERSION:3.0
+                    N:Dimpfl;Thomas
+                    FN:Thomas Dimpfl
+                    URL:https://orcid.org/0000-0003-3415-7412
+                    END:VCARD
+                </vcard>
+            </centity>
+            <date>
+                <datetime>2019-07-13</datetime>
+                <description>
+                    <langstring>Modified</langstring>
+                </description>
+            </date>
+        </contribute>
+        <contribute>
+            <role>
+                <source>
+                    <langstring xml:lang="x-none">LOMv1.0</langstring>
+                </source>
+                <value>
+                    <langstring xml:lang="x-none">Provider</langstring>
+                </value>
+            </role>
+            <centity>
+                <vcard>
+                    BEGIN:VCARD
+                    VERSION:3.0
+                    ORG:Universität Tübingen
+                    URL:https://www.wikidata.org/wiki/Q153978
+                    END:VCARD
+                </vcard>
+            </centity>
+        </contribute>
+        <contribute>
+            <role>
+                <source>
+                    <langstring xml:lang="x-none">LOMv1.0</langstring>
+                </source>
+                <value>
+                    <langstring xml:lang="x-none">Validator</langstring>
+                </value>
+            </role>
+            <centity>
+                <vcard>
+                    BEGIN:VCARD
+                    VERSION:3.0
+                    N:Schreiber;Anja
+                    FN:Anja Schreiber
+                    END:VCARD
+                </vcard>
+            </centity>
+            <date>
+                <datetime>2019-07-17</datetime>
+                <description>
+                    <langstring>Published</langstring>
+                </description>
+            </date>
+        </contribute>
+    </metametadata>
+</lom>
