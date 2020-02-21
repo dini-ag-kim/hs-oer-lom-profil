@@ -79,6 +79,12 @@
                     href: "https://edu-sharing.com/",
                     publisher: "metaVentis GmbH"
                 },
+                "ISO26324": {
+                    title: "Information and documentation — Digital object identifier system. ISO 26324:2012",
+                    href: "https://www.iso.org/standard/43506.html",
+                    status: "Last Reviewed and confirmed in 2017",
+                    publisher: "International Organization for Standardization (ISO)"
+                },
                 "GND": {
                     title: "Gemeinsame Normdatei (GND)",
                     href: "https://www.dnb.de/gnd",
@@ -361,6 +367,13 @@ Das Element benennt den Katalog, d.h. das Identifizierungssystem.
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>keine</dd>
+    <dd>Die erlaubten Werte sind:
+
+- `DOI` - für Digital Object Identifiers [[!ISO26324]]
+
+- `HDL` - für Handles [[!RFC3650]]
+
+- `URN` - für Uniform Resource Names [[!RFC8141]]
 </dl>
 
 </section>
@@ -651,7 +664,7 @@ oder `image/png`.
     <dt>Mehrwertigkeit:</dt>
     <dd>
         Es DARF nicht oder ein- oder mehrfach innerhalb des Elements
-        <a>&lt;technical></a> vorkommen, maximal jedoch 10 Mal. Es ist möglich, dass
+        <a>&lt;technical></a> vorkommen. Es ist möglich, dass
         das Lernobjekt in verschiedenen Formaten angeboten wird.
     </dd>
     <dt>Attribute:</dt>
@@ -792,7 +805,7 @@ Das Element benennt die Art des Lernobjekts.
     <dt>Mehrwertigkeit:</dt>
     <dd>
         Es DARF nicht oder ein- oder mehrfach innerhalb des Elements
-        <a>&lt;educational></a> vorkommen, maximal jedoch 10 Mal.
+        <a>&lt;educational></a> vorkommen.
     </dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
@@ -1022,7 +1035,7 @@ Das Element beschreibt den Pfad der Taxonomie in der konkreten Klassifizierung.
     <dt>Mehrwertigkeit:</dt>
     <dd>
         Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;classification></a>
-        vorkommen, maximal jedoch 10 Mal.
+        vorkommen.
     </dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
@@ -1041,15 +1054,15 @@ Wert `Hochschulfaecher` oder `DDC` gesetzt.
 
 Das Element beschreibt einen Eintrag in der Klassifikation.
 
-<code>&lt;taxon></code>-Elemente können ineinander geschachtelt werden und bilden
-damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde Klassifikation.
+<code>&lt;taxon></code>-Elemente werden als Liste repräsentiert und bilden
+damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde
+Klassifikation.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
     <dd>
-        Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;taxonpath></a> vorkommen.
-
-        Es DARF 1 Mal innerhalb des Elements <a>&lt;taxon></a> vorkommen.
+         Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;taxonpath></a>
+    vorkommen.
     </dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
@@ -1060,7 +1073,6 @@ damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde Klassifikat
 Rahmen der bezeichneten Taxonomie mittels eines Labels. Da die <a>&lt;id></a>
 das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
 beschreibenden Charakter.<br>
-<a>&lt;taxon></a>
     </dd>
 </dl>
 
@@ -1265,8 +1277,8 @@ Element angegeben.
 
 ## Das Element <dfn><code>&lt;centity></code></dfn>
 
-Das Element enthält die Informationen über die Beteiligten in der angeführten Rolle,
-bedeutendste Beteiligte zuerst.
+Das Element enthält die Informationen über die Beteiligten in der angeführten
+Rolle, bedeutendste Beteiligte zuerst.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>

@@ -9,9 +9,9 @@
 				<langstring>Baustein 5 Classroom Action Research</langstring>
 			</title>
 			<catalogentry>
-				<catalog>Handle.Net</catalog>
+				<catalog>HDL</catalog>
 				<entry>
-					<langstring>http://hdl.handle.net/10900.3/OER_qiYOaTBN</langstring>
+					<langstring>10900.3/OER_qiYOaTBN</langstring>
 				</entry>
 			</catalogentry>
 			<language>de</language>
@@ -209,18 +209,18 @@
 					<entry>
 						<langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
 					</entry>
-					<taxon>
-						<id>http://w3id.org/class/hochschulfaechersystematik/n33#</id>
-						<entry>
-							<langstring>Erziehungswissenschaften</langstring>
-						</entry>
-						<taxon>
-							<id>http://w3id.org/class/hochschulfaechersystematik/n052#</id>
-							<entry>
-								<langstring>Erziehungswissenschaft (Pädagogik)</langstring>
-							</entry>
-						</taxon>
-					</taxon>
+				</taxon>
+				<taxon>
+					<id>http://w3id.org/class/hochschulfaechersystematik/n33#</id>
+					<entry>
+						<langstring>Erziehungswissenschaften</langstring>
+					</entry>
+				</taxon>
+				<taxon>
+					<id>http://w3id.org/class/hochschulfaechersystematik/n052#</id>
+					<entry>
+						<langstring>Erziehungswissenschaft (Pädagogik)</langstring>
+					</entry>
 				</taxon>
 			</taxonpath>
 			<taxonpath>
@@ -232,18 +232,18 @@
 					<entry>
 						<langstring>Social sciences</langstring>
 					</entry>
-					<taxon>
-						<id>370</id>
-						<entry>
-							<langstring>Education</langstring>
-						</entry>
-						<taxon>
-							<id>378</id>
-							<entry>
-								<langstring>Higher education</langstring>
-							</entry>
-						</taxon>
-					</taxon>
+				</taxon>
+				<taxon>
+					<id>370</id>
+					<entry>
+						<langstring>Education</langstring>
+					</entry>
+				</taxon>
+				<taxon>
+					<id>378</id>
+					<entry>
+						<langstring>Higher education</langstring>
+					</entry>
 				</taxon>
 			</taxonpath>
 		</classification>
