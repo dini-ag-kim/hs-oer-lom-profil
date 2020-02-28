@@ -2,13 +2,13 @@
 <!-- Diese XML Shema Description beschreibt ein auf LOM basierendes Metadatenformat, welches
 beim Austausch von Metadaten zwischen OER Hochschulrepositorien in Deutschland
 verwendet werden soll. Eine Dokumentation des Schemas findet sich unter
-https://w3id.org/dini-ag-kim/hs-oer-lom-profil/ -->
+https://w3id.org/kim/hs-oer-lom-profil/ -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
   elementFormDefault="qualified"
   targetNamespace="https://www.oerbw.de/hsoerlom" 
   xmlns="https://www.oerbw.de/hsoerlom">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-    schemaLocation="https://w3id.org/dini-ag-kim/hs-oer-lom-profil/20200116/schemas/xml.xsd"/>
+    schemaLocation="https://w3id.org/kim/hs-oer-lom-profil/20200116/schemas/xml.xsd"/>
   <xs:simpleType name="LOCISURI">
     <xs:restriction base="xs:string">
       <xs:enumeration value="URI"/>

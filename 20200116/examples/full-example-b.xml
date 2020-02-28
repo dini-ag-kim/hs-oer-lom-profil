@@ -1,7 +1,7 @@
 <?xml version = "1.0" encoding = "UTF-8" ?>
 <metadata xmlns="https://www.oerbw.de/hsoerlom" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="https://www.oerbw.de/hsoerlom https://w3id.org/dini-ag-kim/hs-oer-lom-profil/20200116/schemas/hs-oer-lom.xsd">
+	xsi:schemaLocation="https://www.oerbw.de/hsoerlom https://w3id.org/kim/hs-oer-lom-profil/20200116/schemas/hs-oer-lom.xsd">
 	<lom>
 		<general>
 			<identifier>8dee40f6-0b22-4e5c-9d39-7ebeb7d20b9f</identifier>

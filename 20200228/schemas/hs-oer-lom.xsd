@@ -8,7 +8,7 @@ https://w3id.org/dini/hs-oer-lom-profil/ -->
   targetNamespace="https://www.oerbw.de/hsoerlom" 
   xmlns="https://www.oerbw.de/hsoerlom">
   <xs:import namespace="http://www.w3.org/XML/1998/namespace"
-    schemaLocation="https://w3id.org/kim/hs-oer-lom-profil/draft/schemas/xml.xsd"/>
+    schemaLocation="https://w3id.org/kim/hs-oer-lom-profil/20200228/schemas/xml.xsd"/>
   <xs:simpleType name="LOCISURI">
     <xs:restriction base="xs:string">
       <xs:enumeration value="URI"/>

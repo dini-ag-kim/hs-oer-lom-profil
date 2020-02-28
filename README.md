@@ -22,7 +22,8 @@ durch die jeweilige Versionnummer ersetzt werden.
 
 Bisher wurden folgende Versionen veröffentlicht:
 
-- [`latest`][latest_version] (Aktuelle Version vom 16.01.2020)
+- [`latest`][latest_version] (Aktuelle Version vom 28.02.2020)
+- [`20200228`][20200228] (Version vom 28.02.2020)
 - [`20200116`][20200116] (Version vom 16.01.2020)
 
 ## Mitwirkung
@@ -41,6 +42,7 @@ rechte Spalte) oder die [Kommentarfunktion von GitHub][multi-line comments]
 verwendet werden.
 
 [latest_version]: https://w3id.org/kim/hs-oer-lom-profil/latest/
+[20200228]: https://w3id.org/kim/hs-oer-lom-profil/20200228/
 [20200116]: https://w3id.org/kim/hs-oer-lom-profil/20200116/
 [draft_version]: https://w3id.org/kim/hs-oer-lom-profil/draft/
 [github]: https://github.com/dini-ag-kim/hs-oer-lom-profil/
