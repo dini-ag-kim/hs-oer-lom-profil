@@ -242,7 +242,7 @@ Schema zu finden ist und MUSS den folgenden Wert haben:
 
 Das Element beinhaltet die Metadaten zu einem Objekt. Das Schema basiert auf
 [[!LOMv1.2]], wurde aber konsequent reduziert auf die für die Repositorien
-notwendigen Metadaten. 
+notwendigen Metadaten.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
@@ -486,9 +486,9 @@ Erstellung beteiligt waren.
 <a>&lt;contribute></a> - Das Element beschreibt die Personen und
 Organisationen, die an der Erstellung des Lernobjekts beteiligt waren. Es
 MUSS mindestens ein <code>&lt;contribute></code> mit Angabe der Autoren
-geben.
-
-Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
+geben. Innerhalb jedes <code>&lt;contribute></code>-Elements MUSS genau
+einmal ein <code>&lt;role></code>-Element vorkommen. Die erlaubten Werte
+aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
 
 - `Author`
 
@@ -597,7 +597,11 @@ Metadaten beteiligt waren.
     <dd>
 <a>&lt;contribute></a> - Das Element beschreibt die Personen und
 Organisationen, die an der Erstellung der Metadaten des Lernobjekts und an
-seiner Einstellung ins Repositorium beteiligt waren.
+seiner Einstellung ins Repositorium beteiligt waren. Bei Vorhandensein des
+<code>&lt;metametadata></code>-Elements MUSS es mindestens ein
+<code>&lt;contribute></code> geben.
+Innerhalb jedes <code>&lt;contribute></code>-Elements MUSS genau
+einmal ein <code>&lt;role></code>-Element vorkommen.
 
 Es wird vereinbart, in der Rolle des `Provider` die Hochschule bzw.
 Organisation zu benennen, über die das Material zur Verfügung gestellt
@@ -705,7 +709,7 @@ sich die Angabe auf das komprimierte Archiv, das alles enthält.
 ## Das Element <dfn><code>&lt;location></code></dfn>
 
 Das Element benennt den Ort, an dem das Lernobjekt abgerufen werden kann. Für Webinhalte ist dies
-in der Regel ein Universal Resource Locator (URL). Siehe auch das Attribut `type`.
+in der Regel ein Uniform Resource Locator (URL). Siehe auch das Attribut `type`.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
@@ -716,7 +720,7 @@ in der Regel ein Universal Resource Locator (URL). Siehe auch das Attribut `type
 
 Gültige Werte für `type` sind:
 
-- `URI` - ein Identifier (Uniform Resource Identifier) für eine physische oder 
+- `URI` - ein Identifier (Uniform Resource Identifier) für eine physische oder
 abstrakte Ressource
 
 - `TEXT` - eine Ortsbeschreibung des Objekts als Text
@@ -893,7 +897,7 @@ Die von [[!LOMv1.0]] erlaubten Werte sind:
 - `no`
     </dd>
 </dl>
-            
+
 </section>
 
 </section>
@@ -924,8 +928,8 @@ Classification</em> [[?DDC]] erfolgen. Es dürfen nicht mehr als 3 Hierarchieben
 verwendet werden. Im Folgenden wird bei den einzelnen Unterelementen auf Eigenheiten
 bei der Verwendung der [[?DDC]] hingewiesen.</p>
 
-Jeder Beteiligte kann die Anzahl der Ebenen in der Hierarchie verwenden, die er für
-sich für angemessen hält. Im Datenaustausch fehlende Ebenen müssen dann von den
+Alle Beteiligten können die Anzahl der Ebenen in der Hierarchie verwenden, die sie für
+sich für angemessen halten. Im Datenaustausch fehlende Ebenen müssen dann von den
 Partnern akzeptiert werden, überzählige werden ignoriert.
 
 [1]: https://www.destatis.de/DE/Methoden/Klassifikationen/Bildung/studenten-pruefungsstatistik.pdf
@@ -1112,7 +1116,7 @@ Das Element bezeichnet den konkreten Eintrag in einer Taxonomie oder einem Katal
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
-    <dd>Es DARF genau 1 Mal innerhalb übergeordneten Elements vorkommen. Im Falle des 
+    <dd>Es DARF genau 1 Mal innerhalb des übergeordneten Elements vorkommen. Im Falle des
 <a>&lt;catalogentry></a> MUSS es genau 1 Mal vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
@@ -1198,7 +1202,7 @@ Rolle, bedeutendste Beteiligte zuerst.
 ## Das Element <dfn><code>&lt;vcard></code></dfn>
 
 Der vCard-Eintrag erfolgt in einfacher Textform und richtet sich nach [[!RFC6350]],
-wie in den Beispielen zu sehen. Er beschreibt die Person oder Organisation.
+wie in den Beispielen zu sehen. Er beschreibt eine Person oder Organisation.
 
 Anzumerken ist die Möglichkeit, die [[?ORCID]] oder die [[?GND]] -ID der Person
 als Tag `URL` mit anzugeben, die genutzt werden SOLL, wenn die Information zur Verfügung steht.
@@ -1211,13 +1215,15 @@ also z. B. für die Universität Tübingen `http://www.wikidata.org/entity/Q1539
 oder `https://d-nb.info/gnd/36187-2`.
 <br>
 Alternativ können auch die IDs der Research Organization Registry [[?ROR]] genutzt
-werden. [[?ROR]] ist noch relativ neu und Geschäftsmodell und Weg sind noch nicht klar.
+werden.
+
+<p class="note">[[?ROR]] ist noch relativ neu und Geschäftsmodell und Weg sind noch nicht klar.
 Bei der Abdeckung konnten stichprobenartig keine deutlichen Unterschiede festgestellt
 werden. Es muss aber bedacht werden, dass sich [[?ROR]] nur mit
-Forschungsorganisationen - allerdings im weitesten Sinne - befasst. Mehrere
+Forschungsorganisationen – allerdings im weitesten Sinne – befasst. Mehrere
 wissenschaftliche Serviceangebote wollen aber allem Anschein nach zukünftig ROR-IDs
 ebenfalls nutzen, wie [[?Crossref]], [[?DataCite]] und [[?ORCID]]. Das spricht sehr
-stark für eine Unterstützung.
+stark für eine Unterstützung.</p>
 
 </section>
 
@@ -1262,7 +1268,7 @@ Es wird vorgeschlagen, als Konvention die Begriffe `Modified` und
 ## Kontrollierte Vokabulare
 
 An mehreren Stellen innerhalb der Beschreibung eines Lernobjekts wird auf
-kontrolliertes Vokabular zurückgegriffen.
+kontrollierte Vokabulare zurückgegriffen.
 
 <section data-dfn-for="source">
 
@@ -1348,7 +1354,7 @@ kontrollierten Vokabular.
 </section>
 
 </section>
-        
+
 </section>
 
 <section id="examples">
