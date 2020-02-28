@@ -486,37 +486,9 @@ Erstellung beteiligt waren.
 <a>&lt;contribute></a> - Das Element beschreibt die Personen und
 Organisationen, die an der Erstellung des Lernobjekts beteiligt waren. Es
 MUSS mindestens ein <code>&lt;contribute></code> mit Angabe der Autoren
-geben.
-
-Die erlaubten Angaben aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
-
-- `Author`
-
-- `Content Provider`
-
-- `Editor`
-
-- `Educational Validator`
-
-- `Graphical Designer`
-
-- `Initiator`
-
-- `Instructional Designer`
-
-- `Publisher`
-
-- `Unknown`
-
-- `Script Writer`
-
-- `Technical Implementer`
-
-- `Technical Validator`
-
-- `Terminator`
-
-- `Validator`
+geben. Innerhalb jedes <code>&lt;contribute></code>-Elements MUSS genau 
+einmal ein <code>&lt;role></code>-Element vorkommen, dessen erlaubte Werte unter 
+<a>&lt;role></a> aufgelistet sind.
     </dd>
 </dl>
 
@@ -1170,8 +1142,35 @@ Das Element beschreibt die Art der Beteiligung.
 <a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
 <a>&lt;value></a> - Es beschreibt die Rolle des Beteiligten.
 
-Die erlaubten Werte von [[!LOMv1.0]] sind jeweils beim übergeordneten
-Element angegeben.
+Die erlaubten Angaben aus [[!LOMv1.0]] für <code>&lt;role></code> sind:
+
+- `Author`
+
+- `Content Provider`
+
+- `Editor`
+
+- `Educational Validator`
+
+- `Graphical Designer`
+
+- `Initiator`
+
+- `Instructional Designer`
+
+- `Publisher`
+
+- `Unknown`
+
+- `Script Writer`
+
+- `Technical Implementer`
+
+- `Technical Validator`
+
+- `Terminator`
+
+- `Validator`
     </dd>
 </dl>
 
