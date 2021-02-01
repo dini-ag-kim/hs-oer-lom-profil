@@ -26,6 +26,19 @@ Bisher wurden folgende Versionen veröffentlicht:
 - [`20200228`][20200228] (Version vom 28.02.2020)
 - [`20200116`][20200116] (Version vom 16.01.2020)
 
+
+## Lokales Setup
+
+Um die `index.html`-Datei lokal editieren und anzeigen zu können, klone das Repo und wechsle in das `hs-oer-lom-profil`-Verzeichnis:
+
+`git clone git@github.com:dini-ag-kim/hs-oer-lom-profil.git ; cd hs-oer-lom-profil`
+
+Lasse einen Server im `hs-oer-lom-profil`-Verzeichnis laufen:
+
+`python3 -m http.server`
+
+Dann lässt sich die Spezifikation im Web-Browser anschauen unter [http://localhost:8000](http://localhost:8000).
+
 ## Mitwirkung
 
 Die Pflege der Spezifikation erfolgt auf [GitHub][github]. Dort kann der jeweils
