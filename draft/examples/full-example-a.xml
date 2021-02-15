@@ -4,7 +4,7 @@
 	xsi:schemaLocation="https://www.oerbw.de/hsoerlom https://w3id.org/kim/hs-oer-lom-profil/draft/schemas/hs-oer-lom.xsd">
 	<lom>
 		<general>
-		  	<identifier>
+			<identifier>
 				<catalog>ZOERR</catalog>
 				<entry>
 					<langstring>c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</langstring>
