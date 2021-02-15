@@ -4,22 +4,27 @@
 	xsi:schemaLocation="https://www.oerbw.de/hsoerlom https://w3id.org/kim/hs-oer-lom-profil/draft/schemas/hs-oer-lom.xsd">
 	<lom>
 		<general>
-			<identifier>c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</identifier>
-			<title>
-				<langstring>Introduction to Difference Equations</langstring>
-			</title>
-			<catalogentry>
+		  	<identifier>
+				<catalog>ZOERR</catalog>
+				<entry>
+					<langstring>c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</langstring>
+				</entry>
+			</identifier>
+			<identifier>
 				<catalog>DOI</catalog>
 				<entry>
 					<langstring>10.1137/S0036144500378302</langstring>
 				</entry>
-			</catalogentry>
-			<catalogentry>
+			</identifier>
+			<identifier>
 				<catalog>HDL</catalog>
 				<entry>
 					<langstring>10900.3/OER_ZZxWvFJV</langstring>
 				</entry>
-			</catalogentry>
+			</identifier>
+			<title>
+				<langstring>Introduction to Difference Equations</langstring>
+			</title>
 			<language>en</language>
 			<description>
 				<langstring>Vorbereitung auf einen Kurs zur Zeitreihenanalyse</langstring>

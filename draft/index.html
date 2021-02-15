@@ -288,7 +288,6 @@ Das Element beschreibt das Lernobjekt allgemein.
     <dd>
         <a>&lt;identifier></a><br>
         <a>&lt;title></a><br>
-        <a>&lt;catalogentry></a><br>
         <a>&lt;language></a><br>
         <a>&lt;description></a><br>
         <a>&lt;keyword></a><br>
@@ -304,44 +303,6 @@ Das Element beschreibt das Lernobjekt allgemein.
 
 ## Das Element <dfn><code>&lt;identifier></code></dfn>
 
-Das Element bezeichnet eine innerhalb des Repositoriums eindeutige Identifizierung.
-Es hat Werte vom Typ `String`, die keiner Einschränkung unterliegen.
-
-Bei Anfragen an den OAI-Server eines Repositoriums ist der Wert dieses Elements das
-bestimmende Identifikationsmerkmal für ein Lernobjekt.
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd>keine</dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="title">
-
-## Das Element <dfn><code>&lt;title></code></dfn>
-
-Das Element gibt den Namen oder Titel des Lernobjekts an.
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd><a>&lt;langstring></a></dd>
-</dl>
-
-</section>
-
-<section data-dfn-for="catalogentry">
-
-## Das Element <dfn><code>&lt;catalogentry></code></dfn>
-
 Das Element bezeichnet einen Eintrag in einem Katalog, d. h. einem
 Identifizierungssystem, der dem Objekt zugeordnet ist. Durch den Eintrag soll das
 Objekt von dritter Seite gesucht und gefunden werden können.
@@ -354,7 +315,8 @@ Objekt von dritter Seite gesucht und gefunden werden können.
     <dt>Elemente:</dt>
     <dd>
 <a>&lt;catalog></a><br>
-<a>&lt;entry></a> - Es bezeichnet den Eintrag des Objekts (ID) im Katalog, d. h. Identifizierungssystem.
+<a>&lt;entry></a> - Es bezeichnet den Eintrag des Objekts (ID) im Katalog,
+    d. h. Identifizierungssystem.
     </dd>
 </dl>
 
@@ -372,17 +334,37 @@ Das Element benennt den Katalog, d.h. das Identifizierungssystem.
     <dt>Elemente:</dt>
     <dd>keine</dd>
     <dd>
-Die erlaubten Werte sind:
+Erlaubten Werte sind vom Typ `String`, die keiner Einschränkung unterliegen. Es
+    werden aber folgende Bezeichner für Standards reserviert:
 
 - `DOI` - für Digital Object Identifiers [[!ISO26324]]
 
 - `HDL` - für Handles [[!RFC3650]]
+
+- `ISBN` - für Internationale Standardbuchnummern      
 
 - `URN` - für Uniform Resource Names [[!RFC8141]]
     </dd>
 </dl>
 
 </section>
+
+</section>
+
+<section data-dfn-for="title">
+
+## Das Element <dfn><code>&lt;title></code></dfn>
+
+Das Element gibt den Namen oder Titel des Lernobjekts an.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
 
 </section>
 

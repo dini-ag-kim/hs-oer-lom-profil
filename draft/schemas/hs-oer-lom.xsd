@@ -45,11 +45,18 @@ https://w3id.org/dini/hs-oer-lom-profil/ -->
     </xs:sequence>
   </xs:complexType>
   <xs:simpleType name="CATALOGS">
+    <xs:union memberTypes="STDCATS ANYCATS"/>
+  </xs:simpleType>
+  <xs:simpleType name="STDCATS">
     <xs:restriction base="xs:string">
       <xs:enumeration value="DOI"/>
       <xs:enumeration value="HDL"/>
+      <xs:enumeration value="ISBN"/>
       <xs:enumeration value="URN"/>
     </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ANYCATS">
+    <xs:restriction base="xs:string"/>
   </xs:simpleType>
   <xs:simpleType name="AGGREGATLEVELVALUELIST">
     <xs:restriction base="xs:positiveInteger">
@@ -292,9 +299,8 @@ https://w3id.org/dini/hs-oer-lom-profil/ -->
   <xs:element name="general">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="identifier"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="identifier"/>
         <xs:element maxOccurs="unbounded" ref="title"/>
-        <xs:element minOccurs="0" maxOccurs="unbounded" ref="catalogentry"/>
         <xs:element minOccurs="0" ref="language"/>
         <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="keyword"/>
@@ -302,7 +308,6 @@ https://w3id.org/dini/hs-oer-lom-profil/ -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="identifier" type="xs:string"/>
   <xs:element name="title">
     <xs:complexType>
       <xs:sequence>
@@ -310,7 +315,7 @@ https://w3id.org/dini/hs-oer-lom-profil/ -->
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="catalogentry">
+  <xs:element name="identifier">
     <xs:complexType>
       <xs:sequence>
         <xs:element ref="catalog"/>
