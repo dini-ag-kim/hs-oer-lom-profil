@@ -301,7 +301,7 @@ https://w3id.org/dini/hs-oer-lom-profil/ -->
       <xs:sequence>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="identifier"/>
         <xs:element maxOccurs="unbounded" ref="title"/>
-        <xs:element minOccurs="0" ref="language"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="language"/>
         <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
         <xs:element minOccurs="0" maxOccurs="unbounded" ref="keyword"/>
         <xs:element minOccurs="0" name="aggregationlevel" type="AGGREGATLEVEL"/>
