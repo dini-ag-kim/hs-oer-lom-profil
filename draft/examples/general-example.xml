@@ -1,15 +1,20 @@
 <lom>
     <general>
-        <identifier>8dee40f6-0b22-4e5c-9d39-7ebeb7d20b9f</identifier>
-        <title>
-            <langstring>Baustein 5 Classroom Action Research</langstring>
-        </title>
-        <catalogentry>
+        <identifier>
+            <catalog>OER Sammlung</catalog>
+            <entry>
+                <langstring>8dee40f6-0b22-4e5c-9d39-7ebeb7d20b9f</langstring>
+            </entry>
+        </identifier>
+        <identifier>
             <catalog>HDL</catalog>
             <entry>
                 <langstring>10900.3/OER_qiYOaTBN</langstring>
             </entry>
-        </catalogentry>
+        </identifier>
+        <title>
+            <langstring>Baustein 5 Classroom Action Research</langstring>
+        </title>
         <language>de</language>
         <description>
             <langstring>

@@ -288,7 +288,6 @@ Das Element beschreibt das Lernobjekt allgemein.
     <dd>
         <a>&lt;identifier></a><br>
         <a>&lt;title></a><br>
-        <a>&lt;catalogentry></a><br>
         <a>&lt;language></a><br>
         <a>&lt;description></a><br>
         <a>&lt;keyword></a><br>
@@ -304,20 +303,51 @@ Das Element beschreibt das Lernobjekt allgemein.
 
 ## Das Element <dfn><code>&lt;identifier></code></dfn>
 
-Das Element bezeichnet eine innerhalb des Repositoriums eindeutige Identifizierung.
-Es hat Werte vom Typ `String`, die keiner Einschränkung unterliegen.
-
-Bei Anfragen an den OAI-Server eines Repositoriums ist der Wert dieses Elements das
-bestimmende Identifikationsmerkmal für ein Lernobjekt.
+Das Element bezeichnet einen Eintrag in einem Katalog, d. h. einem
+Identifizierungssystem, der dem Objekt zugeordnet ist. Durch den Eintrag soll das
+Objekt von dritter Seite gesucht und gefunden werden können.
 
 <dl>
     <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dd>Es DARF nicht oder ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;catalog></a><br>
+<a>&lt;entry></a> - Es bezeichnet den Eintrag des Objekts (ID) im Katalog,
+    d. h. Identifizierungssystem.
+    </dd>
+</dl>
+
+<section data-dfn-for="catalog">
+
+## Das Element <dfn><code>&lt;catalog></code></dfn>
+
+Das Element benennt den Katalog, d.h. das Identifizierungssystem.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;identifier></a> vorkommen.</dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
     <dt>Elemente:</dt>
     <dd>keine</dd>
+    <dd>
+Erlaubte Werte sind vom Typ `String`, die keiner Einschränkung unterliegen. Es
+    werden aber folgende Bezeichner für Standards reserviert:
+
+- `DOI` - für Digital Object Identifiers [[!ISO26324]]
+
+- `HDL` - für Handles [[!RFC3650]]
+
+- `ISBN` - für Internationale Standardbuchnummern      
+
+- `URN` - für Uniform Resource Names [[!RFC8141]]
+    </dd>
 </dl>
+
+</section>
 
 </section>
 
@@ -335,54 +365,6 @@ Das Element gibt den Namen oder Titel des Lernobjekts an.
     <dt>Elemente:</dt>
     <dd><a>&lt;langstring></a></dd>
 </dl>
-
-</section>
-
-<section data-dfn-for="catalogentry">
-
-## Das Element <dfn><code>&lt;catalogentry></code></dfn>
-
-Das Element bezeichnet einen Eintrag in einem Katalog, d. h. einem
-Identifizierungssystem, der dem Objekt zugeordnet ist. Durch den Eintrag soll das
-Objekt von dritter Seite gesucht und gefunden werden können.
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es DARF nicht oder ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd>
-<a>&lt;catalog></a><br>
-<a>&lt;entry></a> - Es bezeichnet den Eintrag des Objekts (ID) im Katalog, d. h. Identifizierungssystem.
-    </dd>
-</dl>
-
-<section data-dfn-for="catalog">
-
-## Das Element <dfn><code>&lt;catalog></code></dfn>
-
-Das Element benennt den Katalog, d.h. das Identifizierungssystem.
-
-<dl>
-    <dt>Mehrwertigkeit:</dt>
-    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;catalogentry></a> vorkommen.</dd>
-    <dt>Attribute:</dt>
-    <dd>keine</dd>
-    <dt>Elemente:</dt>
-    <dd>keine</dd>
-    <dd>
-Die erlaubten Werte sind:
-
-- `DOI` - für Digital Object Identifiers [[!ISO26324]]
-
-- `HDL` - für Handles [[!RFC3650]]
-
-- `URN` - für Uniform Resource Names [[!RFC8141]]
-    </dd>
-</dl>
-
-</section>
 
 </section>
 
@@ -1120,8 +1102,7 @@ Das Element bezeichnet den konkreten Eintrag in einer Taxonomie oder einem Katal
 <dl>
     <dt>Mehrwertigkeit:</dt>
     <dd>
-Es DARF genau 1 Mal innerhalb des übergeordneten Elements vorkommen. Im Falle des
-<a>&lt;catalogentry></a> MUSS es genau 1 Mal vorkommen.
+Es DARF genau 1 Mal innerhalb des übergeordneten Elements vorkommen.
     </dd>
     <dt>Attribute:</dt>
     <dd>keine</dd>
