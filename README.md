@@ -6,6 +6,10 @@ den Austausch von Metadaten über die Materialien wurde eine XML Schema Descript
 erstellt. Das Schema basiert auf LOM, wurde aber konsequent reduziert auf die
 für die Repositorien notwendigen Metadaten.
 
+## Maintainer
+
+[Michael Menzel](https://github.com/mic-men) und [Adrian Pohl](https://github.com/acka47)
+
 ## Versionen der Spezifikation
 
 Die aktuelle Fassung der Spezifikation findet sich unter folgendem Permalink:
@@ -41,7 +45,8 @@ Dann lässt sich die Spezifikation im Web-Browser anschauen unter [http://localh
 
 ## Mitwirkung
 
-Die Pflege der Spezifikation erfolgt auf [GitHub][github]. Dort kann der jeweils
+In der Entwicklung der Spezifikation nutzen wir die [StöberSpecs](https://w3id.org/kim/stoeberspecs/)-Werkzeuge und -Prozesse.
+Die redaktionelle Arbeit erfolgt auf [GitHub][https://github.com/dini-ag-kim/hs-oer-lom-profil]. Dort kann der jeweils
 aktuelle Arbeitsstand eingesehen werden und Verbesserungsvorschläge eingebracht
 werden. Zudem kann der aktuelle Arbeitsentwurf der Spezifikation unter folgendem
 Permalink betrachtet und kommentiert werden:
