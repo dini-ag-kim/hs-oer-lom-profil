@@ -6,7 +6,7 @@ den Austausch von Metadaten über die Materialien wurde eine XML Schema Descript
 erstellt. Das Schema basiert auf LOM, wurde aber konsequent reduziert auf die
 für die Repositorien notwendigen Metadaten.
 
-## Maintainer\*innen
+## Maintainer
 
 [Michael Menzel](https://github.com/mic-men) und [Adrian Pohl](https://github.com/acka47)
 
