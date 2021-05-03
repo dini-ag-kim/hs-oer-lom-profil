@@ -26,7 +26,8 @@ durch die jeweilige Versionnummer ersetzt werden.
 
 Bisher wurden folgende Versionen veröffentlicht:
 
-- [`latest`][latest_version] (Aktuelle Version vom 28.02.2020)
+- [`latest`][latest_version] (Aktuelle Version vom 06.05.2021)
+- [`20210506`][20210506] (Version vom 06.05.2021)
 - [`20200228`][20200228] (Version vom 28.02.2020)
 - [`20200116`][20200116] (Version vom 16.01.2020)
 
