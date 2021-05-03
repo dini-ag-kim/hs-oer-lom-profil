@@ -46,7 +46,7 @@ Dann lässt sich die Spezifikation im Web-Browser anschauen unter [http://localh
 ## Mitwirkung
 
 In der Entwicklung der Spezifikation nutzen wir die [StöberSpecs](https://w3id.org/kim/stoeberspecs/)-Werkzeuge und -Prozesse.
-Die redaktionelle Arbeit erfolgt auf [GitHub][https://github.com/dini-ag-kim/hs-oer-lom-profil]. Dort kann der jeweils
+Die redaktionelle Arbeit erfolgt auf [GitHub](https://github.com/dini-ag-kim/hs-oer-lom-profil). Dort kann der jeweils
 aktuelle Arbeitsstand eingesehen werden und Verbesserungsvorschläge eingebracht
 werden. Zudem kann der aktuelle Arbeitsentwurf der Spezifikation unter folgendem
 Permalink betrachtet und kommentiert werden:
