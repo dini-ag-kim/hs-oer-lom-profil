@@ -1,0 +1,210 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<metadata xmlns="https://www.oerbw.de/hsoerlom" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="https://www.oerbw.de/hsoerlom https://w3id.org/kim/hs-oer-lom-profil/20210506/schemas/hs-oer-lom.xsd">
+	<lom>
+		<general>
+			<identifier>
+				<catalog>ZOERR</catalog>
+				<entry>
+					<langstring>c0a478bd-b5f0-4d67-89c5-4a49dfefddcf</langstring>
+				</entry>
+			</identifier>
+			<identifier>
+				<catalog>DOI</catalog>
+				<entry>
+					<langstring>10.1137/S0036144500378302</langstring>
+				</entry>
+			</identifier>
+			<identifier>
+				<catalog>HDL</catalog>
+				<entry>
+					<langstring>10900.3/OER_ZZxWvFJV</langstring>
+				</entry>
+			</identifier>
+			<title>
+				<langstring>Introduction to Difference Equations</langstring>
+			</title>
+			<language>de</language>
+			<language>en</language>
+			<description>
+				<langstring>Vorbereitung auf einen Kurs zur Zeitreihenanalyse</langstring>
+			</description>
+			<keyword>
+				<langstring xml:lang="de">Differenzengleichung</langstring>
+			</keyword>
+			<keyword>
+				<langstring xml:lang="en">Difference Equation</langstring>
+			</keyword>
+		</general>
+		<lifecycle>
+			<version>
+				<langstring>1.7</langstring>
+			</version>
+			<contribute>
+				<role>
+					<source>
+						<langstring xml:lang="x-none">LOMv1.0</langstring>
+					</source>
+					<value>
+						<langstring xml:lang="x-none">Author</langstring>
+					</value>
+				</role>
+				<centity>
+					<vcard>
+						BEGIN:VCARD
+						VERSION:3.0
+						N:Dimpfl;Thomas
+						FN:Thomas Dimpfl
+						URL:https://orcid.org/0000-0003-3415-7412
+						END:VCARD
+					</vcard>
+				</centity>
+			</contribute>
+		</lifecycle>
+		<metametadata>
+			<contribute>
+				<role>
+					<source>
+						<langstring xml:lang="x-none">LOMv1.0</langstring>
+					</source>
+					<value>
+						<langstring xml:lang="x-none">Creator</langstring>
+					</value>
+				</role>
+				<centity>
+					<vcard>
+						BEGIN:VCARD
+						VERSION:3.0
+						N:Dimpfl;Thomas
+						FN:Thomas Dimpfl
+						URL:https://orcid.org/0000-0003-3415-7412
+						END:VCARD
+					</vcard>
+				</centity>
+				<date>
+					<datetime>2019-02-11</datetime>
+					<description>
+						<langstring>Modified</langstring>
+					</description>
+				</date>
+			</contribute>
+			<contribute>
+				<role>
+					<source>
+						<langstring xml:lang="x-none">LOMv1.0</langstring>
+					</source>
+					<value>
+						<langstring xml:lang="x-none">Provider</langstring>
+					</value>
+				</role>
+				<centity>
+					<vcard>
+						BEGIN:VCARD
+						VERSION:3.0
+						ORG:Universität Tübingen
+						URL:https://www.wikidata.org/entity/Q153978
+						END:VCARD
+					</vcard>
+				</centity>
+			</contribute>
+		</metametadata>
+		<technical>
+			<format>video/mp4</format>
+			<size>45061194</size>
+			<location type="URI">https://www.oerbw.de/edu-sharing/components/render/c0a478bd-b5f0-4d67-89c5-4a49dfefddcf/1.7</location>
+			<otherplatformrequirements>Es wird ein Videoplayer für MP4 benötigt.</otherplatformrequirements>
+			<duration>
+				<datetime>00:31:33</datetime>
+				<description>
+					<langstring>Playing time</langstring>
+				</description>
+			</duration>
+		</technical>
+		<educational>
+			<learningResourceType>
+				<source>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hcrt/scheme</langstring>
+				</source>
+				<id>https://w3id.org/kim/hcrt/video</id>
+				<entry>
+					<langstring xml:lang="de">Video</langstring>
+				</entry>
+			</learningResourceType>
+			<learningResourceType>
+				<source>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hcrt/scheme</langstring>
+				</source>
+				<id>https://w3id.org/kim/hcrt/course</id>
+				<entry>
+					<langstring xml:lang="de">Lernkurs</langstring>
+				</entry>
+			</learningResourceType>
+		</educational>
+		<rights>
+			<copyrightandotherrestrictions>
+				<source>
+					<langstring xml:lang="x-none">LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring xml:lang="x-none">no</langstring>
+				</value>
+			</copyrightandotherrestrictions>
+			<description>
+				<langstring xml:lang="x-t-cc-url">
+					https://creativecommons.org/publicdomain/zero/1.0/legalcode
+				</langstring>
+			</description>
+		</rights>
+		<classification>
+			<purpose>
+				<source>
+					<langstring xml:lang="x-none">LOMv1.0</langstring>
+				</source>
+				<value>
+					<langstring xml:lang="x-none">Discipline</langstring>
+				</value>
+			</purpose>
+			<taxonpath>
+				<source>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hochschulfaechersystematik/scheme</langstring>
+				</source>
+				<taxon>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n4</id>
+					<entry>
+						<langstring>Mathematik, Naturwissenschaften</langstring>
+					</entry>
+				</taxon>
+				<taxon>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n37</id>
+					<entry>
+						<langstring>Studienbereich Mathematik</langstring>
+					</entry>
+				</taxon>
+				<taxon>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n276</id>
+					<entry>
+						<langstring>Wirtschaftsmathematik</langstring>
+					</entry>
+				</taxon>
+			</taxonpath>
+			<taxonpath>
+				<source>
+					<langstring xml:lang="x-none">https://w3id.org/kim/hochschulfaechersystematik/scheme</langstring>
+				</source>
+				<taxon>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n3</id>
+					<entry>
+						<langstring> Rechts-, Wirtschafts- und Sozialwissenschaften</langstring>
+					</entry>
+				</taxon>
+				<taxon>
+					<id>http://w3id.org/kim/hochschulfaechersystematik/n30</id>
+					<entry>
+						<langstring>Wirtschaftswissenschaften</langstring>
+					</entry>
+				</taxon>
+			</taxonpath>
+		</classification>
+	</lom>
+</metadata>

@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Diese XML Shema Description beschreibt ein auf LOM basierendes Metadatenformat, welches
+beim Austausch von Metadaten zwischen OER Hochschulrepositorien in Deutschland
+verwendet werden soll. Eine Dokumentation des Schemas findet sich unter
+https://w3id.org/dini/hs-oer-lom-profil/ -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="qualified"
+  targetNamespace="https://www.oerbw.de/hsoerlom" 
+  xmlns="https://www.oerbw.de/hsoerlom">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace"
+    schemaLocation="https://w3id.org/kim/hs-oer-lom-profil/20210506/schemas/xml.xsd"/>
+  <xs:simpleType name="LOCISURI">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="URI"/>
+      <xs:enumeration value="TEXT"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ATTRLANGNONE">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LOM1SOURCE">
+    <xs:sequence>
+      <xs:element name="langstring" type="ATTRLANGNONE" fixed="LOMv1.0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="CCCMSOURCE">
+    <xs:sequence>
+      <xs:element name="langstring" type="ATTRLANGNONE" fixed="https://w3id.org/kim/hcrt/scheme"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LANGSTRINGS">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="xml:lang"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DESCRIPTIONS">
+    <xs:sequence>
+      <xs:element name="langstring" type="LANGSTRINGS"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CATALOGS">
+    <xs:union memberTypes="STDCATS ANYCATS"/>
+  </xs:simpleType>
+  <xs:simpleType name="STDCATS">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DOI"/>
+      <xs:enumeration value="HDL"/>
+      <xs:enumeration value="ISBN"/>
+      <xs:enumeration value="URN"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ANYCATS">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+  <xs:simpleType name="AGGREGATLEVELVALUELIST">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:maxInclusive value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="AGGREGATLEVELVALUE">
+    <xs:simpleContent>
+      <xs:extension base="AGGREGATLEVELVALUELIST">
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="AGGREGATLEVEL">
+    <xs:sequence>
+      <xs:element name="source" type="LOM1SOURCE"/>
+      <xs:element name="value">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="AGGREGATLEVELVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="STATUSVALUELIST">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Draft"/>
+      <xs:enumeration value="Final"/>
+      <xs:enumeration value="Revised"/>
+      <xs:enumeration value="Unavailable"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="STATUSVALUE">
+    <xs:simpleContent>
+      <xs:extension base="STATUSVALUELIST">
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="STATUSTYPE">
+    <xs:sequence>
+      <xs:element name="source" type="LOM1SOURCE"/>
+      <xs:element name="value">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="STATUSVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="CONTENTCONTRIBUTERROLELIST">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Author"/>
+      <xs:enumeration value="Publisher"/>
+      <xs:enumeration value="Unknown"/>
+      <xs:enumeration value="Initiator"/>
+      <xs:enumeration value="Terminator"/>
+      <xs:enumeration value="Validator"/>
+      <xs:enumeration value="Editor"/>
+      <xs:enumeration value="Graphical Designer"/>
+      <xs:enumeration value="Technical Implementer"/>
+      <xs:enumeration value="Content Provider"/>
+      <xs:enumeration value="Technical Validator"/>
+      <xs:enumeration value="Educational Validator"/>
+      <xs:enumeration value="Script Writer"/>
+      <xs:enumeration value="Instructional Designer"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="CONTENTCONTRIBUTERROLEVALUE">
+    <xs:simpleContent>
+      <xs:extension base="CONTENTCONTRIBUTERROLELIST">
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="CONTENTCONTRIBUTORROLE">
+    <xs:sequence>
+      <xs:element name="source" type="LOM1SOURCE"/>
+      <xs:element name="value">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="CONTENTCONTRIBUTERROLEVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="METACONTRIBUTORROLELIST">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Creator"/>
+      <xs:enumeration value="Provider"/>
+      <xs:enumeration value="Validator"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="METACONTRIBUTERROLEVALUE">
+    <xs:simpleContent>
+      <xs:extension base="METACONTRIBUTORROLELIST">
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="METACONTRIBUTORROLE">
+    <xs:sequence>
+      <xs:element name="source" type="LOM1SOURCE"/>
+      <xs:element name="value">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="METACONTRIBUTERROLEVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DATES">
+    <xs:sequence>
+      <xs:element name="datetime" type="xs:date"/>
+      <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TIMES">
+    <xs:sequence>
+      <xs:element name="datetime" type="xs:time"/>
+      <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="LRT">
+    <xs:sequence>
+      <xs:element name="source" type="CCCMSOURCE"/>
+      <xs:element name="id" type="LRTIDS"/>
+      <xs:element minOccurs="0" ref="entry"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="LRTIDS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="https://w3id.org/kim/hcrt/([A-Za-z0-9_-])+"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="RIGHTSVALUELIST">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="yes"/>
+      <xs:enumeration value="no"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="RIGHTSVALUE">
+    <xs:simpleContent>
+      <xs:extension base="RIGHTSVALUELIST">
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="RIGHTS">
+    <xs:sequence>
+      <xs:element name="source" type="LOM1SOURCE"/>
+      <xs:element name="value">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="RIGHTSVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FACHCLASSPURPOSE">
+    <xs:sequence>
+      <xs:element name="source" type="LOM1SOURCE"/>
+      <xs:element name="value">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="ATTRLANGNONE" fixed="Discipline"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TAXONS">
+    <xs:sequence>
+      <xs:element name="id" type="IDS"/>
+      <xs:element minOccurs="0" ref="entry"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="IDS">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="http://w3id.org/kim/hochschulfaechersystematik/[a-z]([0-9])+|[0-9][0-9][0-9]"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="HSFAECHERVALUELIST">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="https://w3id.org/kim/hochschulfaechersystematik/scheme"/>
+      <xs:enumeration value="DDC"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="HSFAECHERVALUE">
+    <xs:simpleContent>
+      <xs:extension base="HSFAECHERVALUELIST">
+        <xs:attribute ref="xml:lang" use="required" fixed="x-none"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="HSFAECHER">
+    <xs:sequence>
+      <xs:element name="source">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="langstring" type="HSFAECHERVALUE"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element maxOccurs="unbounded" name="taxon" type="TAXONS"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="entry">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="langstring" type="LANGSTRINGS"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="metadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="lom"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lom">
+    <xs:complexType>
+      <xs:all>
+        <xs:element ref="general"/>
+        <xs:element ref="lifecycle"/>
+        <xs:element minOccurs="0" ref="metametadata"/>
+        <xs:element minOccurs="0" ref="technical"/>
+        <xs:element minOccurs="0" ref="educational"/>
+        <xs:element ref="rights"/>
+        <xs:element minOccurs="0" ref="classification"/>
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="general">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="identifier"/>
+        <xs:element maxOccurs="unbounded" ref="title"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="language"/>
+        <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="keyword"/>
+        <xs:element minOccurs="0" name="aggregationlevel" type="AGGREGATLEVEL"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="langstring" type="LANGSTRINGS"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="identifier">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="catalog"/>
+        <xs:element ref="entry"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="catalog" type="CATALOGS"/>
+  <xs:element name="language">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[a-z][a-z]"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="keyword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="langstring" type="LANGSTRINGS"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="lifecycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" ref="version"/>
+        <xs:element minOccurs="0" name="status" type="STATUSTYPE"/>
+        <xs:element maxOccurs="14" name="contribute">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="role" type="CONTENTCONTRIBUTORROLE"/>
+              <xs:element maxOccurs="unbounded" ref="centity"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="metametadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="3" name="contribute">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="role" type="METACONTRIBUTORROLE"/>
+              <xs:element maxOccurs="unbounded" ref="centity"/>
+              <xs:element minOccurs="0" name="date" type="DATES"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="version">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="langstring" type="LANGSTRINGS"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="centity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="vcard"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!-- Das VCard-Format wird hier nicht genau spezifiziert, auch eine
+       XML-Repräsentation ist in Übereinstimmung mit der LOM-Spezifikation
+       nicht vorgesehen. Der Empfänger muss den Text entsprechend der Beispiele
+       parsen können. -->
+  <xs:element name="vcard" type="xs:string"/>
+  <xs:element name="technical">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="format" type="xs:string"/>
+        <xs:element minOccurs="0" name="size" type="xs:positiveInteger"/>
+        <xs:element minOccurs="0" ref="location"/>
+        <xs:element minOccurs="0" name="otherplatformrequirements" type="xs:string"/>
+        <xs:element minOccurs="0" name="duration" type="TIMES"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="location">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="type" use="required" type="LOCISURI"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="educational">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" name="learningResourceType" type="LRT"/>
+        <xs:element minOccurs="0" name="description" type="DESCRIPTIONS"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="rights">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="copyrightandotherrestrictions" type="RIGHTS"/>
+        <xs:element name="description" type="DESCRIPTIONS">
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="classification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="purpose" type="FACHCLASSPURPOSE"/>
+        <xs:element maxOccurs="unbounded" name="taxonpath" type="HSFAECHER"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
