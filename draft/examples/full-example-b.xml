@@ -65,16 +65,18 @@
 				<centity>
 					<vcard>
 						BEGIN:VCARD
-						VERSION:3.0
-						N:Kolb;Annika
-						FN: Annika Kolb
+						VERSION:4.0
+						KIND:individual
+						N:Kolb;Annika;;Dr.
+						FN:Dr. Annika Kolb
 						END:VCARD
 					</vcard>
 				</centity>
 				<centity>
 					<vcard>
 						BEGIN:VCARD
-						VERSION:3.0
+						VERSION:4.0
+						KIND:individual
 						N:Vonrhein;Ingrid
 						FN:Ingrid Vonrhein
 						END:VCARD
@@ -83,7 +85,8 @@
 				<centity>
 					<vcard>
 						BEGIN:VCARD
-						VERSION:3.0
+						VERSION:4.0
+						KIND:individual
 						N:Schocker;Marita
 						FN:Marita Schocker
 						END:VCARD
@@ -104,7 +107,8 @@
 				<centity>
 					<vcard>
 						BEGIN:VCARD
-						VERSION:3.0
+						VERSION:4.0
+						KIND:individual
 						N:Faißt;Julia
 						FN:Julia Faißt
 						END:VCARD
@@ -129,7 +133,8 @@
 				<centity>
 					<vcard>
 						BEGIN:VCARD
-						VERSION:3.0
+						VERSION:4.0
+						KIND:individual
 						N:Schreiber;Anja
 						FN:Anja Schreiber
 						END:VCARD
@@ -154,8 +159,9 @@
 				<centity>
 					<vcard>
 						BEGIN:VCARD
-						VERSION:3.0
-						ORG:PH Freiburg
+						VERSION:4.0
+						KIND:org
+						FN:PH Freiburg
 						URL:https://www.wikidata.org/entity/Q1441203
 						END:VCARD
 					</vcard>
