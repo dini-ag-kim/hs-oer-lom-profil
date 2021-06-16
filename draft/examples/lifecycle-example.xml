@@ -23,8 +23,8 @@
             <centity>
                 <vcard>
                     BEGIN:VCARD
-		    VERSION:4.0
-		    KIND:individual
+		            VERSION:4.0
+		            KIND:individual
                     N:Kolb;Annika;;Dr.
                     FN:Dr. Annika Kolb
                     URL:https://orcid.org/0000-0003-3456-7812
@@ -34,8 +34,8 @@
             <centity>
                 <vcard>
                     BEGIN:VCARD
-		    VERSION:4.0
-		    KIND:individual
+		            VERSION:4.0
+		            KIND:individual
                     N:Reimer;Ingrid
                     FN:Ingrid Reimer
                     END:VCARD
@@ -54,8 +54,8 @@
             <centity>
                 <vcard>
                     BEGIN:VCARD
-		    VERSION:4.0
-		    KIND:individual
+		            VERSION:4.0
+		            KIND:individual
                     N:Mair;Anna
                     FN: Anna Mair
                     END:VCARD
