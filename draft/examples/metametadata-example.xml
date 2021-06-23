@@ -12,10 +12,11 @@
             <centity>
                 <vcard>
                     BEGIN:VCARD
-                    VERSION:3.0
-                    N:Dimpfl;Thomas
-                    FN:Thomas Dimpfl
-                    URL:https://orcid.org/0000-0003-3415-7412
+		            VERSION:4.0
+		            KIND:individual
+                    N:Dacher;Thomas
+                    FN:Thomas Dacher
+                    URL:https://orcid.org/0000-0002-5962-0349
                     END:VCARD
                 </vcard>
             </centity>
@@ -38,9 +39,11 @@
             <centity>
                 <vcard>
                     BEGIN:VCARD
-                    VERSION:3.0
-                    ORG:Universität Tübingen
-                    URL:https://www.wikidata.org/entity/Q153978
+		            VERSION:4.0
+		            KIND:org
+                    FN:Universität Tübingen
+		            URL:https://www.wikidata.org/entity/Q153978
+		            URL:https://ror.org/03a1kwz48
                     END:VCARD
                 </vcard>
             </centity>
@@ -57,7 +60,8 @@
             <centity>
                 <vcard>
                     BEGIN:VCARD
-                    VERSION:3.0
+		            VERSION:4.0
+		            KIND:individual
                     N:Schreiber;Anja
                     FN:Anja Schreiber
                     END:VCARD

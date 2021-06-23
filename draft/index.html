@@ -1188,9 +1188,11 @@ Rolle, bedeutendste Beteiligte zuerst.
 ## Das Element <dfn><code>&lt;vcard></code></dfn>
 
 Der vCard-Eintrag erfolgt in einfacher Textform und richtet sich nach [[!RFC6350]],
-wie in den Beispielen zu sehen. Er beschreibt eine Person oder Organisation.
+wie in den Beispielen zu sehen. Er beschreibt eine Person oder Organisation. Um
+Organisationen korrekt beschreiben zu können, ist Version 4.0 der vCard mit dem
+Attribut `KIND` notwendig.
 
-Anzumerken ist die Möglichkeit, die [[?ORCID]] oder die [[?GND]] -ID der Person
+Anzumerken ist die Möglichkeit, die [[?ORCID]] oder die [[?GND]]-URI der Person
 als Tag `URL` mit anzugeben, die genutzt werden SOLL, wenn die Information zur Verfügung steht.
 Der entsprechende Identifier MUSS bei Angabe als HTTP-URI angegeben werden, z.B.
 `https://orcid.org/0000-0001-9083-7442` oder `https://d-nb.info/gnd/14326723X`.
@@ -1203,11 +1205,10 @@ oder `https://d-nb.info/gnd/36187-2`.
 Alternativ können auch die IDs der Research Organization Registry [[?ROR]] genutzt
 werden.
 
-<p class="note">[[?ROR]] ist noch relativ neu und Geschäftsmodell und Weg sind noch nicht klar.
-Bei der Abdeckung konnten stichprobenartig keine deutlichen Unterschiede festgestellt
-werden. Es muss aber bedacht werden, dass sich [[?ROR]] nur mit
+<p class="note">Bei der Abdeckung von [[?ROR]] konnten stichprobenartig keine
+deutlichen Lücken festgestellt werden. Es muss aber bedacht werden, dass sich [[?ROR]] nur mit
 Forschungsorganisationen – allerdings im weitesten Sinne – befasst. Mehrere
-wissenschaftliche Serviceangebote wollen aber allem Anschein nach zukünftig ROR-IDs
+wissenschaftliche Serviceangebote wollen aber allem Anschein nach ROR-IDs
 ebenfalls nutzen, wie [[?Crossref]], [[?DataCite]] und [[?ORCID]]. Das spricht sehr
 stark für eine Unterstützung.</p>
 
