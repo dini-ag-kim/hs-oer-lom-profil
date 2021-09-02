@@ -1,0 +1,40 @@
+<lom>
+    <general>
+        <identifier>
+            <catalog>OER Sammlung</catalog>
+            <entry>
+                <langstring>8dee40f6-0b22-4e5c-9d39-7ebeb7d20b9f</langstring>
+            </entry>
+        </identifier>
+        <identifier>
+            <catalog>HDL</catalog>
+            <entry>
+                <langstring>10900.3/OER_qiYOaTBN</langstring>
+            </entry>
+        </identifier>
+        <title>
+            <langstring>Baustein 5 Classroom Action Research</langstring>
+        </title>
+        <language>de</language>
+        <description>
+            <langstring>
+                Studierende führen im Rahmen von Praxisphasen\
+                Klassenforschungsprojekte durch.
+            </langstring>
+        </description>
+        <keyword>
+            <langstring>Aktionsforschung</langstring>
+        </keyword>
+        <keyword>
+            <langstring>forschungsorientierte Lehre</langstring>
+        </keyword>
+        <aggregationlevel>
+            <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">2</langstring>
+            </value>
+        </aggregationlevel>
+    </general>
+</lom>

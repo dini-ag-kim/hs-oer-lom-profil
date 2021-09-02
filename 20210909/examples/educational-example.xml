@@ -1,0 +1,18 @@
+<lom>
+    <educational>
+        <learningResourceType>
+            <source>
+                <langstring xml:lang="x-none">https://w3id.org/kim/hcrt/scheme</langstring>
+	    </source>
+	    <id>https://w3id.org/kim/hcrt/video</id>
+            <entry>
+                <langstring xml:lang="de">Video</langstring>
+            </entry>
+        </learningResourceType>
+        <description>
+            <langstring>
+                Das Arbeiten mit linearen Vektorabbildungen wird vermittelt.
+            </langstring>
+        </description>
+    </educational>
+</lom>

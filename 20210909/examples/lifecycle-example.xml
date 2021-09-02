@@ -1,0 +1,66 @@
+<lom>
+    <lifecycle>
+        <version>
+            <langstring>1.6</langstring>
+        </version>
+        <status>
+            <source>
+                <langstring xml:lang="x-none">LOMv1.0</langstring>
+            </source>
+            <value>
+                <langstring xml:lang="x-none">Final</langstring>
+            </value>
+        </status>
+        <contribute>
+            <role>
+                <source>
+                    <langstring xml:lang="x-none">LOMv1.0</langstring>
+                </source>
+                <value>
+                    <langstring xml:lang="x-none">Author</langstring>
+                </value>
+            </role>
+            <centity>
+                <vcard>
+                    BEGIN:VCARD
+		            VERSION:4.0
+		            KIND:individual
+                    N:Kolb;Annika;;Dr.
+                    FN:Dr. Annika Kolb
+                    URL:https://orcid.org/0000-0003-3456-7812
+                    END:VCARD
+                </vcard>
+            </centity>
+            <centity>
+                <vcard>
+                    BEGIN:VCARD
+		            VERSION:4.0
+		            KIND:individual
+                    N:Reimer;Ingrid
+                    FN:Ingrid Reimer
+                    END:VCARD
+                </vcard>
+            </centity>
+        </contribute>
+        <contribute>
+            <role>
+                <source>
+                    <langstring xml:lang="x-none">LOMv1.0</langstring>
+                </source>
+                <value>
+                    <langstring xml:lang="x-none">Graphical Designer</langstring>
+                </value>
+            </role>
+            <centity>
+                <vcard>
+                    BEGIN:VCARD
+		            VERSION:4.0
+		            KIND:individual
+                    N:Mair;Anna
+                    FN: Anna Mair
+                    END:VCARD
+                </vcard>
+            </centity>
+        </contribute>
+    </lifecycle>
+</lom>
