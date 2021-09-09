@@ -62,6 +62,7 @@ rechte Spalte) oder die [Kommentarfunktion von GitHub][multi-line comments]
 verwendet werden.
 
 [latest_version]: https://w3id.org/kim/hs-oer-lom-profil/latest/
+[20210909]: https://w3id.org/kim/hs-oer-lom-profil/20210909/
 [20210506]: https://w3id.org/kim/hs-oer-lom-profil/20210506/
 [20200228]: https://w3id.org/kim/hs-oer-lom-profil/20200228/
 [20200116]: https://w3id.org/kim/hs-oer-lom-profil/20200116/
