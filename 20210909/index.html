@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset='utf-8'>
+    <title>LOM for Higher Education OER Repositories</title>
+    <script src='https://w3c.github.io/respec/builds/respec-dini.js' async class='remove'></script>
+    <script class='remove'>
+        var respecConfig = {
+            editors: [
+              {
+                name: "Michael Menzel",
+                mailto: "michael.menzel@uni-tuebingen.de",
+                company: "Universitätsbibliothek Tübingen - ZOERR",
+                companyURL: "https://www.ub.uni-tuebingen.de/"
+              },
+              {
+                name: "Adrian Pohl",
+                mailto: "pohl@hbz-nrw.de",
+                company: "Hochschulbibliothekszentrum des Landes NRW",
+                companyURL: "https://www.hbz-nrw.de/"
+              }
+            ],
+            authors: [
+              {
+                name: "Konrad Faber",
+                mailto: "faber@vcrp.de",
+                company: "Virtueller Campus Rheinland-Pfalz",
+                companyURL: "https://www.vcrp.de/"
+              },
+              {
+                name: "Holger Kächelein",
+                mailto: "holger.kaechelein@vhb.org",
+                company: "Virtuelle Hochschule Bayern",
+                companyURL: "https://www.vhb.org/"
+              },
+              {
+                name: "Axel Klinger",
+                mailto: "axel.klinger@tib.eu",
+                company: "Technische Informationsbibliothek Hannover",
+                companyURL: "https://www.tib.eu/"
+              },
+              {
+                name: "Patrick Peters",
+                mailto: "p.peters@mmkh.de",
+                company: "Multimediakontor Hamburg GmbH für die Hamburg Open Online University",
+                companyURL: "https://www.mmkh.de/"
+              },
+              {
+                name: "Peter Rempis",
+                mailto: "peter.rempis@uni-tuebingen.de",
+                company: "Universitätsbibliothek Tübingen",
+                companyURL: "https://www.ub.uni-tuebingen.de/"
+              }
+            ],
+            format: "markdown",
+            localBiblio: {
+                "CC": {
+                    title: "Creative Commons Licenses",
+                    href: "https://creativecommons.org/licenses/",
+                    publisher: "Creative Commons"
+                },
+                "Crossref": {
+                    title: "Crossref",
+                    href: "https://www.crossref.org/",
+                    publisher: "Publishers International Linking Association, Inc."
+                },
+                "DataCite": {
+                    title: "DataCite",
+                    href: "https://datacite.org/",
+                    publisher: "DataCite –International Data Citation Initiative"
+                },
+                "DDC": {
+                    title: "Dewey Decimal Classification",
+                    href: "https://www.oclc.org/en/dewey/resources.html",
+                    publisher: "OCLC"
+                },
+                "edu-sharing": {
+                    title: "Open Source Bildungsinfrastruktur",
+                    href: "https://edu-sharing.com/",
+                    publisher: "metaVentis GmbH"
+                },
+                "ISO26324": {
+                    title: "Information and documentation — Digital object identifier system. ISO 26324:2012",
+                    href: "https://www.iso.org/standard/43506.html",
+                    status: "Last Reviewed and confirmed in 2017",
+                    publisher: "International Organization for Standardization (ISO)"
+                },
+                "GND": {
+                    title: "Gemeinsame Normdatei (GND)",
+                    href: "https://www.dnb.de/gnd",
+                    publisher: "Deutsche Nationalbibliothek"
+                },
+                "LOMv1.0": {
+                    title: "IEEE Standard for Learning Object Metadata",
+                    href: "https://ieeexplore.ieee.org/document/1032843/",
+                    status: "1484.12.1-2002",
+                    publisher: "IEEE"
+                },
+                "LOMv1.2": {
+                    title: "IMS Learning Resource Meta-data Specification",
+                    href: "https://www.imsglobal.org/metadata/index.html",
+                    status: "Maintenance Release 1.2.4",
+                    publisher: "IMS Global Learning Consortium, Inc."
+                },
+                "MIME": {
+                    title: "List of Media Types",
+                    href: "http://www.iana.org/assignments/media-types/media-types.xhtml",
+                    publisher: "IANA"
+                },
+                "OAI-PMH": {
+                    title: "Open Archives Initiative Protocol for Metadata Harvesting",
+                    href: "https://www.openarchives.org/OAI/openarchivesprotocol.html",
+                    status: "Version 2.0",
+                    publisher: "Open Archives Initiative"
+                },
+                "ORCID": {
+                    title: "ORCID",
+                    href: "https://orcid.org/",
+                    publisher: "ORCID, Inc."
+                },
+                "ROR": {
+                    title: "Research Organization Registry",
+                    href: "https://ror.org/",
+                    publisher: "California Digital Library, Crossref, DataCite, and Digital Science"
+                },
+                "SKOS-HS": {
+                    title: "Destatis-Systematik der Fächergruppen, Studienbereiche und Studienfächer",
+                    href: "https://w3id.org/kim/hochschulfaechersystematik/scheme",
+                    publisher: "Statistisches Bundesamt der Bundesrepublik Deutschland"
+                },
+                "SKOS-LRT": {
+                    title: "Hochschulcampus Ressourcentypen",
+                    href: "https://w3id.org/kim/hcrt/scheme",
+                    publisher: "OER-Repo AG der Länder"
+                },
+                "Wikidata": {
+                    title: "Wikidata",
+                    href: "https://www.wikidata.org/",
+                    publisher: "The Wikimedia Foundation, Inc."
+                }
+            },
+            logos: [],
+            otherLinks: [{
+                key: "Links zur Spezifikation",
+                data: [{
+                    value: "Permalink zur aktuellsten Version",
+                    href: "https://w3id.org/kim/hs-oer-lom-profil/latest/"
+                }, {
+                    value: "Permalink zu dieser Version",
+                    href: "https://w3id.org/kim/hs-oer-lom-profil/20210909/"
+                }, {
+                    value: "Letzter Entwurf zur Kommentierung",
+                    href: "https://w3id.org/kim/hs-oer-lom-profil/draft/"
+                }]
+            }, {
+                key: "Mitmachen",
+                data: [{
+                    value: "GitHub-Repository",
+                    href: "https://github.com/dini-ag-kim/hs-oer-lom-profil/"
+                }, {
+                    value: "Änderungshistorie",
+                    href: "https://github.com/dini-ag-kim/hs-oer-lom-profil/commits/master"
+                }]
+            }],
+            publishDate: "2021-09-09", // Add publication date when publishing new spec version!
+            specStatus: "base", // Change to "base" when publishing new spec version!
+            subtitle: "Beschreibung zur XML Schema Definition des Metadatenprofils für Open Educational Resources im Hochschulbereich"
+        };
+    </script>
+</head>
+<body>
+
+<section id="abstract">
+
+## Einleitung
+
+Verschiedene Hochschulrepositorien deutscher Bundesländer haben sich
+zum Ziel gesetzt, ihre frei verfügbaren Materialien vernetzt zugänglich
+zu machen. Für den Austausch von Metadaten über die Materialien wurde
+eine [XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Da solche
+Schemata schwer zu lesen sind, gibt es diese Dokumentation.
+
+Kenntnisse über grundlegende XML–Eigenschaften werden vorausgesetzt und
+nicht erläutert. Vielfältige Informationen dazu gibt es im WWW oder
+auch in der [[?LOMv1.2]]-Spezifikation.
+
+Die weitere Entwicklung und Pflege des Standards erfolgt in einem
+[GitHub-Repositorium](https://github.com/dini-ag-kim/hs-oer-lom-profil/),
+welches alle notwendigen Informationen enthält.
+
+<p class="copyright">
+<img alt="CC-BY-SA" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" />
+Dieses Werk ist lizenziert unter
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+Creative Commons Namensnennung/Weitergabe unter gleichen Bedingungen 4.0</a>.</p>
+
+</section>
+
+<section id="conformance"></section>
+
+<section id="basic-structure">
+
+## Grundstruktur
+
+<section data-dfn-for="metadata">
+
+## Das Wurzelelement <dfn><code>&lt;metadata></code></dfn>
+
+Das Element bildet die Klammer für die Metadaten zu allen Objekten.
+
+<p class="note">Evtl. kommen bei [[?OAI-PMH]] noch weitere umschließende
+Elemente hinzu, die Anfrage an den OAI-Server betreffend. Das hat
+aber keinen weiteren Einfluss auf die hier spezifizierten Angaben zu
+den Metadaten der Lernobjekte.</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal in der XML-Metadatendatei vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>
+`xmlns` - Es benennt den durch diese XML Schema Description
+deklarierten Namespace und SOLL folgenden Wert haben:
+`https://www.oerbw.de/hsoerlom`
+
+`xmlns:xsi` - Es benennt den Namespace für XSI-Elemente und
+MUSS den folgenden Wert haben:
+`http://www.w3.org/2001/XMLSchema-instance`
+
+`xsi:schemaLocation` - Es benennt den Ort, an dem das XML
+Schema zu finden ist und MUSS den folgenden Wert haben:
+`https://www.oerbw.de/hsoerlom https://w3id.org/kim/hs-oer-lom-profil/latest/schemas/hs-oer-lom.xsd`
+    </dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;lom></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="lom">
+
+## Das Element <dfn><code>&lt;lom></code></dfn>
+
+Das Element beinhaltet die Metadaten zu einem Objekt. Das Schema basiert auf
+[[!LOMv1.2]], wurde aber konsequent reduziert auf die für die Repositorien
+notwendigen Metadaten.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;metadata></a>
+vorkommen. Jeweils ein <code>&lt;lom></code> Element beschreibt somit ein
+komplettes Lernobjekt.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;general></a><br>
+        <a>&lt;lifecycle></a><br>
+        <a>&lt;metametadata></a><br>
+        <a>&lt;technical></a><br>
+        <a>&lt;educational></a><br>
+        <a>&lt;rights></a><br>
+        <a>&lt;classification></a>
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+<section id="general">
+
+## Allgemeine Beschreibung
+
+<section data-dfn-for="general">
+
+## Das Element <dfn><code>&lt;general></code></dfn>
+
+Das Element beschreibt das Lernobjekt allgemein.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;identifier></a><br>
+        <a>&lt;title></a><br>
+        <a>&lt;language></a><br>
+        <a>&lt;description></a><br>
+        <a>&lt;keyword></a><br>
+        <a>&lt;aggregationlevel></a>
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/general-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/general-example.xml)
+
+<section data-dfn-for="identifier">
+
+## Das Element <dfn><code>&lt;identifier></code></dfn>
+
+Das Element bezeichnet einen Eintrag in einem Katalog, d. h. einem
+Identifizierungssystem, der dem Objekt zugeordnet ist. Durch den Eintrag soll das
+Objekt von dritter Seite gesucht und gefunden werden können.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF nicht oder ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;catalog></a><br>
+<a>&lt;entry></a> - Es bezeichnet den Eintrag des Objekts (ID) im Katalog,
+    d. h. Identifizierungssystem.
+    </dd>
+</dl>
+
+<section data-dfn-for="catalog">
+
+## Das Element <dfn><code>&lt;catalog></code></dfn>
+
+Das Element benennt den Katalog, d.h. das Identifizierungssystem.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;identifier></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+    <dd>
+Erlaubte Werte sind vom Typ `String`, die keiner Einschränkung unterliegen. Es
+    werden aber folgende Bezeichner für Standards reserviert:
+
+- `DOI` - für Digital Object Identifiers [[!ISO26324]]
+
+- `HDL` - für Handles [[!RFC3650]]
+
+- `ISBN` - für Internationale Standardbuchnummern      
+
+- `URN` - für Uniform Resource Names [[!RFC8141]]
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+<section data-dfn-for="title">
+
+## Das Element <dfn><code>&lt;title></code></dfn>
+
+Das Element gibt den Namen oder Titel des Lernobjekts an.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="language">
+
+## Das Element <dfn><code>&lt;language></code></dfn>
+
+Das Element benennt die Sprache(n) des Inhalts des Lernobjekts.
+
+Werte bestehen aus einem zweibuchstabigem Kürzel für die Sprache, z. B. `de`,
+nach [[!ISO-639-1]]. Kompliziertere Varianten mit Subtags, z.B. `en-US`, werden bis
+auf weiteres nicht unterstützt.
+Kann keine Sprache, z. B. bei Bildern, angegeben werden, DARF der Wert `xnone`
+gesetzt werden.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="keyword">
+
+## Das Element <dfn><code>&lt;keyword></code></dfn>
+
+Das Element enthält eine Sammlung von Schlagwörten oder Phrasen, die das Lernobjekt
+beschreiben.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF nicht oder ein- oder mehrfach innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="aggregationlevel">
+
+## Das Element <dfn><code>&lt;aggregationlevel></code></dfn>
+
+Das Element beschreibt die Granularität des Lernobjekts nach [[!LOMv1.0]].
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;general></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es benennt die Granularität des Lernobjekts.
+
+Die von [[!LOMv1.0]] erlaubten Werte sind:
+
+- `1` - für einzelne, atomare Materialien
+
+- `2` - für eine Anzahl zusammengehöriger atomarer Materialien, z. B. eine
+HTML-Seite mit eingefügten Bildern, oder ein Übungsblatt mit Erläuterungen und
+Lösungen
+
+- `3` - für eine Sammlung von Lernobjekten des 2. Levels, z. B.  ein Webportal oder
+ein Lernkurs
+
+- `4` - höchster Level, z. B. für einen ganzen Satz von Kursen, die zu einem
+Abschluss führen
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="lifecycle">
+
+## Angaben zum Lebenszyklus
+
+<section data-dfn-for="lifecycle">
+
+## Das Element <dfn><code>&lt;lifecycle></code></dfn>
+
+Das Element beschreibt Eigenschaften zu Historie und aktuellem Status des
+Lernobjekts. Es bezeichnet außerdem die Personen und Organisationen, die an seiner
+Erstellung beteiligt waren.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;version></a><br>
+<a>&lt;status></a><br>
+<a>&lt;contribute></a> - Das Element beschreibt die Personen und
+Organisationen, die an der Erstellung des Lernobjekts beteiligt waren. Es
+MUSS mindestens ein <code>&lt;contribute></code> mit Angabe der Autoren
+geben. Innerhalb jedes <code>&lt;contribute></code>-Elements MUSS genau
+einmal ein <code>&lt;role></code>-Element vorkommen. Die erlaubten Werte
+aus [[!LOMv1.0]] für <a>&lt;role></a> sind:
+
+- `Author`
+
+- `Content Provider`
+
+- `Editor`
+
+- `Educational Validator`
+
+- `Graphical Designer`
+
+- `Initiator`
+
+- `Instructional Designer`
+
+- `Publisher`
+
+- `Unknown`
+
+- `Script Writer`
+
+- `Technical Implementer`
+
+- `Technical Validator`
+
+- `Terminator`
+
+- `Validator`
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/lifecycle-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/lifecycle-example.xml)
+
+<section data-dfn-for="version">
+
+## Das Element <dfn><code>&lt;version></code></dfn>
+
+Das Element bezeichnet die gegenwärtige Version des Lernobjekts.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lifecycle></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="status">
+
+## Das Element <dfn><code>&lt;status></code></dfn>
+
+Das Element bezeichnet den Veröffentlichungszustand des Lernobjekts.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lifecycle></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es benennt den konkreten Veröffentlichungszustand.
+
+Die von [[!LOMv1.0]] erlaubten Werte sind:
+
+- `Draft`
+
+- `Final` - Das sollte der Normalzustand für veröffentliche Objekte sein.
+
+- `Revised` - In der Praxis Handhabung wie `Final`.
+
+- `Unavailable` - Das sollte gesetzt sein, wenn ein Objekt aus rechtlichen
+oder anderen Gründen zurückgezogen werden musste.
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="metametadata">
+
+## Angaben zum Metadatensatz
+
+<section data-dfn-for="metametadata">
+
+## Das Element <dfn><code>&lt;metametadata></code></dfn>
+
+Das Element gibt Informationen zu den Metadaten des Lernobjekts selbst. Es
+bezeichnet außerdem die Personen und Organisationen, die an der Erstellung der
+Metadaten beteiligt waren.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;contribute></a> - Das Element beschreibt die Personen und
+Organisationen, die an der Erstellung der Metadaten des Lernobjekts und an
+seiner Einstellung ins Repositorium beteiligt waren. Bei Vorhandensein des
+<code>&lt;metametadata></code>-Elements MUSS es mindestens ein
+<code>&lt;contribute></code> geben.
+Innerhalb jedes <code>&lt;contribute></code>-Elements MUSS genau
+einmal ein <code>&lt;role></code>-Element vorkommen.
+
+Es wird vereinbart, in der Rolle des `Provider` die Hochschule bzw.
+Organisation zu benennen, über die das Material zur Verfügung gestellt
+wurde.
+
+Die das Material prüfende Person aus dem Redaktionsteam ist in der Rolle
+`Validator` einzutragen. Damit lässt sich auch nachvollziehen, wer das
+Lernobjekt zur Veröffentlichung freigegeben hat. Zudem ist es auch die
+geeignete Stelle, um das Veröffentlichungsdatum im Repositorium als
+<a>&lt;date></a> anzugeben.
+
+Die erlaubten Angaben für <a>&lt;role></a> sind:
+
+- `Creator`
+
+- `Provider`
+
+- `Validator`
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/metametadata-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/metametadata-example.xml)
+
+</section>
+
+</section>
+
+<section id="technical-metadata">
+
+## Technische Angaben
+
+<section data-dfn-for="technical">
+
+## Das Element <dfn><code>&lt;technical></code></dfn>
+
+Das Element beschreibt die technischen Eigenschaften und Anforderungen des
+Lernobjekts.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;format></a><br>
+        <a>&lt;size></a><br>
+        <a>&lt;location></a><br>
+        <a>&lt;otherplatformrequirements></a><br>
+        <a>&lt;duration></a>
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/technical-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/technical-example.xml)
+
+<section data-dfn-for="format">
+
+## Das Element <dfn><code>&lt;format></code></dfn>
+
+Das Element benennt das technische Format des Lernobjekts. Die Werte sollen den
+üblichen Notationen für [[!MIME]] Typen entsprechen, also z. B. `application/pdf`
+oder `image/png`.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es DARF nicht oder ein- oder mehrfach innerhalb des Elements
+<a>&lt;technical></a> vorkommen. Es ist möglich, dass
+das Lernobjekt in verschiedenen Formaten angeboten wird.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="size">
+
+## Das Element <dfn><code>&lt;size></code></dfn>
+
+Das Element benennt die Größe des digitalen Lernobjekts in Bytes. Es sind nur Ziffern
+von `0` bis `9` erlaubt und keine Angabe einer Einheit. Im Falle des Vorhandenseins des
+Lernobjekts in mehreren Formaten oder des Bestehens aus mehreren Einzelobjekten bezieht
+sich die Angabe auf das komprimierte Archiv, das alles enthält.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;technical></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="location">
+
+## Das Element <dfn><code>&lt;location></code></dfn>
+
+Das Element benennt den Ort, an dem das Lernobjekt abgerufen werden kann. Für Webinhalte ist dies
+in der Regel ein Uniform Resource Locator (URL). Siehe auch das Attribut `type`.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;technical></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>
+`type` - Beschreibt die Art der Angabe.
+
+Gültige Werte für `type` sind:
+
+- `URI` - ein Identifier (Uniform Resource Identifier) für eine physische oder
+abstrakte Ressource
+
+- `TEXT` - eine Ortsbeschreibung des Objekts als Text
+    </dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="otherplatformrequirements">
+
+## Das Element <dfn><code>&lt;otherplatformrequirements></code></dfn>
+
+Das Element enthält Informationen über benötigte Software oder andere technische
+Anforderungen, um das Lernobjekt benutzen zu können.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;technical></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="duration">
+
+## Das Element <dfn><code>&lt;duration></code></dfn>
+
+Das Element enthält die Zeit, die benötigt wird, wenn das Lernobjekt mit der
+beabsichtigten Geschwindigkeit abgespielt wird. Naturgemäß ist diese Angabe nur bei
+bestimmten Formaten, wie Videos, Audios oder Animationen sinnvoll.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;technical></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;datetime></a><br>
+<a>&lt;description></a>
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="educational-data">
+
+## Pädagogische Angaben
+
+<section data-dfn-for="educational">
+
+## Das Element <dfn><code>&lt;educational></code></dfn>
+
+Das Element beschreibt die Eigenschaften des Lernobjekts in Bezug auf die Lernerfahrung.
+Da diese Eigenschaften von den Autoren selten angegeben werden und
+redaktionell schwierig zu bestimmen sind, beschränkt sich die Spezifikation vorerst
+auf zwei Elemente in diesem Bereich.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;learningresourcetype></a><br>
+<a>&lt;description></a> - Es beschreibt das Lernziel des Lernobjekts als Freitext.
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/educational-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/educational-example.xml)
+
+<section data-dfn-for="learningresourcetype">
+
+## Das Element <dfn><code>&lt;learningresourcetype></code></dfn>
+
+Das Element benennt die Art des Lernobjekts.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es DARF nicht oder ein- oder mehrfach innerhalb des Elements
+<a>&lt;educational></a> vorkommen.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;source></a> mit dem Wert `https://w3id.org/kim/hcrt/scheme`<br>
+<a>&lt;id></a><br>
+<a>&lt;entry></a> - Es benennt die konkrete Art des Objekts
+mittels eines Labels. Da die <a>&lt;id></a>
+das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
+beschreibenden Charakter.<br>
+
+Für die Arten des Lernobjekts wurden „Hochschulcampus Ressourcentypen“
+in Anlehnung an LOM spezifiziert, die in [[!SKOS-LRT]] repräsentiert
+sind. Die angegebene URL in <a>&lt;source></a> stellt den persistenten
+Link zur Repräsentation dar.
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="rights">
+
+## Rechteangaben
+
+<section data-dfn-for="rights">
+
+## Das Element <dfn><code>&lt;rights></code></dfn>
+
+Das Element beschreibt die Nutzungsbedingungen und Lizenz des Lernobjekts.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;copyrightandotherrestrictions></a><br>
+<a>&lt;description></a> - Das Element beschreibt die Lizenz und
+Nutzungsbedingungen genauer. Es MUSS genau 1 Mal innerhalb des Elements
+<a>&lt;rights></a> vorkommen.
+
+Die Angabe kann als Text, RDF, URL oder in anderer Form erfolgen. Bei Creative
+Commons Lizenzen [[?CC]] SOLL das Attribut `xml:lang` im <a>&lt;langstring></a>
+für RDF-Ausdrücke auf `x-t-cc` und für URL auf `x-t-cc-url` gesetzt werden.
+Diese Vorgabe wird im Schema aber nicht forciert.
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/rights-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/rights-example.xml)
+
+<section data-dfn-for="copyrightandotherrestrictions">
+
+## Das Element <dfn><code>&lt;copyrightandotherrestrictions></code></dfn>
+
+Das Element gibt an, ob ein Copyright oder andere Einschränkungen bestehen.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;rights></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es gibt an, ob ein Copyright oder andere Einschränkungen
+bestehen.
+
+Die von [[!LOMv1.0]] erlaubten Werte sind:
+
+- `yes`
+
+- `no`
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="classifications">
+
+## Angaben zur Klassifikation
+
+<section data-dfn-for="classification">
+
+## Das Element <dfn><code>&lt;classification></code></dfn>
+
+Das Element beschreibt Eigenschaften des Lernobjekts mittels Klassifizierungen. Bis auf
+weiteres ist nur eine Klassifizierung nach Fachgebieten vorgesehen. Diese bezieht sich
+ausdrücklich darauf, <i>für welche Fachgebiete das Lernobjekt geeignet ist</i>.
+
+<p class="note">In [[?LOMv1.2]] vorgesehene Elemente für Beschreibungen und Schlagwörter
+erscheinen in diesem Kontext nicht notwendig und werden daher weggelassen.</p>
+
+Die Klassifikation erfolgt als eine dreistufige Hierarchie von Fachgebieten entsprechend
+der [*Fächersystematik für Studierende an Hochschulen* des Statistischen Bundesamtes][1].
+Dazu gibt es eine Repräsentation der Fachgebiete und der Hierarchie in [[!SKOS-HS]].
+
+<p class="note">Zusätzlich kann eine Klassifikation nach der <em>Dewey Decimal
+Classification</em> [[?DDC]] erfolgen. Es dürfen nicht mehr als 3 Hierarchiebenen
+verwendet werden. Im Folgenden wird bei den einzelnen Unterelementen auf Eigenheiten
+bei der Verwendung der [[?DDC]] hingewiesen.</p>
+
+Alle Beteiligten können die Anzahl der Ebenen in der Hierarchie verwenden, die sie für
+sich für angemessen halten. Im Datenaustausch fehlende Ebenen müssen dann von den
+Partnern akzeptiert werden, überzählige werden ignoriert.
+
+[1]: https://www.destatis.de/DE/Methoden/Klassifikationen/Bildung/studenten-pruefungsstatistik.pdf
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;lom></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+        <a>&lt;purpose></a><br>
+        <a>&lt;taxonpath></a>
+    </dd>
+</dl>
+
+<pre class="example" data-include="examples/classification-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/classification-example.xml)
+
+<section data-dfn-for="purpose">
+
+## Das Element <dfn><code>&lt;purpose></code></dfn>
+
+Das Element charakterisiert die Art der Klassifizierung.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;classification></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es benennt die konkrete Art der Klassifizierung.<br>
+Da die Klassifizierung nur nach Fachgebieten vorgesehen ist, ist nur der
+Wert `Discipline` erlaubt und wird im XML Schema auch forciert.
+    </dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="taxonpath">
+
+## Das Element <dfn><code>&lt;taxonpath></code></dfn>
+
+Das Element beschreibt den Pfad der Taxonomie in der konkreten Klassifizierung.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;classification></a>
+vorkommen.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;source></a> - Je nach verwendeter Klassifizierung wird es auf den
+Wert `https://w3id.org/kim/hochschulfaechersystematik/scheme` oder `DDC` gesetzt.<br>
+<a>&lt;taxon></a>
+    </dd>
+</dl>
+
+<section data-dfn-for="taxon">
+
+## Das Element <dfn><code>&lt;taxon></code></dfn>
+
+Das Element beschreibt einen Eintrag in der Klassifikation.
+
+<code>&lt;taxon></code>-Elemente werden als Liste repräsentiert und bilden
+damit einen Taxonomiepfad, d. h. eine hierarchisch sich verfeinernde
+Klassifikation.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;taxonpath></a>
+vorkommen.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;id></a><br>
+<a>&lt;entry></a> - Es benennt die konkrete Klassifikation des Objekts im
+Rahmen der bezeichneten Taxonomie mittels eines Labels. Da die <a>&lt;id></a>
+das entscheidende Klassifikationsmerkmal ist, hat dieses Element nur
+beschreibenden Charakter.<br>
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="generic-elements">
+
+## Mehrfach vorkommende Elemente
+
+<section data-dfn-for="langstring">
+
+## Das Element <dfn><code>&lt;langstring></code></dfn>
+
+Das Element kommt wiederholt im Schema vor. Es wird für einen
+Texteintrag benutzt, der in verschiedenen Sprachen vorliegen kann.
+
+Im Rahmen der Hochschulrepositorien deutscher Länder wird diese
+Möglichkeit vorerst nicht benutzt, sie wird jedoch offengehalten.
+Solange davon kein Gebrauch gemacht wird, KANN auf das Attribut
+`xml:lang` auch verzichtet werden.
+
+<p class="note">Wird das Element <code>&lt;langstring></code> in den
+Elementen <a>&lt;source></a> und <a>&lt;value></a> benutzt, so MUSS das
+Attribut `xml:lang` verwendet und auf den Wert `x-none` gesetzt werden!</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es DARF im übergeordneten Element mehrfach enthalten sein, dann MUSS sich
+der Wert des Attributs `xml:lang` jeweils unterscheiden.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>`xml:lang`</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="description">
+
+## Das Element <dfn><code>&lt;description></code></dfn>
+
+Das Element beschreibt die Bedeutung oder den Inhalt eines
+übergeordneten Elements genauer.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="datetime">
+
+## Das Element <dfn><code>&lt;datetime></code></dfn>
+
+Das Element enthält eine Zeit oder ein Datum, wahlweise ergänzt um
+eine Uhrzeit und eine Zeitzone entsprechend [[!ISO8601]].
+
+<p class="note">Für eine Zusammenfassung von [[!ISO8601]] siehe z. B.
+<a href="https://www.cl.cam.ac.uk/~mgk25/iso-time.html">hier</a>.
+</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+<pre class="example" data-include="examples/datetime-example.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/datetime-example.xml)
+
+</section>
+
+<section data-dfn-for="entry">
+
+## Das Element <dfn><code>&lt;entry></code></dfn>
+
+Das Element bezeichnet den konkreten Eintrag in einer Taxonomie oder einem Katalog.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es DARF genau 1 Mal innerhalb des übergeordneten Elements vorkommen.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a></dd>
+</dl>
+
+</section>
+
+<section id="associates">
+
+## Beteiligte Personen
+
+An mehreren Stellen innerhalb der Beschreibung eines Lernobjekts werden beteiligte
+Personen und Körperschaften benannt. Dies erfolgt in Form von vCard-Einträgen in
+einfacher Textform und richtet sich nach [[!RFC6350]]. Zusätzlich wird die jeweilige
+Rolle der Person oder Körperschaft angegeben.
+
+<section data-dfn-for="contribute">
+
+## Das Element <dfn><code>&lt;contribute></code></dfn>
+
+Das Element beschreibt die Personen und Organisationen, die in irgendeiner Form mit
+dem Lernobjekt oder dessen Beschreibung in Beziehung stehen.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>
+Es MUSS ein- oder mehrfach innerhalb des übergeordneten Elements vorkommen,
+wobei sich der Wert für <a>&lt;role></a> jeweils unterscheiden MUSS.
+    </dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;role></a><br>
+<a>&lt;centity></a><br>
+<a>&lt;date></a>
+    </dd>
+</dl>
+
+<section data-dfn-for="role">
+
+## Das Element <dfn><code>&lt;role></code></dfn>
+
+Das Element beschreibt die Art der Beteiligung.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des Elements <a>&lt;contribute></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;source></a> mit dem Wert `LOMv1.0`<br>
+<a>&lt;value></a> - Es beschreibt die Rolle des Beteiligten.
+
+Die erlaubten Werte von [[!LOMv1.0]] sind jeweils beim übergeordneten
+Element angegeben.
+    </dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="centity">
+
+## Das Element <dfn><code>&lt;centity></code></dfn>
+
+Das Element enthält die Informationen über die Beteiligten in der angeführten
+Rolle, bedeutendste Beteiligte zuerst.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS ein- oder mehrfach innerhalb des Elements <a>&lt;contribute></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;vcard></a></dd>
+</dl>
+
+<section data-dfn-for="vcard">
+
+## Das Element <dfn><code>&lt;vcard></code></dfn>
+
+Der vCard-Eintrag erfolgt in einfacher Textform und richtet sich nach [[!RFC6350]],
+wie in den Beispielen zu sehen. Er beschreibt eine Person oder Organisation. Um
+Organisationen korrekt beschreiben zu können, ist Version 4.0 der vCard mit dem
+Attribut `KIND` notwendig.
+
+Anzumerken ist die Möglichkeit, die [[?ORCID]] oder die [[?GND]]-URI der Person
+als Tag `URL` mit anzugeben, die genutzt werden SOLL, wenn die Information zur Verfügung steht.
+Der entsprechende Identifier MUSS bei Angabe als HTTP-URI angegeben werden, z.B.
+`https://orcid.org/0000-0001-9083-7442` oder `https://d-nb.info/gnd/14326723X`.
+
+Für Organisationen gilt ein ähnlicher Vorschlag, hier SOLL als `URL` der URI des
+entsprechenden [[?Wikidata]]-Items genannt werden oder die [[?GND]]-URI,
+also z. B. für die Universität Tübingen `http://www.wikidata.org/entity/Q153978`
+oder `https://d-nb.info/gnd/36187-2`.
+<br>
+Alternativ können auch die IDs der Research Organization Registry [[?ROR]] genutzt
+werden.
+
+<p class="note">Bei der Abdeckung von [[?ROR]] konnten stichprobenartig keine
+deutlichen Lücken festgestellt werden. Es muss aber bedacht werden, dass sich [[?ROR]] nur mit
+Forschungsorganisationen – allerdings im weitesten Sinne – befasst. Mehrere
+wissenschaftliche Serviceangebote wollen aber allem Anschein nach ROR-IDs
+ebenfalls nutzen, wie [[?Crossref]], [[?DataCite]] und [[?ORCID]]. Das spricht sehr
+stark für eine Unterstützung.</p>
+
+</section>
+
+</section>
+
+<section data-dfn-for="date">
+
+## Das Element <dfn><code>&lt;date></code></dfn>
+
+Das Element beschreibt das Datum des Beitrags.
+
+<p class="note">Es wird festgelegt, dass der <code>&lt;contribute></code>-Eintrag
+mit der Rolle `Creator` das <em>Datum der letzten Änderung</em> enthält. Außerdem wird
+festgelegt, dass der <code>&lt;contribute></code>-Eintrag mit der Rolle `Validator`
+das <em>Datum der Veröffentlichung</em> enthält.</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es DARF 1 Mal innerhalb des Elements <a>&lt;contribute></a> vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>
+<a>&lt;datetime></a><br>
+<a>&lt;description></a> - Es beschreibt die Bedeutung des Datums.<br>
+Es wird vorgeschlagen, als Konvention die Begriffe `Modified` und
+`Published` zu verwenden.
+    </dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="authoritative-data">
+
+## Kontrollierte Vokabulare
+
+An mehreren Stellen innerhalb der Beschreibung eines Lernobjekts wird auf
+kontrollierte Vokabulare zurückgegriffen.
+
+<section data-dfn-for="source">
+
+## Das Element <dfn><code>&lt;source></code></dfn>
+
+Das Element benennt die Quelle des Vokabulars. Es ist abhängig vom Kontext der
+Verwendung auf `LOMv1.0`, `https://w3id.org/kim/hcrt/scheme`,
+`https://w3id.org/kim/hochschulfaechersystematik/scheme` oder `DDC` zu
+setzen. Die zulässigen Werte sind jeweils beim übergeordneten Element angegeben.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a> mit dem Attribut `xml:lang="x-none"`</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="id">
+
+## Das Element <dfn><code>&lt;id></code></dfn>
+
+Das Element enthält einen URI, mittels dessen die konkrete Kategorie eindeutig
+identifiziert wird, der das Objekts im Rahmen der bezeichneten
+Taxonomie zugeordnet wird.
+
+**Für Hochschulcampus Ressourcentypen:**
+
+Es werden [permanente Identifier im WWW](https://w3id.org/) genutzt. Damit
+bekommt jeder Ressourcentyp eine URL als ID, die in [[!SKOS-LRT]] nachgeschlagen werden kann.
+Die URL löst dabei zu den im [[!SKOS-LRT]] hinterlegten Eintrag zu diesem
+Hochschulcampus Ressourcentyp nebst einer eventuellen Erläuterung auf.
+
+**Für Hochschulfächer:**
+
+Es werden [permanente Identifier im WWW](https://w3id.org/) genutzt. Damit bekommt jedes
+Fach eine URL als ID, die in [[!SKOS-HS]] nachgeschlagen werden kann.
+Die URL löst dabei zu den im [[!SKOS-HS]] hinterlegten Eintrag zum Fachgebiet nebst
+Beschreibung auf.
+
+**Für DDC:**
+
+Aus der [[!DDC]] ergeben sich eindeutige Zahlen. Es ist wie in der DDC Summary
+beschrieben mit 0 auf 3 Ziffern aufzufüllen. Die Klassifikation wird auf
+maximal die 3 Hauptebenen beschränkt, feinere Unterteilungen werden nicht unterstützt.
+
+<p class="note">Die XML Schema Definition kann validieren, dass nur gültige URLs
+oder DDC-Codes verwendet werden und ebenfalls dass im obigen Element <a>&lt;source></a>
+nur einer der beiden spezifizierten Werte angegeben wird. Aufgrund von sprachlichen
+Limitierungen können jedoch bei der Validierung keine falschen Angaben über Kreuz
+aufgedeckt werden, also z. B. Hochschulfächer mit einem DDC-Zifferncode.</p>
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordnetenElements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd>keine</dd>
+</dl>
+
+</section>
+
+<section data-dfn-for="value">
+
+## Das Element <dfn><code>&lt;value></code></dfn>
+
+Das Element enthält einen Eintrag aus dem in <a>&lt;source></a> festgelegten
+kontrollierten Vokabular.
+
+<dl>
+    <dt>Mehrwertigkeit:</dt>
+    <dd>Es MUSS genau 1 Mal innerhalb des übergeordneten Elements vorkommen.</dd>
+    <dt>Attribute:</dt>
+    <dd>keine</dd>
+    <dt>Elemente:</dt>
+    <dd><a>&lt;langstring></a> mit dem Attribut `xml:lang="x-none"`</dd>
+</dl>
+
+</section>
+
+</section>
+
+</section>
+
+<section id="examples">
+
+## Beispiele
+
+Zur Illustration werden zwei Beispiele für Metadatenbeschreibungen von
+Lernobjekten entsprechend dieser Spezifikation vorgestellt.
+
+<section id="example-1">
+
+## Beispiel 1
+
+Das ist ein Beispiel für eine OER aus dem Bereich Mathematik.
+
+<pre class="example" data-include="examples/full-example-a.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/full-example-a.xml)
+
+</section>
+
+<section id="example-2">
+
+## Beispiel 2
+
+Das ist ein weiteres Beispiel für eine OER mit einer DDC-Klassifizierung.
+
+<pre class="example" data-include="examples/full-example-b.xml" data-include-format="text"></pre>
+
+[Link zum Beispiel](examples/full-example-b.xml)
+
+</section>
+
+</section>
+
+<section id="schemas">
+
+## Validierung
+
+Für den Austausch von Metadaten über die Materialien wurde eine
+[XML Schema Description](schemas/hs-oer-lom.xsd) erstellt. Bitte
+beachten Sie, dass sie nur vollständig mit dem kleinen begleitenden
+[Dokument](schemas/xml.xsd) ist, das auch für korrekte Validierungen
+benötigt wird.
+
+Eigene XML–Dokumente können gegen das XML Schema mit gängigen
+Werkzeugen validiert werden, z. B. mit `xmllint`:
+
+`$ xmllint --noout --schema hs-oer-lom.xsd mein-oer-lom.xml`
+
+Wenn Sie das Schema in Ihrem eigenen XML-Dokument referenzieren
+möchten, verwenden Sie bitte die folgende URL:
+
+`https://w3id.org/kim/hs-oer-lom-profil/latest/schemas/hs-oer-lom.xsd`
+
+<section id="xml-schema">
+
+## XML Schema
+
+<pre data-include="schemas/hs-oer-lom.xsd" data-include-format="text"></pre>
+
+[Link zum XML Schema](schemas/hs-oer-lom.xsd)
+
+</section>
+
+<section id="schema-addition">
+
+## Schema-Ergänzung
+
+<pre data-include="schemas/xml.xsd" data-include-format="text"></pre>
+
+[Link zur Schema-Ergänzung](schemas/xml.xsd)
+
+</section>
+
+</section>
+
+<section id="glossary" class="appendix">
+
+## Glossar
+
+<dl>
+    <dt><abbr title="Learning Object Metadata">LOM</abbr></dt>
+    <dd>Learning Object Metadata</dd>
+    <dt><abbr title="Open Archives Initiative">OAI</abbr></dt>
+    <dd>Open Archives Initiative</dd>
+    <dt><abbr title="OAI Protocol for Metadata Harvesting">OAI-PMH</abbr></dt>
+    <dd>OAI Protocol for Metadata Harvesting</dd>
+    <dt><abbr title="Open Educational Resource">OER</abbr></dt>
+    <dd>Open Educational Resource</dd>
+    <dt><abbr title="Uniform Resource Identifier">URI</abbr></dt>
+    <dd>Uniform Resource Identifier</dd>
+    <dt><abbr title="Uniform Resource Locator">URL</abbr></dt>
+    <dd>Uniform Resource Locator</dd>
+    <dt><abbr title="World Wide Web">WWW</abbr></dt>
+    <dd>World Wide Web</dd>
+    <dt><abbr title="Extensible Markup Language">XML</abbr></dt>
+    <dd>Extensible Markup Language</dd>
+    <dt><abbr title="XML Schema Instance">XSI</abbr></dt>
+    <dd>XML Schema Instance</dd>
+    <dt><abbr title="Zentrales OER-Repositorium der Hochschulen In Baden-Württemberg">ZOERR</abbr></dt>
+    <dd><a href="https://www.oerbw.de/">Zentrales OER-Repositorium der Hochschulen In Baden-Württemberg</a></dd>
+</dl>
+
+</section>
+
+</body>
+</html>
